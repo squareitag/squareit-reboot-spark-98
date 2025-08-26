@@ -85,27 +85,27 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies#cloud" className="w-full cursor-pointer">
+                  <Link to="/technologies/cloud" className="w-full cursor-pointer">
                     Cloud Plattformen
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies#security" className="w-full cursor-pointer">
+                  <Link to="/technologies/security" className="w-full cursor-pointer">
                     Security Solutions
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies#infrastructure" className="w-full cursor-pointer">
+                  <Link to="/technologies/infrastructure" className="w-full cursor-pointer">
                     Server & Infrastructure
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies#database" className="w-full cursor-pointer">
+                  <Link to="/technologies/database" className="w-full cursor-pointer">
                     Database Systems
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies#networking" className="w-full cursor-pointer">
+                  <Link to="/technologies/networking" className="w-full cursor-pointer">
                     Networking
                   </Link>
                 </DropdownMenuItem>
@@ -215,35 +215,35 @@ const Header = () => {
                     Alle Technologien
                   </Link>
                   <Link
-                    to="/technologies#cloud"
+                    to="/technologies/cloud"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Cloud Plattformen
                   </Link>
                   <Link
-                    to="/technologies#security"
+                    to="/technologies/security"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Security Solutions
                   </Link>
                   <Link
-                    to="/technologies#infrastructure"
+                    to="/technologies/infrastructure"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Server & Infrastructure
                   </Link>
                   <Link
-                    to="/technologies#database"
+                    to="/technologies/database"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     Database Systems
                   </Link>
                   <Link
-                    to="/technologies#networking"
+                    to="/technologies/networking"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >

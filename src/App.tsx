@@ -18,6 +18,13 @@ import CareersPage from "./pages/CareersPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 
+// Technology sub-pages
+import CloudPage from "./pages/technologies/CloudPage";
+import SecurityPage from "./pages/technologies/SecurityPage";
+import InfrastructurePage from "./pages/technologies/InfrastructurePage";
+import DatabasePage from "./pages/technologies/DatabasePage";
+import NetworkingPage from "./pages/technologies/NetworkingPage";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -38,6 +45,11 @@ const App = () => (
               <Route path="/services/consulting" element={<ConsultingPage />} />
               <Route path="/services/support" element={<SupportPage />} />
               <Route path="/technologies" element={<TechnologiesPage />} />
+              <Route path="/technologies/cloud" element={<CloudPage />} />
+              <Route path="/technologies/security" element={<SecurityPage />} />
+              <Route path="/technologies/infrastructure" element={<InfrastructurePage />} />
+              <Route path="/technologies/database" element={<DatabasePage />} />
+              <Route path="/technologies/networking" element={<NetworkingPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
