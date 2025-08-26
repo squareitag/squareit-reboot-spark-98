@@ -3,32 +3,33 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, Monitor, Shield, Wrench, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import managedServersImage from "@/assets/managed-servers.jpg";
 
 const ManagedServersPage = () => {
   const services = [
     {
-      name: "Windows Server Management",
-      description: "Professionelle Verwaltung und Wartung von Windows Server Umgebungen",
-      features: ["Windows Updates", "Active Directory", "Group Policy Management", "Performance Tuning"],
-      category: "Windows"
+      name: "24/7 Überwachung",
+      description: "Kontinuierliche Serverüberwachung mit proaktiver Problemerkennung",
+      features: ["Monitoring-Dashboards", "Automatische Alerts", "Performance-Tracking", "Kapazitätsplanung"],
+      category: "Monitoring"
     },
     {
-      name: "Linux Server Management",
-      description: "Experte Verwaltung von Linux-basierten Server-Systemen",
-      features: ["Ubuntu/CentOS/RHEL", "Security Patching", "Configuration Management", "Log Analysis"],
-      category: "Linux"
+      name: "Sicherheitsupdates",
+      description: "Regelmäßige Sicherheitsupdates und Patch-Management",
+      features: ["Security Patches", "Vulnerability Scanning", "Compliance Updates", "Rollback-Strategien"],
+      category: "Security"
     },
     {
-      name: "Virtualization Management",
-      description: "Verwaltung und Optimierung virtualisierter Server-Umgebungen",
-      features: ["VMware vSphere", "Hyper-V", "Resource Optimization", "VM Lifecycle Management"],
-      category: "Virtualization"
+      name: "Hochverfügbarkeit",
+      description: "Failover-Systeme für nahtlose Geschäftskontinuität",
+      features: ["Redundante Systeme", "Automatisches Failover", "Load Balancing", "Disaster Recovery"],
+      category: "Availability"
     },
     {
-      name: "Database Server Management",
-      description: "Spezialisierte Verwaltung von Datenbank-Servern",
-      features: ["SQL Server", "MySQL/PostgreSQL", "Backup & Recovery", "Performance Optimization"],
-      category: "Database"
+      name: "Skalierbarkeit",
+      description: "Maßgeschneiderte Konfigurationen für wachsende Anforderungen",
+      features: ["Auto-Scaling", "Resource Management", "Kapazitätserweiterung", "Performance Optimization"],
+      category: "Scalability"
     }
   ];
 
@@ -40,13 +41,13 @@ const ManagedServersPage = () => {
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Security Management",
-      description: "Umfassende Sicherheitsverwaltung und Patch-Management"
+      title: "Sicher & up to date",
+      description: "Regelmäßige Sicherheitsupdates und Patch-Management"
     },
     {
       icon: <Wrench className="w-6 h-6" />,
-      title: "Maintenance",
-      description: "Regelmäßige Wartung und Optimierung für beste Performance"
+      title: "Premier Support",
+      description: "Technisches Support-Team steht jederzeit zur Verfügung"
     }
   ];
 
@@ -63,8 +64,9 @@ const ManagedServersPage = () => {
               Managed Servers
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Professionelle Verwaltung und Wartung Ihrer Server-Infrastruktur. 
-              Von Windows über Linux bis hin zu virtualisierten Umgebungen - wir sorgen für optimale Performance.
+              Bei Square IT wissen wir, dass eine effektive Verwaltung und Wartung Ihrer IT-Systeme 
+              entscheidend für den reibungslosen Ablauf Ihres Unternehmens ist. Deshalb haben wir unseren 
+              Managed Server Service entwickelt, um Ihnen alle Sorgen abzunehmen.
             </p>
           </div>
         </div>
@@ -102,30 +104,47 @@ const ManagedServersPage = () => {
         </div>
       </section>
 
-      {/* Benefits Section */}
-      <section className="py-20 bg-secondary/30">
+      {/* Content Section with Image */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold mb-6">
-              Warum Managed Servers?
-            </h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximale Server-Performance durch professionelle Verwaltung
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {benefits.map((benefit, index) => (
-              <Card key={index} className="text-center animate-fade-in" style={{ animationDelay: `${index * 0.2}s` }}>
-                <CardContent className="pt-8 pb-6">
-                  <div className="w-12 h-12 gradient-hero rounded-lg flex items-center justify-center text-white mx-auto mb-4">
-                    {benefit.icon}
-                  </div>
-                  <h3 className="text-xl font-bold mb-3">{benefit.title}</h3>
-                  <p className="text-muted-foreground">{benefit.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={managedServersImage} 
+                alt="Managed Server Infrastructure" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">
+                Umfassende Serverüberwachung
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Unser Managed Server Service umfasst die rund um die Uhr Überwachung Ihrer Serverinfrastruktur. 
+                  Dieser proaktive Ansatz hilft, potenzielle Probleme zu identifizieren, bevor sie kritisch werden, 
+                  und stellt so einen unterbrechungsfreien Geschäftsbetrieb sicher.
+                </p>
+                <p>
+                  Unser Team nutzt fortschrittliche Werkzeuge und Techniken, um Ihre Server aufmerksam im Auge 
+                  zu behalten und Ihnen Stabilität und Sicherheit zu bieten.
+                </p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>24/7 Monitoring und Alerting</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Proaktive Problemerkennung</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Automatisierte Failover-Systeme</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

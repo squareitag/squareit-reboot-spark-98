@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Laptop, Shield, Smartphone, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import managedWorkplaceImage from "@/assets/managed-workplace.jpg";
 
 const ManagedWorkplacePage = () => {
   const services = [
@@ -130,11 +131,18 @@ const ManagedWorkplacePage = () => {
         </div>
       </section>
 
-      {/* Modern Workplace Features */}
+      {/* Content Section with Image */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
+              <img 
+                src={managedWorkplaceImage} 
+                alt="Modern Workplace Environment" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
               <h2 className="text-4xl font-bold mb-6">
                 Microsoft 365 Modern Workplace
               </h2>
@@ -170,48 +178,53 @@ const ManagedWorkplacePage = () => {
                 </Button>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
 
-            <div className="animate-slide-up">
-              <Card className="gradient-hero text-white shadow-elegant">
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-6 text-center">
-                    Workplace Services
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>Device Provisioning & Setup</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>User Onboarding & Training</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>Application Management</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>Security Policy Enforcement</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>24/7 End-User Support</span>
-                    </li>
-                    <li className="flex items-center">
-                      <CheckCircle className="w-5 h-5 mr-3" />
-                      <span>Performance Monitoring</span>
-                    </li>
-                  </ul>
-                </CardContent>
-              </Card>
-            </div>
+      {/* Workplace Services Card */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-2xl mx-auto">
+            <Card className="gradient-hero text-white shadow-elegant">
+              <CardContent className="p-8">
+                <h3 className="text-2xl font-bold mb-6 text-center">
+                  Workplace Services
+                </h3>
+                <ul className="space-y-4">
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>Device Provisioning &amp; Setup</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>User Onboarding &amp; Training</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>Application Management</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>Security Policy Enforcement</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>24/7 End-User Support</span>
+                  </li>
+                  <li className="flex items-center">
+                    <CheckCircle className="w-5 h-5 mr-3" />
+                    <span>Performance Monitoring</span>
+                  </li>
+                </ul>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
       {/* Statistics */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">

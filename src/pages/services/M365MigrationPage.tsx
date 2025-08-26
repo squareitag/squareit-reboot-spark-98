@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cloud, Mail, Users, FileText, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import m365MigrationImage from "@/assets/m365-migration.jpg";
 
 const M365MigrationPage = () => {
   const services = [
@@ -98,6 +99,50 @@ const M365MigrationPage = () => {
                 </CardContent>
               </Card>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Content Section with Image */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={m365MigrationImage} 
+                alt="Microsoft 365 Migration Process" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">
+                Nahtlose Microsoft 365 Migration
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Unsere Experten führen Ihre Microsoft 365 Migration professionell durch, 
+                  von der Planung bis zur vollständigen Implementierung.
+                </p>
+                <p>
+                  Wir sorgen für minimale Ausfallzeiten und maximale Datenintegrität während 
+                  des gesamten Migrationsprozesses.
+                </p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Pre-Migration Assessment</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Phased Migration Approach</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Post-Migration Support</span>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
