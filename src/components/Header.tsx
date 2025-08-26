@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X, Phone } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
+import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,9 +22,9 @@ const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-2">
-            <div className="w-8 h-8 gradient-hero rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-lg">S</span>
+          <Link to="/" className="flex items-center space-x-3">
+            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-lg">SI</span>
             </div>
             <span className="text-xl font-bold text-foreground">Square IT</span>
           </Link>
@@ -46,7 +47,7 @@ const Header = () => {
           {/* Support Button */}
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="outline" size="sm" asChild>
-              <Link to="/support">
+              <Link to="/services/support">
                 <Phone className="w-4 h-4 mr-2" />
                 Support
               </Link>
@@ -86,7 +87,7 @@ const Header = () => {
               ))}
               <div className="pt-2">
                 <Button variant="outline" size="sm" className="w-full" asChild>
-                  <Link to="/support">
+                  <Link to="/services/support">
                     <Phone className="w-4 h-4 mr-2" />
                     Support
                   </Link>

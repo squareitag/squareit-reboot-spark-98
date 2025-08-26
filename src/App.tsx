@@ -10,6 +10,12 @@ import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
 import TechnologiesPage from "./pages/TechnologiesPage";
+import ManagedServicesPage from "./pages/services/ManagedServicesPage";
+import MigrationPage from "./pages/services/MigrationPage";
+import ConsultingPage from "./pages/services/ConsultingPage";
+import SupportPage from "./pages/services/SupportPage";
+import CareersPage from "./pages/CareersPage";
+import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -27,8 +33,14 @@ const App = () => (
               <Route path="/" element={<HomePage />} />
               <Route path="/about" element={<AboutPage />} />
               <Route path="/services" element={<ServicesPage />} />
+              <Route path="/services/managed-services" element={<ManagedServicesPage />} />
+              <Route path="/services/migration" element={<MigrationPage />} />
+              <Route path="/services/consulting" element={<ConsultingPage />} />
+              <Route path="/services/support" element={<SupportPage />} />
               <Route path="/technologies" element={<TechnologiesPage />} />
               <Route path="/contact" element={<ContactPage />} />
+              <Route path="/careers" element={<CareersPage />} />
+              <Route path="/privacy" element={<PrivacyPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

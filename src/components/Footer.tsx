@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import logo from "@/assets/logo.png";
 
 const Footer = () => {
   return (
@@ -8,9 +9,9 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-2">
-              <div className="w-8 h-8 gradient-hero rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-lg">S</span>
+            <div className="flex items-center space-x-3">
+              <div className="w-8 h-8 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+                <span className="text-white font-bold text-sm">SI</span>
               </div>
               <span className="text-xl font-bold">Square IT</span>
             </div>
@@ -88,20 +89,20 @@ const Footer = () => {
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-muted-foreground" />
-                <a href="mailto:info@squareit.ch" className="text-muted-foreground hover:text-primary transition-colors">
-                  info@squareit.ch
+                <a href="mailto:hello@squareit.ch" className="text-muted-foreground hover:text-primary transition-colors">
+                  hello@squareit.ch
                 </a>
               </li>
               <li className="flex items-center space-x-2">
                 <Phone className="w-4 h-4 text-muted-foreground" />
-                <a href="tel:+41000000000" className="text-muted-foreground hover:text-primary transition-colors">
-                  +41 00 000 00 00
+                <a href="tel:+41415602100" className="text-muted-foreground hover:text-primary transition-colors">
+                  +41 41 560 21 00
                 </a>
               </li>
               <li className="flex items-start space-x-2">
                 <MapPin className="w-4 h-4 text-muted-foreground mt-0.5" />
                 <span className="text-muted-foreground">
-                  Zürich, Schweiz
+                  Alpenstrasse 12<br />6300 Zug
                 </span>
               </li>
             </ul>

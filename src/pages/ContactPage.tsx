@@ -31,25 +31,25 @@ const ContactPage = () => {
     {
       icon: <Mail className="w-6 h-6" />,
       title: "E-Mail",
-      info: "info@squareit.ch",
-      link: "mailto:info@squareit.ch"
+      info: "hello@squareit.ch",
+      link: "mailto:hello@squareit.ch"
     },
     {
       icon: <Phone className="w-6 h-6" />,
       title: "Telefon",
-      info: "+41 44 000 00 00",
-      link: "tel:+41440000000"
+      info: "+41 41 560 21 00",
+      link: "tel:+41415602100"
     },
     {
       icon: <MapPin className="w-6 h-6" />,
       title: "Adresse",
-      info: "Zürich, Schweiz",
+      info: "Alpenstrasse 12, 6300 Zug",
       link: null
     },
     {
       icon: <Clock className="w-6 h-6" />,
       title: "Öffnungszeiten",
-      info: "Mo-Fr: 8:00 - 18:00",
+      info: "Mo-Fr: 08:00-12:00 / 13:00-17:00",
       link: null
     }
   ];
@@ -211,7 +211,7 @@ const ContactPage = () => {
               Unser Standort
             </h2>
             <p className="text-xl text-muted-foreground">
-              Besuchen Sie uns in unserem Büro in Zürich
+              Besuchen Sie uns in unserem Büro in Zug
             </p>
           </div>
 
@@ -220,7 +220,7 @@ const ContactPage = () => {
               <div className="text-center">
                 <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
                 <h3 className="text-xl font-semibold mb-2">Square IT AG</h3>
-                <p className="text-muted-foreground">Zürich, Schweiz</p>
+                <p className="text-muted-foreground">Alpenstrasse 12, 6300 Zug</p>
               </div>
             </div>
           </Card>
