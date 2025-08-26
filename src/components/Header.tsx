@@ -1,19 +1,12 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
-import { Menu, X, Phone } from "lucide-react";
+import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
+import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "@/assets/logo.png";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
-
-  const navigation = [
-    { name: "Über uns", href: "/about" },
-    { name: "Dienstleistungen", href: "/services" },
-    { name: "Technologien", href: "/technologies" },
-    { name: "Kontakt", href: "/contact" },
-  ];
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -23,7 +16,7 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-gradient-to-r from-blue-600 to-orange-500 rounded-lg flex items-center justify-center">
+            <div className="w-10 h-10 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-lg">SI</span>
             </div>
             <span className="text-xl font-bold text-foreground">Square IT</span>
@@ -31,17 +24,69 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {navigation.map((item) => (
-              <Link
-                key={item.name}
-                to={item.href}
-                className={`text-sm font-medium transition-colors hover:text-primary ${
-                  isActive(item.href) ? "text-primary" : "text-muted-foreground"
-                }`}
-              >
-                {item.name}
-              </Link>
-            ))}
+            <Link
+              to="/about"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/about") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Über uns
+            </Link>
+            
+            {/* Services Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname.startsWith("/services") ? "text-primary" : "text-muted-foreground"
+              }`}>
+                <span>Dienstleistungen</span>
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/services" className="w-full cursor-pointer">
+                    Alle Dienstleistungen
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-services" className="w-full cursor-pointer">
+                    Managed Services
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/migration" className="w-full cursor-pointer">
+                    Migration
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/consulting" className="w-full cursor-pointer">
+                    Consulting
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/support" className="w-full cursor-pointer">
+                    Support
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
+            <Link
+              to="/technologies"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/technologies") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Technologien
+            </Link>
+            
+            <Link
+              to="/contact"
+              className={`text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/contact") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              Kontakt
+            </Link>
           </nav>
 
           {/* Support Button */}
@@ -71,20 +116,83 @@ const Header = () => {
         {isMenuOpen && (
           <div className="md:hidden py-4 border-t border-border animate-fade-in">
             <nav className="flex flex-col space-y-2">
-              {navigation.map((item) => (
-                <Link
-                  key={item.name}
-                  to={item.href}
-                  className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                    isActive(item.href)
-                      ? "bg-primary text-primary-foreground"
-                      : "text-muted-foreground hover:text-primary hover:bg-secondary"
-                  }`}
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {item.name}
-                </Link>
-              ))}
+              <Link
+                to="/about"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/about")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-primary hover:bg-secondary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Über uns
+              </Link>
+              
+              {/* Mobile Services Menu */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-muted-foreground mb-2">Dienstleistungen</div>
+                <div className="pl-4 space-y-1">
+                  <Link
+                    to="/services"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Alle Dienstleistungen
+                  </Link>
+                  <Link
+                    to="/services/managed-services"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Managed Services
+                  </Link>
+                  <Link
+                    to="/services/migration"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Migration
+                  </Link>
+                  <Link
+                    to="/services/consulting"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Consulting
+                  </Link>
+                  <Link
+                    to="/services/support"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Support
+                  </Link>
+                </div>
+              </div>
+              
+              <Link
+                to="/technologies"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/technologies")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-primary hover:bg-secondary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Technologien
+              </Link>
+              
+              <Link
+                to="/contact"
+                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/contact")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-primary hover:bg-secondary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Kontakt
+              </Link>
               <div className="pt-2">
                 <Button variant="outline" size="sm" className="w-full" asChild>
                   <Link to="/services/support">
