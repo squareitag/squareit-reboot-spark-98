@@ -19,11 +19,13 @@ import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 
 // Technology sub-pages
-import CloudPage from "./pages/technologies/CloudPage";
-import SecurityPage from "./pages/technologies/SecurityPage";
-import InfrastructurePage from "./pages/technologies/InfrastructurePage";
-import DatabasePage from "./pages/technologies/DatabasePage";
-import NetworkingPage from "./pages/technologies/NetworkingPage";
+import Microsoft365Page from "./pages/technologies/Microsoft365Page";
+import MicrosoftAzurePage from "./pages/technologies/MicrosoftAzurePage";
+import AvePointBackupPage from "./pages/technologies/AvePointBackupPage";
+import CatoNetworksPage from "./pages/technologies/CatoNetworksPage";
+import PrintixPage from "./pages/technologies/PrintixPage";
+import PeoplefonePage from "./pages/technologies/PeoplefonePage";
+import KeeperPage from "./pages/technologies/KeeperPage";
 
 const queryClient = new QueryClient();
 
@@ -45,11 +47,13 @@ const App = () => (
               <Route path="/services/consulting" element={<ConsultingPage />} />
               <Route path="/services/support" element={<SupportPage />} />
               <Route path="/technologies" element={<TechnologiesPage />} />
-              <Route path="/technologies/cloud" element={<CloudPage />} />
-              <Route path="/technologies/security" element={<SecurityPage />} />
-              <Route path="/technologies/infrastructure" element={<InfrastructurePage />} />
-              <Route path="/technologies/database" element={<DatabasePage />} />
-              <Route path="/technologies/networking" element={<NetworkingPage />} />
+        <Route path="/technologies/microsoft-365" element={<Microsoft365Page />} />
+        <Route path="/technologies/microsoft-azure" element={<MicrosoftAzurePage />} />
+        <Route path="/technologies/avepoint-backup" element={<AvePointBackupPage />} />
+        <Route path="/technologies/cato-networks" element={<CatoNetworksPage />} />
+        <Route path="/technologies/printix" element={<PrintixPage />} />
+        <Route path="/technologies/peoplefone" element={<PeoplefonePage />} />
+        <Route path="/technologies/keeper" element={<KeeperPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />

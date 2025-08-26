@@ -85,28 +85,38 @@ const Header = () => {
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies/cloud" className="w-full cursor-pointer">
-                    Cloud Plattformen
+                  <Link to="/technologies/microsoft-365" className="w-full cursor-pointer">
+                    Microsoft 365
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies/security" className="w-full cursor-pointer">
-                    Security Solutions
+                  <Link to="/technologies/microsoft-azure" className="w-full cursor-pointer">
+                    Microsoft Azure
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies/infrastructure" className="w-full cursor-pointer">
-                    Server & Infrastructure
+                  <Link to="/technologies/avepoint-backup" className="w-full cursor-pointer">
+                    AvePoint Backup
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies/database" className="w-full cursor-pointer">
-                    Database Systems
+                  <Link to="/technologies/cato-networks" className="w-full cursor-pointer">
+                    Cato Networks
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
-                  <Link to="/technologies/networking" className="w-full cursor-pointer">
-                    Networking
+                  <Link to="/technologies/printix" className="w-full cursor-pointer">
+                    Printix
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies/peoplefone" className="w-full cursor-pointer">
+                    Peoplefone
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies/keeper" className="w-full cursor-pointer">
+                    Keeper
                   </Link>
                 </DropdownMenuItem>
               </DropdownMenuContent>
@@ -215,39 +225,53 @@ const Header = () => {
                     Alle Technologien
                   </Link>
                   <Link
-                    to="/technologies/cloud"
+                    to="/technologies/microsoft-365"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Cloud Plattformen
+                    Microsoft 365
                   </Link>
                   <Link
-                    to="/technologies/security"
+                    to="/technologies/microsoft-azure"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Security Solutions
+                    Microsoft Azure
                   </Link>
                   <Link
-                    to="/technologies/infrastructure"
+                    to="/technologies/avepoint-backup"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Server & Infrastructure
+                    AvePoint Backup
                   </Link>
                   <Link
-                    to="/technologies/database"
+                    to="/technologies/cato-networks"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Database Systems
+                    Cato Networks
                   </Link>
                   <Link
-                    to="/technologies/networking"
+                    to="/technologies/printix"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    Networking
+                    Printix
+                  </Link>
+                  <Link
+                    to="/technologies/peoplefone"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Peoplefone
+                  </Link>
+                  <Link
+                    to="/technologies/keeper"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Keeper
                   </Link>
                 </div>
               </div>
