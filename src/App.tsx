@@ -19,13 +19,19 @@ import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 
 // Technology sub-pages
-import Microsoft365Page from "./pages/technologies/Microsoft365Page";
-import MicrosoftAzurePage from "./pages/technologies/MicrosoftAzurePage";
-import AvePointBackupPage from "./pages/technologies/AvePointBackupPage";
-import CatoNetworksPage from "./pages/technologies/CatoNetworksPage";
-import PrintixPage from "./pages/technologies/PrintixPage";
-import PeoplefonePage from "./pages/technologies/PeoplefonePage";
-import KeeperPage from "./pages/technologies/KeeperPage";
+import ManagedInfrastructurePage from "./pages/services/ManagedInfrastructurePage";
+import ManagedWorkplacePage from "./pages/services/ManagedWorkplacePage";
+import ManagedServersPage from "./pages/services/ManagedServersPage";
+import ManagedNetworkPage from "./pages/services/ManagedNetworkPage";
+import ManagedBackupPage from "./pages/services/ManagedBackupPage";
+import M365MigrationPage from "./pages/services/M365MigrationPage";
+import AzureMigrationPage from "./pages/services/AzureMigrationPage";
+import SharePointTeamsMigrationPage from "./pages/services/SharePointTeamsMigrationPage";
+import ModernWorkplacePage from "./pages/services/ModernWorkplacePage";
+import CloudSecurityPage from "./pages/services/CloudSecurityPage";
+import CollaborationPage from "./pages/services/CollaborationPage";
+import TeamstelephonePage from "./pages/services/TeamstelephonePage";
+import WorkshopPage from "./pages/services/WorkshopPage";
 
 const queryClient = new QueryClient();
 
@@ -47,13 +53,19 @@ const App = () => (
               <Route path="/services/consulting" element={<ConsultingPage />} />
               <Route path="/services/support" element={<SupportPage />} />
               <Route path="/technologies" element={<TechnologiesPage />} />
-        <Route path="/technologies/microsoft-365" element={<Microsoft365Page />} />
-        <Route path="/technologies/microsoft-azure" element={<MicrosoftAzurePage />} />
-        <Route path="/technologies/avepoint-backup" element={<AvePointBackupPage />} />
-        <Route path="/technologies/cato-networks" element={<CatoNetworksPage />} />
-        <Route path="/technologies/printix" element={<PrintixPage />} />
-        <Route path="/technologies/peoplefone" element={<PeoplefonePage />} />
-        <Route path="/technologies/keeper" element={<KeeperPage />} />
+        <Route path="/services/managed-infrastructure" element={<ManagedInfrastructurePage />} />
+        <Route path="/services/managed-workplace" element={<ManagedWorkplacePage />} />
+        <Route path="/services/managed-servers" element={<ManagedServersPage />} />
+        <Route path="/services/managed-network" element={<ManagedNetworkPage />} />
+        <Route path="/services/managed-backup" element={<ManagedBackupPage />} />
+        <Route path="/services/m365-migration" element={<M365MigrationPage />} />
+        <Route path="/services/azure-migration" element={<AzureMigrationPage />} />
+        <Route path="/services/sharepoint-teams-migration" element={<SharePointTeamsMigrationPage />} />
+        <Route path="/services/modern-workplace" element={<ModernWorkplacePage />} />
+        <Route path="/services/cloud-security" element={<CloudSecurityPage />} />
+        <Route path="/services/collaboration" element={<CollaborationPage />} />
+        <Route path="/services/teams-telephone" element={<TeamstelephonePage />} />
+        <Route path="/services/workshop" element={<WorkshopPage />} />
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
