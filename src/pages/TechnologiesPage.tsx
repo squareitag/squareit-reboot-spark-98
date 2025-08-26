@@ -8,36 +8,42 @@ const TechnologiesPage = () => {
   const technologies = [
     {
       category: "Cloud Platforms",
+      id: "cloud",
       icon: <Cloud className="w-8 h-8" />,
       description: "Führende Cloud-Infrastrukturen für maximale Skalierbarkeit",
       items: ["Microsoft Azure", "Amazon AWS", "Google Cloud Platform", "VMware vSphere", "Hyper-V"]
     },
     {
       category: "Security Solutions",
+      id: "security", 
       icon: <Shield className="w-8 h-8" />,
       description: "Umfassende Sicherheitslösungen für Ihren Schutz",
       items: ["Endpoint Protection", "Firewall Management", "VPN Solutions", "Identity Management", "Backup & Recovery"]
     },
     {
       category: "Server Technologies",
+      id: "infrastructure",
       icon: <Server className="w-8 h-8" />,
       description: "Moderne Server-Infrastrukturen für optimale Performance",
       items: ["Windows Server", "Linux/Ubuntu", "Docker", "Kubernetes", "Load Balancing"]
     },
     {
       category: "Database Systems",
+      id: "database",
       icon: <Database className="w-8 h-8" />,
       description: "Leistungsstarke Datenbanklösungen für Ihr Business",
       items: ["Microsoft SQL Server", "MySQL", "PostgreSQL", "MongoDB", "Oracle Database"]
     },
     {
       category: "Networking",
+      id: "networking",
       icon: <Network className="w-8 h-8" />,
       description: "Zuverlässige Netzwerk-Infrastrukturen",
       items: ["Cisco Systems", "Juniper Networks", "Fortinet", "SD-WAN", "Network Monitoring"]
     },
     {
       category: "Monitoring & Analytics",
+      id: "monitoring",
       icon: <Monitor className="w-8 h-8" />,
       description: "Proaktive Überwachung und Business Intelligence",
       items: ["SCOM", "Nagios", "Zabbix", "Power BI", "Grafana"]
@@ -75,7 +81,7 @@ const TechnologiesPage = () => {
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {technologies.map((tech, index) => (
-              <Card key={index} className="hover:shadow-elegant transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+              <Card key={index} id={tech.id} className="hover:shadow-elegant transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
                   <div className="w-16 h-16 gradient-hero rounded-lg flex items-center justify-center text-white mb-4">
                     {tech.icon}

@@ -70,14 +70,47 @@ const Header = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <Link
-              to="/technologies"
-              className={`text-sm font-medium transition-colors hover:text-primary ${
-                isActive("/technologies") ? "text-primary" : "text-muted-foreground"
-              }`}
-            >
-              Technologien
-            </Link>
+            {/* Technologies Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname.startsWith("/technologies") ? "text-primary" : "text-muted-foreground"
+              }`}>
+                <span>Technologien</span>
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies" className="w-full cursor-pointer">
+                    Alle Technologien
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies#cloud" className="w-full cursor-pointer">
+                    Cloud Plattformen
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies#security" className="w-full cursor-pointer">
+                    Security Solutions
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies#infrastructure" className="w-full cursor-pointer">
+                    Server & Infrastructure
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies#database" className="w-full cursor-pointer">
+                    Database Systems
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies#networking" className="w-full cursor-pointer">
+                    Networking
+                  </Link>
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             
             <Link
               to="/contact"
@@ -170,17 +203,54 @@ const Header = () => {
                 </div>
               </div>
               
-              <Link
-                to="/technologies"
-                className={`px-3 py-2 rounded-md text-sm font-medium transition-colors ${
-                  isActive("/technologies")
-                    ? "bg-primary text-primary-foreground"
-                    : "text-muted-foreground hover:text-primary hover:bg-secondary"
-                }`}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                Technologien
-              </Link>
+              {/* Mobile Technologies Menu */}
+              <div className="px-3 py-2">
+                <div className="text-sm font-medium text-muted-foreground mb-2">Technologien</div>
+                <div className="pl-4 space-y-1">
+                  <Link
+                    to="/technologies"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Alle Technologien
+                  </Link>
+                  <Link
+                    to="/technologies#cloud"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Cloud Plattformen
+                  </Link>
+                  <Link
+                    to="/technologies#security"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Security Solutions
+                  </Link>
+                  <Link
+                    to="/technologies#infrastructure"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Server & Infrastructure
+                  </Link>
+                  <Link
+                    to="/technologies#database"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Database Systems
+                  </Link>
+                  <Link
+                    to="/technologies#networking"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Networking
+                  </Link>
+                </div>
+              </div>
               
               <Link
                 to="/contact"
