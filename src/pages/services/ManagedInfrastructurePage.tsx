@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, Cloud, Shield, Monitor, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import managedInfrastructureImage from "@/assets/managed-infrastructure-hero.jpg";
 
 const ManagedInfrastructurePage = () => {
   const services = [
@@ -63,8 +64,9 @@ const ManagedInfrastructurePage = () => {
               Managed Infrastructure
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Professionelle Verwaltung und Überwachung Ihrer gesamten IT-Infrastruktur. 
-              Von Servern über Netzwerke bis hin zu Cloud-Umgebungen - wir sorgen für optimale Performance.
+              Unsere Managed Infrastructure-Services bieten Ihnen zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, 
+              verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit. Indem Sie uns die Verwaltung Ihrer 
+              IT-Infrastruktur anvertrauen, profitieren Sie von einem Expertenteam.
             </p>
           </div>
         </div>
@@ -102,12 +104,56 @@ const ManagedInfrastructurePage = () => {
         </div>
       </section>
 
+      {/* Content Section with Image */}
+      <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={managedInfrastructureImage} 
+                alt="Managed Infrastructure Services" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">
+                Erhöhte Zuverlässigkeit
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Unsere Managed Infrastructure Services bieten zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, 
+                  verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit.
+                </p>
+                <p>
+                  Wenn Sie uns Ihre IT-Infrastruktur anvertrauen, erhalten Sie Zugang zu einem Expertenteam, 
+                  das Ihre Systeme proaktiv verwaltet und wartet.
+                </p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Sicherheit &amp; Compliance</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Skalierbarkeit &amp; Flexibilität</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Kosteneffizienz</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Benefits Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              Warum Managed Infrastructure?
+              Unsere Vorteile
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Konzentrieren Sie sich auf Ihr Kerngeschäft, während wir Ihre IT-Infrastruktur optimieren

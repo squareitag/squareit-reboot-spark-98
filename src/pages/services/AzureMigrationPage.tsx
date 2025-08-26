@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cloud, Server, Database, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import azureMigrationImage from "@/assets/azure-migration-hero.jpg";
 
 const AzureMigrationPage = () => {
   const services = [
@@ -52,8 +53,52 @@ const AzureMigrationPage = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Content Section with Image */}
       <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={azureMigrationImage} 
+                alt="Azure Migration Services" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">
+                Azure Migration Expertise
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Als Microsoft Gold Partner begleiten wir Sie bei der sicheren Migration Ihrer Infrastruktur 
+                  in die Azure Cloud. Von der Bestandsaufnahme bis zum Go-Live.
+                </p>
+                <p>
+                  Wir sorgen für eine sichere und kostenoptimierte Migration ohne Betriebsunterbrechungen. 
+                  Profitieren Sie von unserer langjährigen Azure-Erfahrung.
+                </p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Azure Readiness Assessment</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Hybrid Cloud Architekturen</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Cost Optimization &amp; Monitoring</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">
             Azure Migration Services

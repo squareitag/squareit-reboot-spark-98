@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Network, Wifi, Shield, Settings, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import managedNetworkImage from "@/assets/managed-network-hero.jpg";
 
 const ManagedNetworkPage = () => {
   const services = [
@@ -63,8 +64,8 @@ const ManagedNetworkPage = () => {
               Managed Network
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Professionelle Netzwerk-Verwaltung für optimale Konnektivität und Sicherheit. 
-              Von der Infrastruktur bis zur Überwachung - wir sorgen für stabile Verbindungen.
+              Erfahren Sie, wie unsere führenden Managed Network Services Ihre Unternehmenskommunikation optimieren, 
+              die Netzwerksicherheit erhöhen und eine reibungslose digitale Infrastruktur gewährleisten.
             </p>
           </div>
         </div>

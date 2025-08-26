@@ -3,31 +3,32 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Database, Shield, Clock, RefreshCw, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import managedBackupImage from "@/assets/managed-backup-hero.jpg";
 
 const ManagedBackupPage = () => {
   const services = [
     {
-      name: "Microsoft 365 Backup",
-      description: "Professionelle Sicherung aller Microsoft 365 Daten und Services",
-      features: ["Exchange Online", "SharePoint Online", "OneDrive for Business", "Microsoft Teams"],
-      category: "Cloud Backup"
+      name: "Kundenspezifische Backup-Strategien",
+      description: "Maßgeschneiderte Backup-Lösungen für Ihre spezifischen Anforderungen",
+      features: ["IT-Infrastruktur Analyse", "Datenressourcen Bewertung", "Wiederherstellungsziele", "Maßgeschneiderte Lösung"],
+      category: "Strategy"
     },
     {
-      name: "Server Backup",
-      description: "Umfassende Sicherung von Server-Systemen und Anwendungen",
-      features: ["Windows Server", "Linux Server", "SQL Databases", "File Servers"],
-      category: "Infrastructure"
+      name: "Schnelle Wiederherstellung",
+      description: "Effiziente Wiederherstellungsprozesse minimieren Ausfallzeiten",
+      features: ["Minimale Ausfallzeiten", "Effizienter Prozess", "Reibungsloser Betrieb", "Sofortige Verfügbarkeit"],
+      category: "Recovery"
     },
     {
-      name: "Endpoint Backup",
-      description: "Sicherung von Arbeitsplatz-Computern und mobilen Geräten",
-      features: ["Desktop Backup", "Laptop Backup", "Mobile Devices", "User Data Protection"],
-      category: "Endpoint"
+      name: "Automatisierte Backups",
+      description: "Regelmäßige automatisierte Backup-Pläne für kontinuierlichen Schutz",
+      features: ["Automatisierte Pläne", "Regelmäßige Ausführung", "Kontinuierlicher Schutz", "Minimales Risiko"],
+      category: "Automation"
     },
     {
-      name: "Backup Monitoring",
-      description: "Kontinuierliche Überwachung und Reporting der Backup-Prozesse",
-      features: ["24/7 Monitoring", "Backup Verification", "Failure Alerts", "Compliance Reports"],
+      name: "Überwachung und Verwaltung",
+      description: "Kontinuierliche Überwachung des Backup-Status und Tests",
+      features: ["Status Monitoring", "Wiederherstellungstest", "Ordnungsgemäße Funktion", "Notfall-Bereitschaft"],
       category: "Monitoring"
     }
   ];
@@ -35,18 +36,18 @@ const ManagedBackupPage = () => {
   const benefits = [
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Datensicherheit",
-      description: "Höchste Sicherheitsstandards für Ihre kritischen Geschäftsdaten"
+      title: "Verschlüsselt",
+      description: "Moderne Verschlüsselungstechnologien schützen Ihre sensiblen Daten"
     },
     {
       icon: <Clock className="w-6 h-6" />,
-      title: "Schnelle Recovery",
-      description: "Minimale Ausfallzeiten durch optimierte Wiederherstellungsverfahren"
+      title: "Schnelle Wiederherstellung", 
+      description: "Effiziente Wiederherstellungsprozesse minimieren Ausfallzeiten"
     },
     {
       icon: <RefreshCw className="w-6 h-6" />,
-      title: "Automatisierte Backups",
-      description: "Vollautomatische Sicherung ohne manuellen Aufwand"
+      title: "In der Schweiz",
+      description: "Lokale Datenhaltung nach Schweizer Datenschutzstandards"
     }
   ];
 
@@ -63,8 +64,9 @@ const ManagedBackupPage = () => {
               Managed Backup
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Professionelle Datensicherung und -wiederherstellung für maximalen Schutz Ihrer Geschäftsdaten. 
-              Von Cloud-Services bis zur lokalen Infrastruktur - wir sichern alles ab.
+              Erfahren Sie, wie unsere erstklassigen Managed Backup Services Ihre wertvollen Daten schützen 
+              und Ihr Unternehmen vor Datenverlust bewahren können. Bei Square IT verstehen wir die wesentliche 
+              Rolle zuverlässiger Backups für den Geschäftsbetrieb.
             </p>
           </div>
         </div>

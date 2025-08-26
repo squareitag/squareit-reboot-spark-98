@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { FileText, Users, Share2, MessageSquare, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import sharePointTeamsImage from "@/assets/sharepoint-teams-hero.jpg";
 
 const SharePointTeamsMigrationPage = () => {
   const services = [
@@ -52,8 +53,52 @@ const SharePointTeamsMigrationPage = () => {
         </div>
       </section>
 
-      {/* Services Grid */}
+      {/* Content Section with Image */}
       <section className="py-20">
+        <div className="container mx-auto px-4">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div className="animate-fade-in">
+              <img 
+                src={sharePointTeamsImage} 
+                alt="SharePoint and Teams Migration" 
+                className="rounded-lg shadow-elegant w-full h-auto"
+              />
+            </div>
+            <div className="animate-slide-up">
+              <h2 className="text-4xl font-bold mb-6">
+                Moderne Collaboration Migration
+              </h2>
+              <div className="space-y-4 text-muted-foreground">
+                <p>
+                  Migrieren Sie zu SharePoint Online und Microsoft Teams für optimale Zusammenarbeit. 
+                  Wir sorgen für eine nahtlose Übertragung Ihrer Daten und Workflows.
+                </p>
+                <p>
+                  Von der Dokumentenstruktur bis zu Team-Channels - wir migrieren Ihre gesamte 
+                  Collaboration-Umgebung professionell und sicher.
+                </p>
+              </div>
+              <div className="mt-8 space-y-4">
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Dokumentenstruktur-Analyse</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>Teams-Architektur Design</span>
+                </div>
+                <div className="flex items-center">
+                  <ArrowRight className="w-5 h-5 text-primary mr-3" />
+                  <span>User Adoption Training</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Services Grid */}
+      <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">
             SharePoint &amp; Teams Migration Services
