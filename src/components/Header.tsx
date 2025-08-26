@@ -49,17 +49,82 @@ const Header = () => {
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/managed-services" className="w-full cursor-pointer">
-                    Managed Services
+                    Managed Services →
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-infrastructure" className="w-full cursor-pointer pl-6">
+                    Managed Infrastructure
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-workplace" className="w-full cursor-pointer pl-6">
+                    Managed Workplace
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-servers" className="w-full cursor-pointer pl-6">
+                    Managed Servers
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-network" className="w-full cursor-pointer pl-6">
+                    Managed Network
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/managed-backup" className="w-full cursor-pointer pl-6">
+                    Managed Backup
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/migration" className="w-full cursor-pointer">
-                    Migration
+                    Migration →
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/m365-migration" className="w-full cursor-pointer pl-6">
+                    M365 Migration
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/azure-migration" className="w-full cursor-pointer pl-6">
+                    Azure Migration
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/sharepoint-teams-migration" className="w-full cursor-pointer pl-6">
+                    SharePoint & Teams Migration
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/consulting" className="w-full cursor-pointer">
-                    Consulting
+                    Consulting →
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/modern-workplace" className="w-full cursor-pointer pl-6">
+                    Modern Workplace
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/cloud-security" className="w-full cursor-pointer pl-6">
+                    Cloud Security
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/collaboration" className="w-full cursor-pointer pl-6">
+                    Collaboration
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/teams-telephone" className="w-full cursor-pointer pl-6">
+                    Teams Telephone
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/services/workshop" className="w-full cursor-pointer pl-6">
+                    Workshop
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -182,27 +247,130 @@ const Header = () => {
                   >
                     Alle Dienstleistungen
                   </Link>
-                  <Link
-                    to="/services/managed-services"
-                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Managed Services
-                  </Link>
-                  <Link
-                    to="/services/migration"
-                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Migration
-                  </Link>
-                  <Link
-                    to="/services/consulting"
-                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    Consulting
-                  </Link>
+                  <div className="py-1">
+                    <Link
+                      to="/services/managed-services"
+                      className="block py-1 text-sm text-muted-foreground hover:text-primary font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Managed Services
+                    </Link>
+                    <div className="pl-4 space-y-1">
+                      <Link
+                        to="/services/managed-infrastructure"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Managed Infrastructure
+                      </Link>
+                      <Link
+                        to="/services/managed-workplace"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Managed Workplace
+                      </Link>
+                      <Link
+                        to="/services/managed-servers"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Managed Servers
+                      </Link>
+                      <Link
+                        to="/services/managed-network"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Managed Network
+                      </Link>
+                      <Link
+                        to="/services/managed-backup"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Managed Backup
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="py-1">
+                    <Link
+                      to="/services/migration"
+                      className="block py-1 text-sm text-muted-foreground hover:text-primary font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Migration
+                    </Link>
+                    <div className="pl-4 space-y-1">
+                      <Link
+                        to="/services/m365-migration"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        M365 Migration
+                      </Link>
+                      <Link
+                        to="/services/azure-migration"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Azure Migration
+                      </Link>
+                      <Link
+                        to="/services/sharepoint-teams-migration"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        SharePoint & Teams Migration
+                      </Link>
+                    </div>
+                  </div>
+                  <div className="py-1">
+                    <Link
+                      to="/services/consulting"
+                      className="block py-1 text-sm text-muted-foreground hover:text-primary font-medium"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      Consulting
+                    </Link>
+                    <div className="pl-4 space-y-1">
+                      <Link
+                        to="/services/modern-workplace"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Modern Workplace
+                      </Link>
+                      <Link
+                        to="/services/cloud-security"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Cloud Security
+                      </Link>
+                      <Link
+                        to="/services/collaboration"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Collaboration
+                      </Link>
+                      <Link
+                        to="/services/teams-telephone"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Teams Telephone
+                      </Link>
+                      <Link
+                        to="/services/workshop"
+                        className="block py-1 text-xs text-muted-foreground hover:text-primary"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        Workshop
+                      </Link>
+                    </div>
+                  </div>
                   <Link
                     to="/services/support"
                     className="block py-1 text-sm text-muted-foreground hover:text-primary"
