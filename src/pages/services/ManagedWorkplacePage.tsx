@@ -3,7 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Laptop, Shield, Users, Settings, CheckCircle, ArrowRight, Monitor, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
-import managedWorkplaceHero from "@/assets/managed-workplace-hero.jpg";
+import managedWorkplaceHero from "@/assets/managed-workplace.jpg";
 
 const ManagedWorkplacePage = () => {
   const services = [
