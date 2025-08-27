@@ -1,14 +1,14 @@
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
+import { Mail, Phone, MapPin, Clock, MessageSquare, ExternalLink } from "lucide-react";
 
 const ContactPage = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -16,41 +16,40 @@ const ContactPage = () => {
     service: "",
     message: ""
   });
-  const { toast } = useToast();
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     toast({
       title: "Nachricht gesendet!",
-      description: "Vielen Dank für Ihre Anfrage. Wir melden uns innerhalb von 24 Stunden bei Ihnen.",
+      description: "Vielen Dank für Ihre Nachricht. Wir melden uns bald bei Ihnen.",
     });
     setFormData({ name: "", email: "", company: "", service: "", message: "" });
   };
 
   const contactInfo = [
     {
-      icon: <Mail className="w-6 h-6" />,
-      title: "E-Mail",
-      info: "hello@squareit.ch",
-      link: "mailto:hello@squareit.ch"
-    },
-    {
-      icon: <Phone className="w-6 h-6" />,
+      icon: Phone,
       title: "Telefon",
       info: "+41 41 560 21 00",
       link: "tel:+41415602100"
     },
     {
-      icon: <MapPin className="w-6 h-6" />,
-      title: "Adresse",
-      info: "Alpenstrasse 12, 6300 Zug",
-      link: null
+      icon: Mail,
+      title: "E-Mail",
+      info: "hello@squareit.ch",
+      link: "mailto:hello@squareit.ch"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Öffnungszeiten",
-      info: "Mo-Fr: 08:00-12:00 / 13:00-17:00",
-      link: null
+      icon: MapPin,
+      title: "Adresse",
+      info: "Square IT AG, Alpenstrasse 12, 6300 Zug",
+      link: "https://maps.google.com"
+    },
+    {
+      icon: Clock,
+      title: "Meeting",
+      info: "Termin vereinbaren",
+      link: "https://outlook.office365.com/owa/calendar/TerminBuchung@squareit.ch/bookings/"
     }
   ];
 
@@ -61,143 +60,189 @@ const ContactPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Kontakt
+              Kontaktiere uns
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Haben Sie Fragen oder benötigen Sie Unterstützung? Unser Expertenteam 
-              steht Ihnen gerne zur Verfügung. Kontaktieren Sie uns noch heute!
+              Vielen Dank für Ihren Besuch auf unserer Website! Wir freuen uns über Ihr Interesse 
+              an unseren IT-Dienstleistungen. Bei Fragen, Informationsbedarf oder individuellen 
+              Angeboten sind wir gerne für Sie da.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Contact Form & Info */}
+      {/* Contact Form and Info */}
       <section className="py-20">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Contact Form */}
-            <div className="lg:col-span-2">
-              <Card className="shadow-card">
+          <div className="max-w-6xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+              
+              {/* Contact Form */}
+              <Card className="animate-scale-in">
                 <CardHeader>
-                  <CardTitle className="text-2xl">Senden Sie uns eine Nachricht</CardTitle>
+                  <CardTitle className="text-2xl">Kontaktformular</CardTitle>
                   <CardDescription>
-                    Füllen Sie das Formular aus und wir melden uns innerhalb von 24 Stunden bei Ihnen.
+                    Kontaktieren Sie uns einfach über das Formular. Wir freuen uns auf Ihre Nachricht.
                   </CardDescription>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-6">
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                      <div className="space-y-2">
-                        <Label htmlFor="name">Name *</Label>
+                      <div>
+                        <label htmlFor="name" className="block text-sm font-medium mb-2">
+                          Name *
+                        </label>
                         <Input
                           id="name"
                           value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                          onChange={(e) => setFormData({...formData, name: e.target.value})}
                           required
                         />
                       </div>
-                      <div className="space-y-2">
-                        <Label htmlFor="email">E-Mail *</Label>
+                      <div>
+                        <label htmlFor="email" className="block text-sm font-medium mb-2">
+                          E-Mail *
+                        </label>
                         <Input
                           id="email"
                           type="email"
                           value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                          onChange={(e) => setFormData({...formData, email: e.target.value})}
                           required
                         />
                       </div>
                     </div>
-
-                    <div className="space-y-2">
-                      <Label htmlFor="company">Unternehmen</Label>
+                    
+                    <div>
+                      <label htmlFor="company" className="block text-sm font-medium mb-2">
+                        Firma
+                      </label>
                       <Input
                         id="company"
                         value={formData.company}
-                        onChange={(e) => setFormData({ ...formData, company: e.target.value })}
+                        onChange={(e) => setFormData({...formData, company: e.target.value})}
                       />
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="service">Interessiert an</Label>
-                      <Select value={formData.service} onValueChange={(value) => setFormData({ ...formData, service: value })}>
+                    <div>
+                      <label htmlFor="service" className="block text-sm font-medium mb-2">
+                        Interessanter Service
+                      </label>
+                      <Select onValueChange={(value) => setFormData({...formData, service: value})}>
                         <SelectTrigger>
                           <SelectValue placeholder="Service auswählen" />
                         </SelectTrigger>
                         <SelectContent>
                           <SelectItem value="managed-services">Managed Services</SelectItem>
-                          <SelectItem value="migration">Cloud Migration</SelectItem>
-                          <SelectItem value="consulting">IT Consulting</SelectItem>
+                          <SelectItem value="migration">Migration</SelectItem>
+                          <SelectItem value="consulting">Consulting</SelectItem>
                           <SelectItem value="support">Support</SelectItem>
-                          <SelectItem value="other">Sonstiges</SelectItem>
+                          <SelectItem value="other">Andere</SelectItem>
                         </SelectContent>
                       </Select>
                     </div>
 
-                    <div className="space-y-2">
-                      <Label htmlFor="message">Nachricht *</Label>
+                    <div>
+                      <label htmlFor="message" className="block text-sm font-medium mb-2">
+                        Nachricht *
+                      </label>
                       <Textarea
                         id="message"
-                        rows={5}
+                        rows={6}
                         value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        placeholder="Beschreiben Sie Ihre Anforderungen..."
+                        onChange={(e) => setFormData({...formData, message: e.target.value})}
                         required
                       />
                     </div>
 
-                    <Button type="submit" size="lg" className="w-full gradient-primary text-white">
-                      <Send className="w-4 h-4 mr-2" />
+                    <Button type="submit" size="lg" className="w-full gradient-primary text-white shadow-glow">
                       Nachricht senden
                     </Button>
                   </form>
                 </CardContent>
               </Card>
-            </div>
 
-            {/* Contact Info */}
-            <div className="space-y-6">
-              <Card className="shadow-card">
-                <CardHeader>
-                  <CardTitle>Kontaktinformationen</CardTitle>
-                </CardHeader>
-                <CardContent className="space-y-6">
-                  {contactInfo.map((item, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 gradient-hero rounded-lg flex items-center justify-center text-white flex-shrink-0">
-                        {item.icon}
+              {/* Contact Information */}
+              <div className="space-y-6">
+                {contactInfo.map((contact, index) => (
+                  <Card key={index} className="hover:shadow-elegant transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                    <CardContent className="flex items-center p-6">
+                      <div className="w-12 h-12 gradient-hero rounded-xl flex items-center justify-center text-white mr-4">
+                        <contact.icon className="w-6 h-6" />
                       </div>
-                      <div>
-                        <h3 className="font-semibold mb-1">{item.title}</h3>
-                        {item.link ? (
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-lg">{contact.title}</h3>
+                        {contact.link ? (
                           <a 
-                            href={item.link}
-                            className="text-muted-foreground hover:text-primary transition-colors"
+                            href={contact.link} 
+                            className="text-muted-foreground hover:text-primary transition-colors flex items-center"
+                            target={contact.link.startsWith('http') ? '_blank' : undefined}
+                            rel={contact.link.startsWith('http') ? 'noopener noreferrer' : undefined}
                           >
-                            {item.info}
+                            {contact.info}
+                            {contact.link.startsWith('http') && <ExternalLink className="w-4 h-4 ml-1" />}
                           </a>
                         ) : (
-                          <p className="text-muted-foreground">{item.info}</p>
+                          <p className="text-muted-foreground">{contact.info}</p>
                         )}
                       </div>
-                    </div>
-                  ))}
-                </CardContent>
-              </Card>
+                    </CardContent>
+                  </Card>
+                ))}
 
-              <Card className="gradient-hero text-white">
-                <CardContent className="p-6">
-                  <h3 className="text-xl font-semibold mb-4">
-                    Kostenlose Erstberatung
-                  </h3>
-                  <p className="text-white/90 mb-4">
-                    Vereinbaren Sie einen Termin für eine unverbindliche 
-                    Analyse Ihrer IT-Infrastruktur.
-                  </p>
-                  <Button variant="outline" className="bg-white text-primary hover:bg-white/90 w-full">
-                    Termin vereinbaren
-                  </Button>
-                </CardContent>
-              </Card>
+                {/* Additional Support Options */}
+                <Card className="animate-scale-in" style={{ animationDelay: "0.4s" }}>
+                  <CardHeader>
+                    <CardTitle className="flex items-center">
+                      <MessageSquare className="w-6 h-6 mr-3 text-primary" />
+                      Weitere Support-Optionen
+                    </CardTitle>
+                  </CardHeader>
+                  <CardContent className="space-y-4">
+                    <div>
+                      <h4 className="font-medium mb-2">Remote-Unterstützung</h4>
+                      <a 
+                        href="https://custom.teamviewer.com/squareitsupport" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline flex items-center"
+                      >
+                        Portal Link <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
+                    </div>
+                    <div>
+                      <h4 className="font-medium mb-2">Support-Portal</h4>
+                      <a 
+                        href="https://sqit.atlassian.net/servicedesk/customer/portals" 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="text-primary hover:underline flex items-center"
+                      >
+                        Portal Link <ExternalLink className="w-4 h-4 ml-1" />
+                      </a>
+                    </div>
+                  </CardContent>
+                </Card>
+
+                {/* Free Consultation */}
+                <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 animate-scale-in" style={{ animationDelay: "0.5s" }}>
+                  <CardHeader>
+                    <CardTitle className="text-primary">Kostenlose Erstberatung</CardTitle>
+                    <CardDescription>
+                      Nutzen Sie unsere kostenlose Erstberatung und lassen Sie sich 
+                      unverbindlich über unsere IT-Services informieren.
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent>
+                    <Button variant="outline" className="w-full" asChild>
+                      <a href="https://outlook.office365.com/owa/calendar/TerminBuchung@squareit.ch/bookings/" target="_blank" rel="noopener noreferrer">
+                        Beratungstermin buchen
+                        <ExternalLink className="w-4 h-4 ml-2" />
+                      </a>
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
         </div>
@@ -206,24 +251,20 @@ const ContactPage = () => {
       {/* Map Section */}
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold mb-6">
-              Unser Standort
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              Besuchen Sie uns in unserem Büro in Zug
-            </p>
+          <div className="max-w-4xl mx-auto text-center">
+            <h2 className="text-3xl font-bold mb-8">Unser Standort</h2>
+            <Card className="animate-scale-in">
+              <CardContent className="p-0">
+                <div className="aspect-video bg-muted flex items-center justify-center rounded-lg">
+                  <div className="text-center">
+                    <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
+                    <h3 className="text-xl font-semibold mb-2">Square IT AG</h3>
+                    <p className="text-muted-foreground">Alpenstrasse 12, 6300 Zug</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-
-          <Card className="overflow-hidden shadow-card">
-            <div className="aspect-video bg-secondary/50 flex items-center justify-center">
-              <div className="text-center">
-                <MapPin className="w-12 h-12 text-primary mx-auto mb-4" />
-                <h3 className="text-xl font-semibold mb-2">Square IT AG</h3>
-                <p className="text-muted-foreground">Alpenstrasse 12, 6300 Zug</p>
-              </div>
-            </div>
-          </Card>
         </div>
       </section>
     </div>
