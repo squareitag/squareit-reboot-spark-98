@@ -26,7 +26,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
-import SquareITLogo from "./SquareITLogo";
+import squareItLogo from "@/assets/square-it-logo.png";
 
 const ModernHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -41,11 +41,11 @@ const ModernHeader = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-3">
-            <SquareITLogo className="h-10 w-10" />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-foreground">Square IT</span>
-              <span className="text-xs text-muted-foreground hidden sm:block">AG</span>
-            </div>
+            <img 
+              src={squareItLogo} 
+              alt="Square IT AG" 
+              className="h-10 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Navigation */}

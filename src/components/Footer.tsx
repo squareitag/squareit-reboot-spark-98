@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import SquareITLogo from "./SquareITLogo";
+import squareItLogo from "@/assets/square-it-logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -13,8 +13,11 @@ const Footer = () => {
           {/* Company Info */}
           <div className="space-y-4">
             <Link to="/" className="flex items-center space-x-3">
-              <SquareITLogo className="h-8 w-8" />
-              <span className="text-xl font-bold">Square IT</span>
+              <img 
+                src={squareItLogo} 
+                alt="Square IT AG" 
+                className="h-8 w-auto object-contain"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
               Beste Service- und Lösungsangebote für Ihre IT-Infrastruktur.
