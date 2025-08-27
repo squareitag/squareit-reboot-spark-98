@@ -52,6 +52,8 @@ export function AppSidebar() {
     technologies: false,
   });
 
+  const collapsed = state === 'collapsed';
+  
   const isActive = (path: string) => currentPath === path;
   const getNavCls = ({ isActive }: { isActive: boolean }) =>
     isActive ? "bg-primary text-primary-foreground font-medium" : "hover:bg-muted/80";
@@ -111,13 +113,12 @@ export function AppSidebar() {
     { title: "Keeper", url: "/technologies/keeper", icon: Shield },
   ];
 
+  // Calculate expanded states
   const isServicesExpanded = expandedGroups.services || serviceGroups.some(group => 
     group.items.some(item => isActive(item.url))
   );
 
   const isTechnologiesExpanded = expandedGroups.technologies || technologyItems.some(item => isActive(item.url));
-
-  const collapsed = state === 'collapsed';
 
   return (
     <Sidebar className={collapsed ? "w-16" : "w-80"} collapsible="icon">
