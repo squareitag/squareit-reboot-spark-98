@@ -12,11 +12,11 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <Link to="/" className="flex items-center space-x-3">
+            <Link to="/" className="flex items-center">
               <img 
-                src={squareItLogo} 
+                src="/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png" 
                 alt="Square IT AG" 
-                className="h-8 w-auto object-contain"
+                className="h-10 w-auto object-contain"
               />
             </Link>
             <p className="text-sm text-muted-foreground">

@@ -40,11 +40,11 @@ const ModernHeader = () => {
       <div className="container mx-auto px-4">
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="flex items-center space-x-3">
+          <Link to="/" className="flex items-center space-x-2">
             <img 
-              src={squareItLogo} 
+              src="/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png" 
               alt="Square IT AG" 
-              className="h-10 w-auto object-contain"
+              className="h-12 w-auto object-contain"
             />
           </Link>
 
