@@ -292,8 +292,8 @@ const ModernHeader = () => {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="lg:hidden py-4 border-t border-border animate-fade-in">
-            <nav className="flex flex-col space-y-2">
+          <div className="lg:hidden py-4 border-t border-border animate-fade-in bg-background">
+            <nav className="flex flex-col space-y-2 max-h-96 overflow-y-auto">
               <Link
                 to="/about"
                 className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
@@ -309,35 +309,218 @@ const ModernHeader = () => {
               
               {/* Mobile Services */}
               <div className="px-3 py-2">
-                <div className="flex items-center space-x-2 text-sm font-medium text-muted-foreground mb-2">
+                <div className="flex items-center space-x-2 text-sm font-medium text-foreground mb-3">
                   <Wrench className="w-4 h-4" />
                   <span>{t('nav.services')}</span>
                 </div>
-                <div className="pl-6 space-y-1">
+                <div className="space-y-1">
                   <Link
                     to="/services"
-                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    className="block py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('nav.all_services')}
                   </Link>
-                  {/* Add more mobile service links here if needed */}
+                  
+                  {/* Managed Services */}
+                  <div className="pl-4">
+                    <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">{t('nav.managed_services')}</div>
+                    <Link
+                      to="/services/managed-infrastructure"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Server className="w-3 h-3" />
+                      <span>{t('nav.managed_infrastructure')}</span>
+                    </Link>
+                    <Link
+                      to="/services/managed-workplace"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Laptop className="w-3 h-3" />
+                      <span>{t('nav.managed_workplace')}</span>
+                    </Link>
+                    <Link
+                      to="/services/managed-servers"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Database className="w-3 h-3" />
+                      <span>{t('nav.managed_servers')}</span>
+                    </Link>
+                    <Link
+                      to="/services/managed-network"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Network className="w-3 h-3" />
+                      <span>{t('nav.managed_network')}</span>
+                    </Link>
+                    <Link
+                      to="/services/managed-backup"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <HardDrive className="w-3 h-3" />
+                      <span>{t('nav.managed_backup')}</span>
+                    </Link>
+                  </div>
+
+                  {/* Migration Services */}
+                  <div className="pl-4 mt-2">
+                    <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">{t('nav.migration')}</div>
+                    <Link
+                      to="/services/m365-migration"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Cloud className="w-3 h-3" />
+                      <span>{t('nav.m365_migration')}</span>
+                    </Link>
+                    <Link
+                      to="/services/azure-migration"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Cloud className="w-3 h-3" />
+                      <span>{t('nav.azure_migration')}</span>
+                    </Link>
+                    <Link
+                      to="/services/sharepoint-teams-migration"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Users className="w-3 h-3" />
+                      <span>{t('nav.sharepoint_teams_migration')}</span>
+                    </Link>
+                  </div>
+
+                  {/* Consulting Services */}
+                  <div className="pl-4 mt-2">
+                    <div className="text-xs font-semibold text-muted-foreground mb-2 px-2">{t('nav.consulting')}</div>
+                    <Link
+                      to="/services/modern-workplace"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Laptop className="w-3 h-3" />
+                      <span>{t('nav.modern_workplace')}</span>
+                    </Link>
+                    <Link
+                      to="/services/cloud-security"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Shield className="w-3 h-3" />
+                      <span>{t('nav.cloud_security')}</span>
+                    </Link>
+                    <Link
+                      to="/services/collaboration"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Users className="w-3 h-3" />
+                      <span>{t('nav.collaboration')}</span>
+                    </Link>
+                    <Link
+                      to="/services/teams-telephone"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Phone className="w-3 h-3" />
+                      <span>{t('nav.teams_telephone')}</span>
+                    </Link>
+                    <Link
+                      to="/services/workshop"
+                      className="flex items-center space-x-2 py-1 px-2 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      <Target className="w-3 h-3" />
+                      <span>{t('nav.workshop')}</span>
+                    </Link>
+                  </div>
+
+                  <Link
+                    to="/services/support"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Headphones className="w-4 h-4" />
+                    <span>{t('nav.support')}</span>
+                  </Link>
                 </div>
               </div>
               
               {/* Mobile Technologies */}
               <div className="px-3 py-2">
-                <div className="flex items-center space-x-2 text-sm font-medium text-muted-foreground mb-2">
+                <div className="flex items-center space-x-2 text-sm font-medium text-foreground mb-3">
                   <Monitor className="w-4 h-4" />
                   <span>{t('nav.technologies')}</span>
                 </div>
-                <div className="pl-6 space-y-1">
+                <div className="space-y-1">
                   <Link
                     to="/technologies"
-                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    className="block py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     {t('nav.all_technologies')}
+                  </Link>
+                  <Link
+                    to="/technologies/microsoft-365"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Cloud className="w-3 h-3" />
+                    <span>Microsoft 365</span>
+                  </Link>
+                  <Link
+                    to="/technologies/microsoft-azure"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Cloud className="w-3 h-3" />
+                    <span>Microsoft Azure</span>
+                  </Link>
+                  <Link
+                    to="/technologies/avepoint-backup"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <HardDrive className="w-3 h-3" />
+                    <span>AvePoint Backup</span>
+                  </Link>
+                  <Link
+                    to="/technologies/cato-networks"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Network className="w-3 h-3" />
+                    <span>Cato Networks</span>
+                  </Link>
+                  <Link
+                    to="/technologies/printix"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <FileText className="w-3 h-3" />
+                    <span>Printix</span>
+                  </Link>
+                  <Link
+                    to="/technologies/peoplefone"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Phone className="w-3 h-3" />
+                    <span>Peoplefone</span>
+                  </Link>
+                  <Link
+                    to="/technologies/keeper"
+                    className="flex items-center space-x-2 py-1 px-4 text-xs text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Shield className="w-3 h-3" />
+                    <span>Keeper</span>
                   </Link>
                 </div>
               </div>
