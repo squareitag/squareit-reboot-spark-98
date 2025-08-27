@@ -4,10 +4,12 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigge
 import { Menu, X, Phone, ChevronDown } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const { t } = useLanguage();
 
   const isActive = (path: string) => location.pathname === path;
 
@@ -31,7 +33,7 @@ const Header = () => {
                 isActive("/about") ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              Über uns
+              {t('nav.about')}
             </Link>
             
             {/* Services Dropdown */}
@@ -39,23 +41,23 @@ const Header = () => {
               <DropdownMenuTrigger className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
                 location.pathname.startsWith("/services") ? "text-primary" : "text-muted-foreground"
               }`}>
-                <span>Dienstleistungen</span>
+                <span>{t('nav.services')}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
                 <DropdownMenuItem asChild>
                   <Link to="/services" className="w-full cursor-pointer">
-                    Alle Dienstleistungen
+                    {t('nav.all_services')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/managed-services" className="w-full cursor-pointer">
-                    Managed Services →
+                    {t('nav.managed_services')} →
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
                   <Link to="/services/managed-infrastructure" className="w-full cursor-pointer pl-6">
-                    Managed Infrastructure
+                    {t('nav.managed_infrastructure')}
                   </Link>
                 </DropdownMenuItem>
                 <DropdownMenuItem asChild>
@@ -141,7 +143,7 @@ const Header = () => {
               <DropdownMenuTrigger className={`flex items-center space-x-1 text-sm font-medium transition-colors hover:text-primary ${
                 location.pathname.startsWith("/technologies") ? "text-primary" : "text-muted-foreground"
               }`}>
-                <span>Technologien</span>
+                <span>{t('nav.technologies')}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
@@ -194,7 +196,7 @@ const Header = () => {
                 isActive("/contact") ? "text-primary" : "text-muted-foreground"
               }`}
             >
-              Kontakt
+              {t('nav.contact')}
             </Link>
           </nav>
 

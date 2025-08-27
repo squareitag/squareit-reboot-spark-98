@@ -3,51 +3,54 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, Cloud, Shield, Monitor, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import managedInfrastructureImage from "@/assets/managed-infrastructure-hero.jpg";
 
 const ManagedInfrastructurePage = () => {
+  const { t } = useLanguage();
+
   const services = [
     {
-      name: "Server Management",
-      description: "Vollständige Verwaltung Ihrer Server-Infrastruktur",
-      features: ["24/7 Monitoring", "Patch Management", "Performance Optimization", "Backup & Recovery"],
-      category: "Infrastructure"
+      name: t('infrastructure.server_management'),
+      description: t('infrastructure.server_description'),
+      features: [t('features.24_7_monitoring'), t('features.patch_management'), t('features.performance_optimization'), t('features.backup_recovery')],
+      category: t('category.infrastructure')
     },
     {
-      name: "Cloud Infrastructure",
-      description: "Verwaltung und Optimierung Ihrer Cloud-Umgebung",
-      features: ["Azure Management", "Cost Optimization", "Security Compliance", "Disaster Recovery"],
-      category: "Cloud"
+      name: t('infrastructure.cloud_infrastructure'),
+      description: t('infrastructure.cloud_description'),
+      features: [t('features.azure_management'), t('features.cost_optimization'), t('features.security_compliance'), t('features.disaster_recovery')],
+      category: t('category.cloud')
     },
     {
-      name: "Network Infrastructure",
-      description: "Professionelle Netzwerk-Administration und -Überwachung",
-      features: ["Network Monitoring", "Firewall Management", "VPN Setup", "Performance Analysis"],
-      category: "Network"
+      name: t('infrastructure.network_infrastructure'),
+      description: t('infrastructure.network_description'),
+      features: [t('features.network_monitoring'), t('features.firewall_management'), t('features.vpn_setup'), t('features.performance_analysis')],
+      category: t('category.network')
     },
     {
-      name: "Storage Management",
-      description: "Sichere und effiziente Speicherlösungen",
-      features: ["Storage Optimization", "Data Backup", "Archive Solutions", "Capacity Planning"],
-      category: "Storage"
+      name: t('infrastructure.storage_management'),
+      description: t('infrastructure.storage_description'),
+      features: [t('features.storage_optimization'), t('features.data_backup'), t('features.archive_solutions'), t('features.capacity_planning')],
+      category: t('category.storage')
     }
   ];
 
   const benefits = [
     {
       icon: <Monitor className="w-6 h-6" />,
-      title: "24/7 Überwachung",
-      description: "Kontinuierliche Überwachung Ihrer gesamten IT-Infrastruktur"
+      title: t('infrastructure.24_7_monitoring'),
+      description: t('infrastructure.monitoring_description')
     },
     {
       icon: <Shield className="w-6 h-6" />,
-      title: "Proaktive Wartung",
-      description: "Vorbeugende Maßnahmen zur Vermeidung von Ausfällen"
+      title: t('infrastructure.proactive_maintenance'),
+      description: t('infrastructure.maintenance_description')
     },
     {
       icon: <Cloud className="w-6 h-6" />,
-      title: "Skalierbarkeit",
-      description: "Flexible Anpassung an Ihre wachsenden Anforderungen"
+      title: t('infrastructure.scalability'),
+      description: t('infrastructure.scalability_description')
     }
   ];
 
@@ -61,12 +64,10 @@ const ManagedInfrastructurePage = () => {
               <Server className="w-10 h-10" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Managed Infrastructure
+              {t('infrastructure.title')}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Unsere Managed Infrastructure-Services bieten Ihnen zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, 
-              verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit. Indem Sie uns die Verwaltung Ihrer 
-              IT-Infrastruktur anvertrauen, profitieren Sie von einem Expertenteam.
+              {t('infrastructure.subtitle')}
             </p>
           </div>
         </div>
@@ -76,7 +77,7 @@ const ManagedInfrastructurePage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">
-            Unsere Infrastructure Services
+            {t('infrastructure.our_services')}
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -117,30 +118,28 @@ const ManagedInfrastructurePage = () => {
             </div>
             <div className="animate-slide-up">
               <h2 className="text-4xl font-bold mb-6">
-                Erhöhte Zuverlässigkeit
+                {t('infrastructure.scalability')}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Unsere Managed Infrastructure Services bieten zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, 
-                  verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit.
+                  {t('infrastructure.process_description')}
                 </p>
                 <p>
-                  Wenn Sie uns Ihre IT-Infrastruktur anvertrauen, erhalten Sie Zugang zu einem Expertenteam, 
-                  das Ihre Systeme proaktiv verwaltet und wartet.
+                  {t('infrastructure.continuous_monitoring')}
                 </p>
               </div>
               <div className="mt-8 space-y-4">
                 <div className="flex items-center">
                   <ArrowRight className="w-5 h-5 text-primary mr-3" />
-                  <span>Sicherheit &amp; Compliance</span>
+                  <span>{t('features.security_compliance')}</span>
                 </div>
                 <div className="flex items-center">
                   <ArrowRight className="w-5 h-5 text-primary mr-3" />
-                  <span>Skalierbarkeit &amp; Flexibilität</span>
+                  <span>{t('infrastructure.scalability')}</span>
                 </div>
                 <div className="flex items-center">
                   <ArrowRight className="w-5 h-5 text-primary mr-3" />
-                  <span>Kosteneffizienz</span>
+                  <span>{t('features.cost_optimization')}</span>
                 </div>
               </div>
             </div>
@@ -153,10 +152,10 @@ const ManagedInfrastructurePage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              Unsere Vorteile
+              {t('infrastructure.our_benefits')}
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Konzentrieren Sie sich auf Ihr Kerngeschäft, während wir Ihre IT-Infrastruktur optimieren
+              {t('infrastructure.focus_description')}
             </p>
           </div>
 
@@ -182,16 +181,14 @@ const ManagedInfrastructurePage = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-4xl font-bold mb-6">
-                Unser Managed Infrastructure Prozess
+                {t('infrastructure.process_title')}
               </h2>
               <div className="space-y-4 text-muted-foreground">
                 <p>
-                  Wir beginnen mit einer umfassenden Analyse Ihrer bestehenden Infrastruktur 
-                  und entwickeln eine massgeschneiderte Strategie für optimales Management.
+                  {t('infrastructure.process_description')}
                 </p>
                 <p>
-                  Durch kontinuierliche Überwachung und proaktive Wartung stellen wir sicher, 
-                  dass Ihre IT-Systeme stets optimal funktionieren und sicher sind.
+                  {t('infrastructure.continuous_monitoring')}
                 </p>
               </div>
               <div className="mt-8 space-y-4">
@@ -211,7 +208,7 @@ const ManagedInfrastructurePage = () => {
               <div className="mt-8">
                 <Button size="lg" className="gradient-primary text-white" asChild>
                   <Link to="/contact">
-                    Infrastructure Beratung
+                    {t('button.infrastructure_consultation')}
                   </Link>
                 </Button>
               </div>
@@ -221,7 +218,7 @@ const ManagedInfrastructurePage = () => {
               <Card className="gradient-hero text-white shadow-elegant">
                 <CardContent className="p-8">
                   <h3 className="text-2xl font-bold mb-6 text-center">
-                    Service Level Agreement
+                    {t('infrastructure.sla_title')}
                   </h3>
                   <ul className="space-y-4">
                     <li className="flex items-center">
@@ -260,20 +257,20 @@ const ManagedInfrastructurePage = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Bereit für professionelles Infrastructure Management?
+            {t('infrastructure.cta_title')}
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Lassen Sie uns Ihre IT-Infrastruktur optimieren und verwalten.
+            {t('infrastructure.cta_description')}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gradient-primary text-white shadow-glow" asChild>
               <Link to="/contact">
-                Kostenlose Beratung
+                {t('button.free_consultation')}
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
               <Link to="/services">
-                Alle Services
+                {t('common.all_services')}
               </Link>
             </Button>
           </div>
