@@ -1,30 +1,61 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Users, Target, Award, Lightbulb } from "lucide-react";
+import { Users, Target, Award, Lightbulb, Shield, Cloud, Headphones } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useLanguage } from "@/contexts/LanguageContext";
 import teamImage from "@/assets/team.jpg";
 
 const AboutPage = () => {
+  const { t } = useLanguage();
+
   const values = [
     {
-      icon: <Target className="w-8 h-8" />,
-      title: "Mission",
-      description: "Wir befähigen Unternehmen durch innovative IT-Lösungen, ihre Ziele zu erreichen und nachhaltiges Wachstum zu erzielen."
+      icon: <Users className="w-8 h-8" />,
+      title: t('about.customer_approach'),
+      description: t('about.customer_description')
     },
     {
       icon: <Lightbulb className="w-8 h-8" />,
-      title: "Vision",
-      description: "Führender Partner für digitale Transformation in der Schweiz und Europa zu sein."
+      title: t('about.innovation_focus'),
+      description: t('about.innovation_description')
     },
     {
       icon: <Award className="w-8 h-8" />,
-      title: "Qualität",
-      description: "Höchste Standards in Service und Technologie sind unser Anspruch an uns selbst."
+      title: t('about.reliability'),
+      description: t('about.reliability_description')
     },
     {
-      icon: <Users className="w-8 h-8" />,
-      title: "Partnerschaft",
-      description: "Langfristige Partnerschaften basierend auf Vertrauen und gegenseitigem Erfolg."
+      icon: <Target className="w-8 h-8" />,
+      title: t('about.strategic_consulting'),
+      description: t('about.consulting_description')
+    },
+    {
+      icon: <Headphones className="w-8 h-8" />,
+      title: t('about.continuous_support'),
+      description: t('about.support_description')
+    },
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: t('about.proven_track'),
+      description: t('about.track_description')
+    }
+  ];
+
+  const processSteps = [
+    {
+      icon: <Shield className="w-8 h-8" />,
+      title: t('about.security_analysis'),
+      description: t('about.security_description')
+    },
+    {
+      icon: <Cloud className="w-8 h-8" />,
+      title: t('about.cloud_integration'),
+      description: t('about.cloud_integration_description')
+    },
+    {
+      icon: <Headphones className="w-8 h-8" />,
+      title: t('about.technical_support'),
+      description: t('about.technical_description')
     }
   ];
 
@@ -34,44 +65,36 @@ const AboutPage = () => {
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <div className="text-6xl font-bold text-primary mb-4">80+</div>
+            <p className="text-lg text-muted-foreground mb-8">{t('about.years_experience')}</p>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Über Square IT
+              {t('about.title')}
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Seit über 15 Jahren entwickeln wir innovative IT-Lösungen für Unternehmen 
-              jeder Größe. Unser Fokus liegt auf nachhaltiger Technologie und 
-              partnerschaftlicher Zusammenarbeit.
+            <p className="text-xl text-muted-foreground leading-relaxed mb-8">
+              {t('about.subtitle')}
             </p>
+            <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg inline-block text-lg font-semibold">
+              IT Lösungen aus einer Hand
+            </div>
           </div>
         </div>
       </section>
 
-      {/* Story Section */}
+      {/* Welcome and Main Content Section */}
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="animate-fade-in">
               <h2 className="text-4xl font-bold mb-6">
-                Unsere Geschichte
+                {t('about.welcome_title')}
               </h2>
               <div className="space-y-4 text-muted-foreground">
-                <p>
-                  Square IT wurde 2009 mit der Vision gegründet, Schweizer Unternehmen 
-                  dabei zu helfen, das volle Potenzial ihrer IT-Infrastruktur auszuschöpfen. 
-                  Was als kleines Team von IT-Enthusiasten begann, ist heute ein 
-                  führender Anbieter von Managed Services und IT-Consulting.
-                </p>
-                <p>
-                  Unsere Reise war geprägt von kontinuierlicher Innovation und dem 
-                  unermüdlichen Streben nach Exzellenz. Wir haben Hunderte von 
-                  erfolgreichen Projekten durchgeführt und dabei stets die 
-                  individuellen Bedürfnisse unserer Kunden in den Mittelpunkt gestellt.
-                </p>
-                <p>
-                  Heute sind wir stolz darauf, mit über 500 zufriedenen Kunden 
-                  zusammenzuarbeiten und ihnen dabei zu helfen, ihre digitalen 
-                  Ziele zu erreichen.
-                </p>
+                <p>{t('about.main_description')}</p>
+                <p>{t('about.cloud_solutions')}</p>
+                <p>{t('about.our_goal')}</p>
+                <div className="mt-6 p-4 bg-primary/10 rounded-lg border-l-4 border-primary">
+                  <p className="font-semibold text-primary">{t('about.tagline')}</p>
+                </div>
               </div>
             </div>
 
@@ -79,26 +102,40 @@ const AboutPage = () => {
               <img 
                 src={teamImage} 
                 alt="Square IT Team" 
-                className="rounded-lg shadow-card"
+                className="rounded-lg shadow-elegant"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Section */}
+      {/* Excellence Section */}
       <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="max-w-4xl mx-auto text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">
+              {t('about.choose_us_title')}
+            </h2>
+            <p className="text-xl text-muted-foreground">
+              {t('about.excellence_commitment')}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Values Section */}
+      <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              Unsere Werte
+              Warum Square IT AG wählen?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
               Diese Prinzipien leiten uns in allem, was wir tun
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
               <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
                 <CardHeader>
@@ -110,6 +147,38 @@ const AboutPage = () => {
                 <CardContent>
                   <CardDescription className="text-center">
                     {value.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Process Section */}
+      <section className="py-20 bg-secondary/30">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold mb-6">
+              {t('about.steps_title')}
+            </h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              {t('about.steps_description')}
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {processSteps.map((step, index) => (
+              <Card key={index} className="text-center hover:shadow-elegant transition-all duration-300 animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+                <CardHeader>
+                  <div className="w-16 h-16 gradient-hero rounded-lg flex items-center justify-center text-white mx-auto mb-4">
+                    {step.icon}
+                  </div>
+                  <CardTitle>{step.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-center">
+                    {step.description}
                   </CardDescription>
                 </CardContent>
               </Card>
@@ -153,18 +222,17 @@ const AboutPage = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-secondary/30">
+      <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Bereit für eine Partnerschaft?
+            {t('about.partnership_ready')}
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Lassen Sie uns gemeinsam Ihre IT-Herausforderungen lösen und 
-            Ihr Unternehmen für die Zukunft rüsten.
+            {t('about.partnership_description')}
           </p>
           <Button size="lg" className="gradient-primary text-white shadow-glow" asChild>
             <Link to="/contact">
-              Kontakt aufnehmen
+              {t('about.contact_us')}
             </Link>
           </Button>
         </div>
