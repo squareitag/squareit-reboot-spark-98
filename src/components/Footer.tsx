@@ -1,19 +1,21 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
+import { useLanguage } from "@/contexts/LanguageContext";
+import SquareITLogo from "./SquareITLogo";
 
 const Footer = () => {
+  const { t } = useLanguage();
+  
   return (
     <footer className="bg-secondary/30 border-t border-border">
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-4">
-            <div className="flex items-center space-x-3">
-              <div className="w-8 h-8 bg-gradient-to-br from-orange-400 to-orange-600 rounded-lg flex items-center justify-center">
-                <span className="text-white font-bold text-sm">SI</span>
-              </div>
+            <Link to="/" className="flex items-center space-x-3">
+              <SquareITLogo className="h-8 w-8" />
               <span className="text-xl font-bold">Square IT</span>
-            </div>
+            </Link>
             <p className="text-sm text-muted-foreground">
               Beste Service- und Lösungsangebote für Ihre IT-Infrastruktur.
               Vertrauen Sie auf unsere Expertise.
@@ -30,7 +32,7 @@ const Footer = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Dienstleistungen</h3>
+            <h3 className="font-semibold text-foreground">{t('nav.services')}</h3>
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/services/managed-services" className="text-muted-foreground hover:text-primary transition-colors">
@@ -61,17 +63,17 @@ const Footer = () => {
             <ul className="space-y-2 text-sm">
               <li>
                 <Link to="/about" className="text-muted-foreground hover:text-primary transition-colors">
-                  Über uns
+                  {t('nav.about')}
                 </Link>
               </li>
               <li>
                 <Link to="/technologies" className="text-muted-foreground hover:text-primary transition-colors">
-                  Technologien
+                  {t('nav.technologies')}
                 </Link>
               </li>
               <li>
                 <Link to="/careers" className="text-muted-foreground hover:text-primary transition-colors">
-                  Karriere
+                  {t('nav.careers')}
                 </Link>
               </li>
               <li>
@@ -84,7 +86,7 @@ const Footer = () => {
 
           {/* Contact */}
           <div className="space-y-4">
-            <h3 className="font-semibold text-foreground">Kontakt</h3>
+            <h3 className="font-semibold text-foreground">{t('nav.contact')}</h3>
             <ul className="space-y-3 text-sm">
               <li className="flex items-center space-x-2">
                 <Mail className="w-4 h-4 text-muted-foreground" />
