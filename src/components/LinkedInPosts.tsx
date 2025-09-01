@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Heart, MessageCircle, Share, Linkedin } from "lucide-react";
+import { ExternalLink, Heart, MessageCircle, Share, Linkedin, Settings } from "lucide-react";
 import { Link } from "react-router-dom";
-import logoImage from "@/assets/logo.png";
 
 interface LinkedInPost {
   id: string;
@@ -25,7 +24,7 @@ const defaultPosts: LinkedInPost[] = [
   {
     id: "1",
     author: "Square IT AG",
-    authorImage: logoImage,
+    authorImage: "/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png",
     content: "🎯 Successful Azure Migration completed! \n\nWir haben erfolgreich ein mittelständisches Unternehmen bei der vollständigen Migration ihrer lokalen Infrastruktur zu Microsoft Azure unterstützt. Das Ergebnis: 60% Kosteneinsparung und 99.9% Verfügbarkeit.\n\nUnser Team hat dabei folgende Services implementiert:\n✅ Azure Virtual Machines\n✅ Azure SQL Database\n✅ Azure Active Directory\n✅ Backup & Disaster Recovery\n\n#Azure #CloudMigration #DigitalTransformation #SquareIT",
     likes: 42,
     comments: 15,
@@ -36,7 +35,7 @@ const defaultPosts: LinkedInPost[] = [
   {
     id: "2",
     author: "Square IT AG",
-    authorImage: logoImage,
+    authorImage: "/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png",
     content: "🔒 Cybersecurity Update: Zero Trust Architektur\n\nIn der heutigen Bedrohungslandschaft reicht der traditionelle Perimeterschutz nicht mehr aus. Zero Trust ist die Antwort!\n\nUnsere Sicherheitsexperten implementieren:\n🛡️ Multi-Faktor-Authentifizierung\n🛡️ Conditional Access Policies\n🛡️ Endpoint Detection & Response\n🛡️ Kontinuierliche Überwachung\n\nSchützen Sie Ihr Unternehmen vor modernen Cyberbedrohungen.\n\n#Cybersecurity #ZeroTrust #Microsoft365 #ITSecurity #SquareIT",
     likes: 38,
     comments: 22,
@@ -47,7 +46,7 @@ const defaultPosts: LinkedInPost[] = [
   {
     id: "3",
     author: "Square IT AG",
-    authorImage: logoImage,
+    authorImage: "/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png",
     content: "📞 Microsoft Teams Telefonie - Der moderne Arbeitsplatz\n\nSie nutzen bereits Microsoft Teams für Meetings und Chat? Warum nicht auch für Ihre Telefonie?\n\nVorteile von Teams Phone:\n📱 Ein Tool für alle Kommunikationsbedürfnisse\n📱 Nahtlose Integration in bestehende Workflows\n📱 Kostenoptimierung durch unified communications\n📱 Flexibles Arbeiten von überall\n\nWir unterstützen Sie bei der Implementierung und Migration Ihrer bestehenden Telefonanlage zu Teams Phone.\n\n#TeamsPhone #Microsoft365 #UnifiedCommunications #ModernWorkplace #SquareIT",
     likes: 29,
     comments: 8,
@@ -60,21 +59,14 @@ const defaultPosts: LinkedInPost[] = [
 export default function LinkedInPosts() {
   const [linkedInPosts, setLinkedInPosts] = useState<LinkedInPost[]>(defaultPosts);
 
-  // Load posts from localStorage with SSR safety
+  // Load posts from localStorage
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-      try {
-        const savedPosts = localStorage.getItem(STORAGE_KEY);
-        if (savedPosts) {
-          setLinkedInPosts(JSON.parse(savedPosts));
-        } else {
-          // Save default posts to localStorage
-          localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultPosts));
-        }
-      } catch (error) {
-        console.warn('Failed to load LinkedIn posts from localStorage:', error);
-        setLinkedInPosts(defaultPosts);
-      }
+    const savedPosts = localStorage.getItem(STORAGE_KEY);
+    if (savedPosts) {
+      setLinkedInPosts(JSON.parse(savedPosts));
+    } else {
+      // Save default posts to localStorage
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(defaultPosts));
     }
   }, []);
   return (
@@ -86,7 +78,13 @@ export default function LinkedInPosts() {
             <p className="text-primary font-medium tracking-wide uppercase text-sm">
               LinkedIn Updates
             </p>
-            {/* Admin link temporarily disabled for remix */}
+            <Link 
+              to="/admin/linkedin" 
+              className="ml-4 text-muted-foreground hover:text-primary transition-colors"
+              title="Manage Posts"
+            >
+              <Settings className="w-5 h-5" />
+            </Link>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold mb-6">
             Neueste Beiträge

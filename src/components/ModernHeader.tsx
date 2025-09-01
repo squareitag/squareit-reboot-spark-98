@@ -26,7 +26,7 @@ import {
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { useLanguage } from "@/contexts/LanguageContext";
-import logoImage from "@/assets/logo.png";
+import squareItLogo from "@/assets/square-it-logo.png";
 
 const ModernHeader = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -42,7 +42,7 @@ const ModernHeader = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center space-x-2">
             <img 
-              src={logoImage} 
+              src="/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png" 
               alt="Square IT AG" 
               className="h-12 w-auto object-contain"
             />
