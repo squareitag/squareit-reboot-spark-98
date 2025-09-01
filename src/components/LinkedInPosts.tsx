@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Heart, MessageCircle, Share, Linkedin, Settings } from "lucide-react";
+import { ExternalLink, Heart, MessageCircle, Share, Linkedin } from "lucide-react";
 import { Link } from "react-router-dom";
 import logoImage from "@/assets/logo.png";
 

@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Linkedin, Twitter } from "lucide-react";
 import { useLanguage } from "@/contexts/LanguageContext";
-import squareItLogo from "@/assets/square-it-logo.png";
+import logoImage from "@/assets/logo.png";
 
 const Footer = () => {
   const { t } = useLanguage();
@@ -14,7 +14,7 @@ const Footer = () => {
           <div className="space-y-4">
             <Link to="/" className="flex items-center">
               <img 
-                src="/lovable-uploads/49070c3a-774e-4906-b38c-3321a301b6c3.png" 
+                src={logoImage} 
                 alt="Square IT AG" 
                 className="h-10 w-auto object-contain"
               />
