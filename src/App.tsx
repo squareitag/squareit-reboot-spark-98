@@ -19,6 +19,7 @@ import SupportPage from "./pages/services/SupportPage";
 import CareersPage from "./pages/CareersPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
+import LinkedInPostManager from "./components/LinkedInPostManager";
 
 // Service sub-pages
 import ManagedInfrastructurePage from "./pages/services/ManagedInfrastructurePage";
@@ -63,9 +64,10 @@ const App = () => (
             <ModernHeader />
             <main className="flex-1">
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/about" element={<AboutPage />} />
-              <Route path="/services" element={<ServicesPage />} />
+            <Route path="/" element={<HomePage />} />
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/services" element={<ServicesPage />} />
+            <Route path="/admin/linkedin" element={<LinkedInPostManager />} />
               <Route path="/services/managed-services" element={<ManagedServicesPage />} />
               <Route path="/services/migration" element={<MigrationPage />} />
               <Route path="/services/consulting" element={<ConsultingPage />} />
