@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import ServiceCard from "@/components/ServiceCard";
+import LinkedInPosts from "@/components/LinkedInPosts";
 import { ArrowRight, Shield, Zap, Users, CheckCircle, Server, Cloud, Headphones, Search, BarChart3 } from "lucide-react";
 import { Link } from "react-router-dom";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -326,6 +327,9 @@ const HomePage = () => {
           </div>
         </div>
       </section>
+
+      {/* LinkedIn Posts Section */}
+      <LinkedInPosts />
 
       {/* CTA Section */}
       <section className="py-20">
