@@ -21,7 +21,8 @@ import {
   Shield,
   Target,
   Headphones,
-  FileText
+  FileText,
+  Calculator
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -247,6 +248,16 @@ const ModernHeader = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
+            
+            <Link
+              to="/kalkulator"
+              className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary ${
+                isActive("/kalkulator") ? "text-primary" : "text-muted-foreground"
+              }`}
+            >
+              <Calculator className="w-4 h-4" />
+              <span>Kalkulator</span>
+            </Link>
             
             <Link
               to="/contact"
@@ -524,6 +535,19 @@ const ModernHeader = () => {
                   </Link>
                 </div>
               </div>
+              
+              <Link
+                to="/kalkulator"
+                className={`flex items-center space-x-2 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  isActive("/kalkulator")
+                    ? "bg-primary text-primary-foreground"
+                    : "text-muted-foreground hover:text-primary hover:bg-secondary"
+                }`}
+                onClick={() => setIsMenuOpen(false)}
+              >
+                <Calculator className="w-4 h-4" />
+                <span>Kalkulator</span>
+              </Link>
               
               <Link
                 to="/contact"
