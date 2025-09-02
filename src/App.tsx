@@ -20,6 +20,7 @@ import CareersPage from "./pages/CareersPage";
 import PrivacyPage from "./pages/PrivacyPage";
 import NotFound from "./pages/NotFound";
 import LinkedInPostManager from "./components/LinkedInPostManager";
+import ITCalculatorPage from "./pages/ITCalculatorPage";
 
 // Service sub-pages
 import ManagedInfrastructurePage from "./pages/services/ManagedInfrastructurePage";
@@ -105,6 +106,7 @@ const App = () => (
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
+              <Route path="/kalkulator" element={<ITCalculatorPage />} />
               {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>

@@ -5,7 +5,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { useToast } from "@/hooks/use-toast";
-import { Mail, Phone, MapPin, Clock, MessageSquare, ExternalLink } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, MessageSquare, ExternalLink, Calculator } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -224,16 +225,22 @@ const ContactPage = () => {
                   </CardContent>
                 </Card>
 
-                {/* Free Consultation */}
+                {/* IT Calculator */}
                 <Card className="bg-gradient-to-br from-primary/10 to-secondary/10 border-primary/20 animate-scale-in" style={{ animationDelay: "0.5s" }}>
                   <CardHeader>
-                    <CardTitle className="text-primary">Kostenlose Erstberatung</CardTitle>
+                    <CardTitle className="text-primary">IT Kostenrechner</CardTitle>
                     <CardDescription>
-                      Nutzen Sie unsere kostenlose Erstberatung und lassen Sie sich 
-                      unverbindlich über unsere IT-Services informieren.
+                      Nutzen Sie unseren kostenlosen IT-Kostenrechner für ein 
+                      massgeschneidertes Angebot basierend auf Ihren Anforderungen.
                     </CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="space-y-3">
+                    <Button variant="outline" className="w-full" asChild>
+                      <Link to="/kalkulator">
+                        Jetzt Kosten berechnen
+                        <Calculator className="w-4 h-4 ml-2" />
+                      </Link>
+                    </Button>
                     <Button variant="outline" className="w-full" asChild>
                       <a href="https://outlook.office365.com/owa/calendar/TerminBuchung@squareit.ch/bookings/" target="_blank" rel="noopener noreferrer">
                         Beratungstermin buchen

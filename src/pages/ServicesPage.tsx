@@ -180,13 +180,13 @@ const ServicesPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90" asChild>
-                  <Link to="/contact">
-                    Kostenlose Beratung
+                  <Link to="/kalkulator">
+                    IT-Kosten berechnen
                   </Link>
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10" asChild>
-                  <Link to="/about">
-                    Mehr über uns
+                  <Link to="/contact">
+                    Kostenlose Beratung
                   </Link>
                 </Button>
               </div>
