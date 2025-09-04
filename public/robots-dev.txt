@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Development environment - no indexing allowed
+# This prevents crawlers from indexing the development site

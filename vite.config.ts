@@ -12,7 +12,22 @@ export default defineConfig(({ mode }) => ({
     middlewareMode: false,
     configureServer(server: any) {
       if (mode === 'development') {
+        // Serve development robots.txt that blocks all crawlers
+        server.middlewares.use('/robots.txt', (req: any, res: any) => {
+          res.setHeader('Content-Type', 'text/plain');
+          res.end(`User-agent: *
+Disallow: /
+
+# Development environment - no indexing allowed`);
+        });
+
+        // HTTP Basic Auth for development
         server.middlewares.use((req: any, res: any, next: any) => {
+          // Skip auth for robots.txt as it's already handled above
+          if (req.url === '/robots.txt') {
+            return;
+          }
+
           const auth = req.headers.authorization;
           
           if (!auth || !auth.startsWith('Basic ')) {
