@@ -4,6 +4,17 @@ import path from "path";
 import { componentTagger } from "lovable-tagger";
 import type { Connect } from "vite";
 
+// Custom Pre-Rendering Plugin
+function prerenderPlugin() {
+  return {
+    name: 'prerender',
+    async writeBundle() {
+      // This runs after build
+      console.log('📄 Pre-rendering will be handled by separate script');
+    }
+  };
+}
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
   server: {
@@ -53,9 +64,26 @@ Disallow: /
   },
   plugins: [
     react(),
-    mode === 'development' &&
-    componentTagger(),
+    mode === 'development' && componentTagger(),
+    mode === 'production' && prerenderPlugin(),
   ].filter(Boolean),
+  
+  // Pre-rendering optimizations
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['react', 'react-dom'],
+          router: ['react-router-dom'],
+          ui: ['@radix-ui/react-accordion', '@radix-ui/react-dialog'],
+        }
+      }
+    },
+    // Generate clean URLs for better SEO
+    outDir: 'dist',
+    assetsDir: 'assets',
+  },
+  
   resolve: {
     alias: {
       "@": path.resolve(__dirname, "./src"),

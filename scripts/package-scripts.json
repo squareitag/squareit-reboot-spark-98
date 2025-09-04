@@ -1,0 +1,6 @@
+{
+  "scripts": {
+    "prerender": "node scripts/prerender.js",
+    "build:prerender": "npm run build && npm run prerender"
+  }
+}
