@@ -287,9 +287,9 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <GraduationCap className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Schulen & Bildung</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Schulen & Bildung</span>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                          <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
                             Moderne IT-Infrastrukturen für Bildungseinrichtungen
                           </p>
                         </Link>
@@ -331,9 +331,9 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Scale className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Treuhänder & Fiduziär</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Treuhänder & Fiduziär</span>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                          <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
                             Vertrauensvolle IT-Partner für Treuhandgesellschaften
                           </p>
                         </Link>
@@ -345,9 +345,9 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Stethoscope className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Gesundheitswesen</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Gesundheitswesen</span>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                          <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
                             HIPAA-konforme IT-Lösungen für medizinische Einrichtungen
                           </p>
                         </Link>
@@ -382,105 +382,105 @@ const ModernHeader = () => {
                     <h3 className="text-lg font-semibold text-foreground mb-2">Technologien</h3>
                     <p className="text-sm text-muted-foreground">Modernste Technologien für Ihr Unternehmen</p>
                   </div>
-                  <div className="grid grid-cols-2 gap-4">
+                  <div className="grid grid-cols-2 gap-6">
                     <div className="space-y-3 text-left">
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/microsoft-365" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Cloud className="w-4 h-4 text-primary" />
-                            </div>
+                        <Link to="/technologies/microsoft-365" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <Cloud className="w-4 h-4 text-primary" />
+                          </div>
+                          <div className="flex-1">
                             <span className="font-medium text-foreground group-hover:text-white transition-colors">Microsoft 365</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Produktivitäts- und Collaboration-Suite
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Produktivitäts- und Collaboration-Suite
-                          </p>
                         </Link>
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/microsoft-azure" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Cloud className="w-4 h-4 text-primary" />
-                            </div>
+                        <Link to="/technologies/microsoft-azure" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <Cloud className="w-4 h-4 text-primary" />
+                          </div>
+                          <div className="flex-1">
                             <span className="font-medium text-foreground group-hover:text-white transition-colors">Microsoft Azure</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Enterprise Cloud Platform
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Enterprise Cloud Platform
-                          </p>
                         </Link>
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/avepoint-backup" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <HardDrive className="w-4 h-4 text-primary" />
-                            </div>
+                        <Link to="/technologies/avepoint-backup" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <HardDrive className="w-4 h-4 text-primary" />
+                          </div>
+                          <div className="flex-1">
                             <span className="font-medium text-foreground group-hover:text-white transition-colors">AvePoint Backup</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Microsoft 365 Backup-Lösung
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Microsoft 365 Backup-Lösung
-                          </p>
                         </Link>
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/cato-networks" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Network className="w-4 h-4 text-primary" />
-                            </div>
-                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Cato Networks</span>
+                        <Link to="/technologies/cato-networks" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <Network className="w-4 h-4 text-primary" />
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Cloud-native Netzwerksicherheit
-                          </p>
+                          <div className="flex-1">
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Cato Networks</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Cloud-native Netzwerksicherheit
+                            </p>
+                          </div>
                         </Link>
                       </DropdownMenuItem>
                     </div>
                     
                     <div className="space-y-3 text-left">
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/printix" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <FileText className="w-4 h-4 text-primary" />
-                            </div>
+                        <Link to="/technologies/printix" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <FileText className="w-4 h-4 text-primary" />
+                          </div>
+                          <div className="flex-1">
                             <span className="font-medium text-foreground group-hover:text-white transition-colors">Printix</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Cloud-basiertes Print Management
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Cloud-basiertes Print Management
-                          </p>
                         </Link>
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/peoplefone" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Phone className="w-4 h-4 text-primary" />
-                            </div>
+                        <Link to="/technologies/peoplefone" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <Phone className="w-4 h-4 text-primary" />
+                          </div>
+                          <div className="flex-1">
                             <span className="font-medium text-foreground group-hover:text-white transition-colors">Peoplefone</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Cloud-Telefonie und VoIP
+                            </p>
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Cloud-Telefonie und VoIP
-                          </p>
                         </Link>
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/keeper" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Shield className="w-4 h-4 text-primary" />
-                            </div>
-                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Keeper</span>
+                        <Link to="/technologies/keeper" className="group w-full cursor-pointer flex items-center space-x-3 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors flex-shrink-0">
+                            <Shield className="w-4 h-4 text-primary" />
                           </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Enterprise Password Manager
-                          </p>
+                          <div className="flex-1">
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Keeper</span>
+                            <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                              Enterprise Password Manager
+                            </p>
+                          </div>
                         </Link>
                       </DropdownMenuItem>
                       
