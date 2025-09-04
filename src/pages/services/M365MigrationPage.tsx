@@ -5,6 +5,7 @@ import { Cloud, Mail, Users, FileText, CheckCircle, ArrowRight, Monitor, Smartph
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import m365MigrationImage from "@/assets/m365-migration.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const M365MigrationPage = () => {
   const { t } = useLanguage();
@@ -66,6 +67,12 @@ const M365MigrationPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Microsoft 365 Migration einfach & sicher | Square IT"
+        description="Square IT übernimmt Ihre M365-Migration – von E-Mails bis Kalender. Wir sorgen für einen sicheren, reibungslosen Übergang und begleiten Ihr Unternehmen bei der erfolgreichen Einführung von Microsoft 365."
+        keywords="Microsoft 365 Migration, M365 Migration, Email Migration, SharePoint Migration, Teams Migration"
+        canonical="https://www.squareit.ch/m365-migration"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

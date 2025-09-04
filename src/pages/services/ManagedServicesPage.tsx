@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { CheckCircle, Server, Shield, Clock, Users, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedServicesPage = () => {
   const benefits = [
@@ -39,6 +40,12 @@ const ManagedServicesPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Managed IT Services für Unternehmen in Zürich | Square IT"
+        description="Vertrauen Sie auf Square IT für Managed Services. Wir übernehmen IT-Betrieb, Support und Monitoring, damit Sie sich auf Ihr Business konzentrieren. Effiziente, sichere und skalierbare IT-Lösungen für KMU."
+        keywords="Managed IT Services, IT Outsourcing, Server Management, 24/7 Support, IT Monitoring"
+        canonical="https://www.squareit.ch/managed-services"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

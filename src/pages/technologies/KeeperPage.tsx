@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Lock, Shield, Users, Smartphone, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const KeeperPage = () => {
   const features = [
@@ -52,6 +53,12 @@ const KeeperPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Keeper Passwort-Manager für Unternehmen | Square IT"
+        description="Mit Keeper Passwort-Manager schützen Sie Passwörter zuverlässig. Square IT unterstützt Sie bei sicherem Passwortmanagement, verschlüsseltem Speicher, MFA und automatischem Ausfüllen für mehr Sicherheit."
+        keywords="Keeper Passwort-Manager, Password Management, Enterprise Security, MFA, Cybersecurity"
+        canonical="https://www.squareit.ch/keeper"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

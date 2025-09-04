@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Laptop, Users, Shield, Smartphone, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const ModernWorkplacePage = () => {
   const services = [
@@ -34,6 +35,12 @@ const ModernWorkplacePage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Modern Workplace Lösungen für produktives Arbeiten | Square IT"
+        description="Square IT gestaltet Ihren Modern Workplace mit Microsoft 365, Teams und Cloud-Lösungen. Profitieren Sie von ortsunabhängigem Arbeiten, sicherer Zusammenarbeit und mehr Effizienz in Ihrem Unternehmen."
+        keywords="Modern Workplace, Digital Workplace, Remote Work, Microsoft 365, Workplace Transformation"
+        canonical="https://www.squareit.ch/modern-workplace"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

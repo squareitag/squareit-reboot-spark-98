@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { useToast } from "@/hooks/use-toast";
 import { Mail, Phone, MapPin, Clock, MessageSquare, ExternalLink, Calculator } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const ContactPage = () => {
   const { toast } = useToast();
@@ -56,6 +57,12 @@ const ContactPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Kontakt zu Square IT – Ihr IT-Partner in Zürich & Zug"
+        description="Nehmen Sie Kontakt zu Square IT auf. Wir beraten Sie zu Managed IT, Microsoft 365, Azure, Cloud-Security und mehr. Ihr Partner für sichere, moderne und zukunftsorientierte IT-Dienstleistungen."
+        keywords="Kontakt Square IT, IT Beratung Zürich, IT Support Zug, Microsoft 365 Beratung, Cloud Security"
+        canonical="https://www.squareit.ch/kontakt"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

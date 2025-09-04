@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, Mail, Calendar, FileText, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const Microsoft365Page = () => {
   const services = [
@@ -52,6 +53,12 @@ const Microsoft365Page = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Microsoft 365 Lösungen & Beratung für Firmen | Square IT"
+        description="Nutzen Sie Microsoft 365 mit Square IT für moderne Zusammenarbeit, Produktivität und Sicherheit. Wir begleiten Unternehmen bei Einführung, Migration und Optimierung von M365 für den Geschäftserfolg."
+        keywords="Microsoft 365, Office 365, Teams, SharePoint, Exchange Online, Modern Workplace"
+        canonical="https://www.squareit.ch/m365"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

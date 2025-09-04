@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Lock, Eye, UserCheck, AlertTriangle, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const SecurityPage = () => {
   const securitySolutions = [
@@ -65,6 +66,12 @@ const SecurityPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="IT-Security & Datenschutzlösungen für Firmen | Square IT"
+        description="Mit Square IT schützen Sie Ihre IT-Infrastruktur vor Cyberangriffen. Unsere IT-Security-Lösungen umfassen Firewalls, Cloud-Security und Awareness-Trainings für maximale Unternehmenssicherheit."
+        keywords="IT Security, Cybersecurity, Firewall, Endpoint Protection, Security Monitoring, SIEM"
+        canonical="https://www.squareit.ch/security"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
