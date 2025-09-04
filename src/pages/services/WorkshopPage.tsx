@@ -1,9 +1,10 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Users, BookOpen, Target, Lightbulb, CheckCircle, ArrowRight } from "lucide-react";
+import { BookOpen, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SEOHead } from "@/components/SEOHead";
+import { Breadcrumb } from "@/components/Breadcrumb";
 
 const WorkshopPage = () => {
   const services = [
@@ -42,6 +43,11 @@ const WorkshopPage = () => {
         canonical="https://sqsolutions.ch/workshop"
       />
       <div className="min-h-screen pt-16">
+      <Breadcrumb items={[
+        { label: "Services", href: "/services" },
+        { label: "Workshop Services" }
+      ]} />
+
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
