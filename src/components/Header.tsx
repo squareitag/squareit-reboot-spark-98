@@ -197,6 +197,7 @@ const Header = () => {
                     Tenant Manager
                   </Link>
                 </DropdownMenuItem>
+                {/* Force refresh */}
               </DropdownMenuContent>
             </DropdownMenu>
             
