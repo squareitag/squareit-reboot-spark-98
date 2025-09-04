@@ -52,9 +52,9 @@ const TenantManagerPage = () => {
   return (
     <>
       <SEOHead 
-        title="Tenant Manager - Multi-Tenant M365 Management für MSPs | Square IT"
-        description="Vereinfachen Sie Ihr Multi-Tenant M365 Management mit Tenant Manager. Schluss mit manuellen Prozessen und unzähligen Browser-Fenstern. Professionelle MSP-Lösung."
-        keywords="Tenant Manager, Multi-Tenant, M365 Management, MSP, Microsoft 365, Software Central, Square IT"
+        title="Tenant Manager - Multi-Tenant M365 Management für IT-Teams | Square IT"
+        description="Vereinfachen Sie Ihr Multi-Tenant M365 Management mit Tenant Manager. Schluss mit manuellen Prozessen und unzähligen Browser-Fenstern. Professionelle Lösung für IT-Teams."
+        keywords="Tenant Manager, Multi-Tenant, M365 Management, IT Teams, Microsoft 365, Software Central, Square IT"
         canonical="https://www.squareit.ch/technologies/tenant-manager"
       />
       <div className="min-h-screen pt-16">
@@ -72,13 +72,13 @@ const TenantManagerPage = () => {
                 <div className="flex justify-center items-center gap-4 mb-6">
                   <Badge variant="outline">Multi-Tenant</Badge>
                   <Badge variant="outline">Sicher</Badge>
-                  <Badge variant="outline">MSP-Ready</Badge>
+                  <Badge variant="outline">IT-Ready</Badge>
                 </div>
               </div>
               <p className="text-xl text-muted-foreground leading-relaxed mb-8">
                 Vereinfachen Sie Ihr Multi-Tenant M365 Management. Schluss mit manuellen 
                 Prozessen und unzähligen Browser-Fenstern. Als zertifizierter Partner bieten 
-                wir Ihnen professionelle <Link to="/services" className="text-primary hover:underline">Managed Services</Link> und umfassende <Link to="/services/consulting" className="text-primary hover:underline">Beratung</Link> für MSPs.
+                wir Ihnen professionelle <Link to="/services" className="text-primary hover:underline">Managed Services</Link> und umfassende <Link to="/services/consulting" className="text-primary hover:underline">Beratung</Link> für IT-Teams und Endkunden.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="gradient-primary text-white shadow-glow" asChild>
@@ -102,12 +102,12 @@ const TenantManagerPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
                 <h2 className="text-3xl font-bold mb-6 text-destructive">
-                  Die Herausforderung für MSPs
+                  Die Herausforderung für IT-Teams
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Die Verwaltung mehrerer Microsoft 365-Mandanten ist komplex und zeitaufwändig. 
-                    MSPs kämpfen täglich mit ineffizienten Prozessen und mangelnder Übersicht.
+                  Die Verwaltung mehrerer Microsoft 365-Mandanten ist komplex und zeitaufwändig. 
+                  IT-Teams kämpfen täglich mit ineffizienten Prozessen und mangelnder Übersicht.
                   </p>
                   <ul className="space-y-2">
                     {challenges.map((challenge, index) => (
@@ -126,8 +126,8 @@ const TenantManagerPage = () => {
                 </h2>
                 <div className="space-y-4 text-muted-foreground">
                   <p>
-                    Tenant Manager revolutioniert das Multi-Tenant Management für MSPs. 
-                    Eine zentrale Plattform für alle Ihre Microsoft 365-Mandanten.
+                  Tenant Manager revolutioniert das Multi-Tenant Management für IT-Teams. 
+                  Eine zentrale Plattform für alle Ihre Microsoft 365-Mandanten.
                   </p>
                   <ul className="space-y-2">
                     {benefits.slice(0, 5).map((benefit, index) => (
@@ -148,7 +148,7 @@ const TenantManagerPage = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold mb-6">
-                Leistungsstarke MSP-Features
+                Leistungsstarke IT-Features
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
                 Modernste Technologien für effizientes Multi-Tenant M365 Management
@@ -179,11 +179,11 @@ const TenantManagerPage = () => {
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div className="animate-fade-in">
                 <h2 className="text-4xl font-bold mb-6">
-                  Perfekt für MSPs entwickelt
+                  Perfekt für IT-Teams entwickelt
                 </h2>
                 <p className="text-xl text-muted-foreground mb-8">
-                  Tenant Manager wurde speziell für die Bedürfnisse von Managed Service Providern 
-                  entwickelt und bietet alle Funktionen für effizientes Multi-Tenant Management.
+                Tenant Manager wurde speziell für die Bedürfnisse von IT-Teams 
+                entwickelt und bietet alle Funktionen für effizientes Multi-Tenant Management.
                 </p>
                 <div className="space-y-3">
                   {benefits.map((benefit, index) => (
@@ -201,7 +201,7 @@ const TenantManagerPage = () => {
                     <div className="text-center">
                       <Building2 className="w-16 h-16 mx-auto mb-6" />
                       <h3 className="text-2xl font-bold mb-4">
-                        Bereit für effizientes MSP-Management?
+                        Bereit für effizientes IT-Management?
                       </h3>
                       <div className="space-y-4 mb-8">
                         <div className="flex items-center justify-center">
@@ -239,7 +239,7 @@ const TenantManagerPage = () => {
                 Typische Anwendungsfälle
               </h2>
               <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-                Wie MSPs Tenant Manager erfolgreich einsetzen
+                Wie IT-Teams Tenant Manager erfolgreich einsetzen
               </p>
             </div>
 
@@ -311,9 +311,9 @@ const TenantManagerPage = () => {
                     </div>
                     <div className="text-center">
                       <Building2 className="w-12 h-12 text-primary mx-auto mb-4" />
-                      <h4 className="font-bold mb-2">MSP-Expertise</h4>
+                      <h4 className="font-bold mb-2">IT-Expertise</h4>
                       <p className="text-sm text-muted-foreground">
-                        Spezialisiert auf Managed Service Provider Lösungen
+                        Spezialisiert auf IT-Team Lösungen
                       </p>
                     </div>
                     <div className="text-center">
@@ -334,11 +334,11 @@ const TenantManagerPage = () => {
         <section className="py-20 bg-secondary/30">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-4xl font-bold mb-6">
-              Revolutionieren Sie Ihr MSP-Management
+              Revolutionieren Sie Ihr IT-Management
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
               Starten Sie noch heute mit Tenant Manager und erleben Sie die Zukunft 
-              des Multi-Tenant M365 Managements für MSPs.
+              des Multi-Tenant M365 Managements für IT-Teams.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gradient-primary text-white shadow-glow" asChild>
