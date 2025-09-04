@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Server, Monitor, Shield, Wrench, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import managedServersImage from "@/assets/managed-servers.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedServersPage = () => {
   const services = [
@@ -52,7 +53,14 @@ const ManagedServersPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Managed Servers - Professional Server Management & Monitoring"
+        description="Bei Square IT wissen wir, dass eine effektive Verwaltung und Wartung Ihrer IT-Systeme entscheidend für den reibungslosen Ablauf Ihres Unternehmens ist."
+        keywords="Managed Servers, Server Management, Server Monitoring, IT Infrastructure Management, 24/7 Support"
+        canonical="https://sqsolutions.ch/managed-servers-old"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -173,6 +181,7 @@ const ManagedServersPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

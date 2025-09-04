@@ -12,10 +12,18 @@ import {
   Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const FinancePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="IT Solutions for Financial Services - Enterprise Technology for Banks"
+        description="Enterprise-grade technology solutions for banks, investment firms, insurance companies, and financial advisors. Secure, compliant, and scalable systems that drive financial innovation."
+        keywords="Financial IT Services, Banking Technology, Investment Firm IT, Insurance IT Solutions, Financial Compliance, FINMA Compliance"
+        canonical="https://sqsolutions.ch/industries/finance"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -263,6 +271,7 @@ const FinancePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

@@ -7,6 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { SEOHead } from "@/components/SEOHead";
 
 const ContactPage = () => {
   const [formData, setFormData] = useState({
@@ -55,7 +56,14 @@ const ContactPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Kontakt - Square IT AG"
+        description="Haben Sie Fragen oder benötigen Sie Unterstützung? Unser Expertenteam steht Ihnen gerne zur Verfügung. Kontaktieren Sie uns noch heute!"
+        keywords="Kontakt, Square IT Support, IT Beratung, Hilfe, Kundenservice"
+        canonical="https://sqsolutions.ch/contact"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -227,6 +235,7 @@ const ContactPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

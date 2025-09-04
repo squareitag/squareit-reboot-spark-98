@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Network, Wifi, Router, Shield, CheckCircle, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const NetworkingPage = () => {
   const networkingSolutions = [
@@ -82,7 +83,14 @@ const NetworkingPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Networking Solutions - Cisco, Juniper, SD-WAN & Network Monitoring"
+        description="Zuverlässige Netzwerk-Infrastrukturen für moderne Unternehmen. Von LAN/WAN bis hin zu Software-Defined Networks - wir verbinden Ihr Business."
+        keywords="Networking Solutions, Cisco Systems, Juniper Networks, SD-WAN, Network Monitoring, LAN/WAN, WLAN, VPN"
+        canonical="https://sqsolutions.ch/technologies/networking"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -303,6 +311,7 @@ const NetworkingPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

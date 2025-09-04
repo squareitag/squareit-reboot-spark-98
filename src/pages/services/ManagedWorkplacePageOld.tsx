@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Laptop, Shield, Smartphone, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import managedWorkplaceImage from "@/assets/managed-workplace.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedWorkplacePage = () => {
   const services = [
@@ -52,7 +53,14 @@ const ManagedWorkplacePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Managed Workplace - Modern Workplace Solutions & Device Management"
+        description="Der moderne Arbeitsplatz erfordert flexible, sichere und produktive Lösungen. Wir verwalten Ihre komplette Workplace-Umgebung für optimale User Experience."
+        keywords="Managed Workplace, Modern Workplace, Device Management, Microsoft Intune, Azure AD, Mobile Device Management"
+        canonical="https://sqsolutions.ch/managed-workplace-old"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -288,6 +296,7 @@ const ManagedWorkplacePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

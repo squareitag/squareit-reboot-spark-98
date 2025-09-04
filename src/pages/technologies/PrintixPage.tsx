@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Printer, Cloud, Settings, BarChart3, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const PrintixPage = () => {
   const features = [
@@ -51,7 +52,14 @@ const PrintixPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Printix - Cloud Print Management & Mobile Printing Solutions"
+        description="Die moderne Cloud-Print-Management-Lösung für Unternehmen. Vereinfachen Sie Ihre Druckinfrastruktur und drucken Sie von überall."
+        keywords="Printix, Cloud Print Management, Mobile Printing, Print Analytics, Print Security, Cloud Printing"
+        canonical="https://sqsolutions.ch/technologies/printix"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -275,6 +283,7 @@ const PrintixPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

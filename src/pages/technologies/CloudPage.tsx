@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cloud, Server, Shield, Database, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const CloudPage = () => {
   const cloudPlatforms = [
@@ -51,7 +52,14 @@ const CloudPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Cloud Plattformen - Microsoft Azure, AWS, Google Cloud & VMware"
+        description="Moderne Cloud-Infrastrukturen für maximale Skalierbarkeit, Sicherheit und Performance. Wir helfen Ihnen dabei, die optimale Cloud-Strategie für Ihr Unternehmen zu entwickeln."
+        keywords="Cloud Plattformen, Microsoft Azure, Amazon AWS, Google Cloud, VMware vSphere, Cloud Migration, Cloud Computing"
+        canonical="https://sqsolutions.ch/technologies/cloud"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -232,6 +240,7 @@ const CloudPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

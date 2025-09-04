@@ -12,10 +12,18 @@ import {
   Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const NGOPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="IT Solutions for NGOs & Non-Profit Organizations - Cost-Effective Technology"
+        description="Maximize your impact with cost-effective, secure IT solutions designed specifically for non-profit organizations. Focus on your mission while we handle your technology needs."
+        keywords="NGO IT Services, Non-Profit Technology, Charity IT Solutions, Microsoft 365 Non-Profit, Volunteer Management, Donor Management"
+        canonical="https://sqsolutions.ch/industries/ngo"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -246,6 +254,7 @@ const NGOPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

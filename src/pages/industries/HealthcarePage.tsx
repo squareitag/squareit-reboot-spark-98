@@ -12,10 +12,18 @@ import {
   Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const HealthcarePage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="IT Solutions for Healthcare & Medical Practices - HIPAA Compliant Technology"
+        description="Secure, HIPAA-compliant technology solutions for hospitals, clinics, and medical practices. Improve patient care while maintaining the highest data security standards."
+        keywords="Healthcare IT, Medical Practice IT, HIPAA Compliance, Electronic Health Records, EHR Systems, Medical Technology"
+        canonical="https://sqsolutions.ch/industries/healthcare"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -295,6 +303,7 @@ const HealthcarePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

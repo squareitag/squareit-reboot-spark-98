@@ -12,10 +12,18 @@ import {
   Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const TrusteesPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="IT-Lösungen für Treuhänder & Treuhand-Services - FINMA Compliant"
+        description="Sichere, konforme und effiziente Technologielösungen für Treuhänder, Treuhand-Dienstleister und Vermögensverwaltungsfachleute. Schützen Sie sensible Finanzdaten mit Sicherheit auf Unternehmensniveau."
+        keywords="Treuhand IT, Fiduciary IT Services, FINMA Compliance, Trust Management Systems, Financial Data Security, Trustee Technology"
+        canonical="https://sqsolutions.ch/industries/trustees"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -257,6 +265,7 @@ const TrusteesPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

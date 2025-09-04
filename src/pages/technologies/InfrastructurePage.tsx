@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Server, HardDrive, Cpu, Network, CheckCircle, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const InfrastructurePage = () => {
   const infrastructureSolutions = [
@@ -73,7 +74,14 @@ const InfrastructurePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Server & Infrastructure - Windows Server, Linux, VMware & Kubernetes"
+        description="Moderne Server-Infrastrukturen für optimale Performance, Skalierbarkeit und Zuverlässigkeit. Von physischen Servern bis hin zu Container-Orchestration."
+        keywords="Server Infrastructure, Windows Server, Linux Server, VMware vSphere, Docker, Kubernetes, Virtualization"
+        canonical="https://sqsolutions.ch/technologies/infrastructure"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -270,6 +278,7 @@ const InfrastructurePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

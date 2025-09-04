@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Phone, Cloud, Users, Headphones, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const PeoplefonePage = () => {
   const features = [
@@ -51,7 +52,14 @@ const PeoplefonePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Peoplefone - Business Voice Lösung & Microsoft Teams Integration"
+        description="Die führende Business Voice Lösung aus der Schweiz. Cloud-Telefonie, Unified Communications und Contact Center in einer integrierten Plattform."
+        keywords="Peoplefone, Business Voice, Cloud Telefonie, Microsoft Teams Telefonie, VoIP Schweiz, Unified Communications"
+        canonical="https://sqsolutions.ch/technologies/peoplefone"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -275,6 +283,7 @@ const PeoplefonePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

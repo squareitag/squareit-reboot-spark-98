@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, MessageSquare, Share2, Video, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const CollaborationPage = () => {
   const services = [
@@ -33,7 +34,14 @@ const CollaborationPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Collaboration Consulting - Optimierte Zusammenarbeit mit modernen Tools"
+        description="Optimieren Sie die Zusammenarbeit in Ihrem Unternehmen mit modernen Collaboration-Tools und -Strategien für maximale Produktivität."
+        keywords="Collaboration Consulting, Microsoft Teams Beratung, SharePoint Zusammenarbeit, Hybrid Meetings, Collaboration Training"
+        canonical="https://sqsolutions.ch/collaboration-old"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -108,6 +116,7 @@ const CollaborationPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

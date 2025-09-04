@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Database, BarChart3, Lock, Zap, CheckCircle, TrendingUp } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const DatabasePage = () => {
   const databaseSolutions = [
@@ -73,7 +74,14 @@ const DatabasePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Database Systems - SQL Server, MySQL, PostgreSQL & MongoDB"
+        description="Leistungsstarke Datenbanklösungen für Ihr Business. Von relationalen Datenbanken bis hin zu NoSQL-Systemen - wir implementieren die optimale Lösung für Ihre Daten."
+        keywords="Database Systems, Microsoft SQL Server, MySQL, PostgreSQL, MongoDB, Database Design, Database Migration"
+        canonical="https://sqsolutions.ch/technologies/database"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -274,6 +282,7 @@ const DatabasePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

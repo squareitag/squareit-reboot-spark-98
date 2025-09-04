@@ -12,10 +12,18 @@ import {
   Quote
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const SchoolsPage = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="IT-Lösungen für Schulen & Bildungseinrichtungen - Digitale Klassenzimmer"
+        description="Bildung durch sichere, skalierbare und innovative Technologielösungen stärken. Von digitalen Klassenzimmern bis zu Verwaltungssystemen – wir helfen Schulen im digitalen Zeitalter zu gedeihen."
+        keywords="Schul-IT, Bildungstechnologie, Digitale Klassenzimmer, WLAN Schulen, Schülerdatenschutz, LMS Lernmanagementsystem"
+        canonical="https://sqsolutions.ch/industries/schools"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 lg:py-32">
         <div className="container mx-auto px-4">
@@ -208,6 +216,7 @@ const SchoolsPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
