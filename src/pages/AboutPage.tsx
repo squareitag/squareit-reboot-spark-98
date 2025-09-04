@@ -74,7 +74,7 @@ const AboutPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="text-6xl font-bold text-primary mb-4">30+</div>
-            <p className="text-lg text-muted-foreground mb-8">{t('about.years_experience')}</p>
+            <p className="text-lg text-muted-foreground mb-8">Jahre Erfahrung im IT-Bereich</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
               Über Square IT AG - Führender IT-Dienstleister in der Schweiz
             </h1>
