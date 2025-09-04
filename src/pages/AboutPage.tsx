@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Target, Award, Lightbulb, Shield, Cloud, Headphones } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { SEOHead } from "@/components/SEOHead";
 import teamImage from "@/assets/team.jpg";
 
 const AboutPage = () => {
@@ -60,7 +61,15 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <div className="min-h-screen">
+      <SEOHead 
+        title="Über Square IT - Führender IT-Dienstleister in der Schweiz"
+        description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support. 80+ Jahre Erfahrung in der Schweiz."
+        keywords="Square IT AG, Über uns, IT Dienstleister Schweiz, Managed Services, Cloud Migration, IT Consulting, IT Support Zug"
+        canonical="https://squareit.ch/about"
+      />
+      
+      <div className="pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -237,6 +246,7 @@ const AboutPage = () => {
           </Button>
         </div>
       </section>
+      </div>
     </div>
   );
 };
