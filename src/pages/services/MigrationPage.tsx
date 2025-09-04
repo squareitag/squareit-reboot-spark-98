@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Cloud, Database, Server, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const MigrationPage = () => {
   const migrationTypes = [
@@ -39,6 +40,12 @@ const MigrationPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="IT-Migrationen in die Cloud & On-Premises | Square IT"
+        description="Square IT begleitet Unternehmen bei IT-Migrationen. Ob Microsoft 365, Azure oder On-Premises – wir sorgen für eine sichere, reibungslose Daten- und Systemübertragung mit minimalen Ausfallzeiten."
+        keywords="IT Migration, Cloud Migration, Azure Migration, Data Migration, System Migration"
+        canonical="https://www.squareit.ch/migration"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

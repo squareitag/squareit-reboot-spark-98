@@ -1,79 +1,77 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Database, Shield, Clock, RefreshCw, CheckCircle, ArrowRight } from "lucide-react";
+import { Mail, Shield, Users, Globe, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-import managedBackupImage from "@/assets/managed-backup-hero.jpg";
 import { SEOHead } from "@/components/SEOHead";
 
-const ManagedBackupPage = () => {
+const ExchangeOnlinePage = () => {
   const services = [
     {
-      name: "Kundenspezifische Backup-Strategien",
-      description: "Maßgeschneiderte Backup-Lösungen für Ihre spezifischen Anforderungen",
-      features: ["IT-Infrastruktur Analyse", "Datenressourcen Bewertung", "Wiederherstellungsziele", "Maßgeschneiderte Lösung"],
-      category: "Strategy"
+      name: "E-Mail Migration",
+      description: "Nahtlose Migration zu Exchange Online",
+      features: ["IMAP Migration", "PST Import", "Cutover Migration", "Hybrid Setup"],
+      category: "Migration"
     },
     {
-      name: "Schnelle Wiederherstellung",
-      description: "Effiziente Wiederherstellungsprozesse minimieren Ausfallzeiten",
-      features: ["Minimale Ausfallzeiten", "Effizienter Prozess", "Reibungsloser Betrieb", "Sofortige Verfügbarkeit"],
-      category: "Recovery"
+      name: "Exchange Setup",
+      description: "Professionelle Einrichtung und Konfiguration",
+      features: ["Tenant Konfiguration", "DNS Setup", "Mail Flow", "Security Policies"],
+      category: "Setup"
     },
     {
-      name: "Automatisierte Backups",
-      description: "Regelmäßige automatisierte Backup-Pläne für kontinuierlichen Schutz",
-      features: ["Automatisierte Pläne", "Regelmäßige Ausführung", "Kontinuierlicher Schutz", "Minimales Risiko"],
-      category: "Automation"
+      name: "Advanced Features",
+      description: "Erweiterte Exchange Online Funktionen",
+      features: ["Shared Mailboxes", "Distribution Lists", "Public Folders", "In-Place Archive"],
+      category: "Features"
     },
     {
-      name: "Überwachung und Verwaltung",
-      description: "Kontinuierliche Überwachung des Backup-Status und Tests",
-      features: ["Status Monitoring", "Wiederherstellungstest", "Ordnungsgemäße Funktion", "Notfall-Bereitschaft"],
-      category: "Monitoring"
+      name: "Security & Compliance",
+      description: "Sicherheit und Compliance-Features",
+      features: ["ATP Protection", "DLP Policies", "eDiscovery", "Retention Policies"],
+      category: "Security"
     }
   ];
 
   const benefits = [
     {
+      icon: <Mail className="w-6 h-6" />,
+      title: "Enterprise E-Mail",
+      description: "Professionelle E-Mail-Lösung mit 50GB Speicher pro Postfach"
+    },
+    {
       icon: <Shield className="w-6 h-6" />,
-      title: "Verschlüsselt",
-      description: "Moderne Verschlüsselungstechnologien schützen Ihre sensiblen Daten"
+      title: "Advanced Security",
+      description: "Integrierter Schutz vor Malware, Spam und Phishing"
     },
     {
-      icon: <Clock className="w-6 h-6" />,
-      title: "Schnelle Wiederherstellung", 
-      description: "Effiziente Wiederherstellungsprozesse minimieren Ausfallzeiten"
-    },
-    {
-      icon: <RefreshCw className="w-6 h-6" />,
-      title: "In der Schweiz",
-      description: "Lokale Datenhaltung nach Schweizer Datenschutzstandards"
+      icon: <Globe className="w-6 h-6" />,
+      title: "Überall verfügbar",
+      description: "Zugriff von jedem Gerät und Standort aus"
     }
   ];
 
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Backup Strategien & Datensicherung | Square IT"
-        description="Mit Square IT sichern Sie Ihre Unternehmensdaten zuverlässig. Wir entwickeln Backup-Strategien für Microsoft 365, Server und Cloud-Lösungen, damit Ihre Daten jederzeit geschützt und wiederherstellbar sind."
-        keywords="IT Backup, Datensicherung, Managed Backup, Backup Strategien, Data Recovery"
-        canonical="https://www.squareit.ch/backup"
+        title="Exchange Online Lösungen & Migration | Square IT"
+        description="Square IT unterstützt Sie bei Exchange Online. Wir übernehmen Migration, Einrichtung und Verwaltung, damit Ihr Unternehmen von einer sicheren, leistungsfähigen und flexiblen E-Mail-Lösung profitiert."
+        keywords="Exchange Online, E-Mail Migration, Microsoft Exchange, Mail Server, Cloud Email"
+        canonical="https://www.squareit.ch/exchange-online"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="w-20 h-20 gradient-hero rounded-2xl flex items-center justify-center text-white mx-auto mb-8">
-              <Database className="w-10 h-10" />
+              <Mail className="w-10 h-10" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Managed Backup
+              Exchange Online
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              Erfahren Sie, wie unsere erstklassigen Managed Backup Services Ihre wertvollen Daten schützen 
-              und Ihr Unternehmen vor Datenverlust bewahren können. Bei Square IT verstehen wir die wesentliche 
-              Rolle zuverlässiger Backups für den Geschäftsbetrieb.
+              Professionelle E-Mail-Lösung in der Cloud. Sichere, skalierbare und 
+              zuverlässige E-Mail-Services für Ihr Unternehmen.
             </p>
           </div>
         </div>
@@ -83,7 +81,7 @@ const ManagedBackupPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <h2 className="text-4xl font-bold text-center mb-16">
-            Backup Management Services
+            Exchange Online Services
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {services.map((service, index) => (
@@ -116,10 +114,10 @@ const ManagedBackupPage = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold mb-6">
-              Warum Managed Backup?
+              Warum Exchange Online?
             </h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Maximaler Schutz für Ihre wertvollsten Geschäftsdaten
+              Die führende Cloud-E-Mail-Lösung für Unternehmen
             </p>
           </div>
 
@@ -143,15 +141,15 @@ const ManagedBackupPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-bold mb-6">
-            Sichern Sie Ihre Daten professionell
+            Migrieren Sie zu Exchange Online
           </h2>
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            Implementieren Sie eine umfassende Backup-Strategie mit unseren Managed Services.
+            Professionelle Migration und Setup durch unsere Exchange-Experten.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button size="lg" className="gradient-primary text-white shadow-glow" asChild>
               <Link to="/contact">
-                Backup Assessment
+                Migration planen
               </Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
@@ -166,4 +164,4 @@ const ManagedBackupPage = () => {
   );
 };
 
-export default ManagedBackupPage;
+export default ExchangeOnlinePage;

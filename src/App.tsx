@@ -38,6 +38,10 @@ import CloudSecurityPage from "./pages/services/CloudSecurityPage";
 import CollaborationPage from "./pages/services/CollaborationPage";
 import TeamstelephonePage from "./pages/services/TeamstelephonePage";
 import WorkshopPage from "./pages/services/WorkshopPage";
+import ExchangeOnlinePage from "./pages/services/ExchangeOnlinePage";
+import SecurityAwarenessPage from "./pages/services/SecurityAwarenessPage";
+import VirtualizationPage from "./pages/services/VirtualizationPage";
+import ITConsultingPage from "./pages/services/ITConsultingPage";
 
 // Technology pages
 import Microsoft365Page from "./pages/technologies/Microsoft365Page";
@@ -101,6 +105,24 @@ const App = () => (
               <Route path="/services/collaboration" element={<CollaborationPage />} />
               <Route path="/services/teams-telephone" element={<TeamstelephonePage />} />
               <Route path="/services/workshop" element={<WorkshopPage />} />
+              <Route path="/exchange-online" element={<ExchangeOnlinePage />} />
+              <Route path="/backup" element={<ManagedBackupPage />} />
+              <Route path="/migration" element={<MigrationPage />} />
+              <Route path="/it-services" element={<ServicesPage />} />
+              <Route path="/security-awareness" element={<SecurityAwarenessPage />} />
+              <Route path="/virtualisierung" element={<VirtualizationPage />} />
+              <Route path="/beratung" element={<ITConsultingPage />} />
+              <Route path="/sharepoint" element={<SharePointTeamsMigrationPage />} />
+              <Route path="/support" element={<SupportPage />} />
+              <Route path="/teams" element={<TeamstelephonePage />} />
+              <Route path="/unternehmen" element={<AboutPage />} />
+              <Route path="/kontakt" element={<ContactPage />} />
+              <Route path="/keeper" element={<KeeperPage />} />
+              <Route path="/m365" element={<Microsoft365Page />} />
+              <Route path="/m365-migration" element={<M365MigrationPage />} />
+              <Route path="/managed-services" element={<ManagedServicesPage />} />
+              <Route path="/modern-workplace" element={<ModernWorkplacePage />} />
+              <Route path="/security" element={<SecurityPage />} />
               
               {/* Technology pages */}
               <Route path="/technologies/microsoft-365" element={<Microsoft365Page />} />

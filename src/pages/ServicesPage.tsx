@@ -1,5 +1,6 @@
 import ServiceCard from "@/components/ServiceCard";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEOHead } from "@/components/SEOHead";
 import { Button } from "@/components/ui/button";
 import { Server, Cloud, Users, Headphones, Shield, Zap, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -80,6 +81,12 @@ const ServicesPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="IT-Services & Beratung für Unternehmen in Zürich | Square IT"
+        description="Square IT bietet umfassende IT-Services – von Beratung über Cloud-Lösungen bis hin zu Managed Services. Wir entwickeln maßgeschneiderte IT-Konzepte für Sicherheit, Effizienz und Wachstum."
+        keywords="IT Services, IT Dienstleistungen, Managed Services, Cloud Services, IT Beratung"
+        canonical="https://www.squareit.ch/it-services"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
