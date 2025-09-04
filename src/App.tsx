@@ -57,6 +57,8 @@ import CatoNetworksPage from "./pages/technologies/CatoNetworksPage";
 import KeeperPage from "./pages/technologies/KeeperPage";
 import PeoplefonePage from "./pages/technologies/PeoplefonePage";
 import PrintixPage from "./pages/technologies/PrintixPage";
+import RobopackPage from "./pages/technologies/RobopackPage";
+import TenantManagerPage from "./pages/technologies/TenantManagerPage";
 
 // Industry pages
 import { 
@@ -139,6 +141,8 @@ const App = () => (
               <Route path="/technologies/keeper" element={<KeeperPage />} />
               <Route path="/technologies/peoplefone" element={<PeoplefonePage />} />
               <Route path="/technologies/printix" element={<PrintixPage />} />
+              <Route path="/technologies/robopack" element={<RobopackPage />} />
+              <Route path="/technologies/tenant-manager" element={<TenantManagerPage />} />
               
               {/* Industry pages */}
               <Route path="/industries" element={<IndustriesPage />} />

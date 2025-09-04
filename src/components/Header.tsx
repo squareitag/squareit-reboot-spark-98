@@ -187,6 +187,16 @@ const Header = () => {
                     Keeper
                   </Link>
                 </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies/robopack" className="w-full cursor-pointer">
+                    Robopack
+                  </Link>
+                </DropdownMenuItem>
+                <DropdownMenuItem asChild>
+                  <Link to="/technologies/tenant-manager" className="w-full cursor-pointer">
+                    Tenant Manager
+                  </Link>
+                </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
             
