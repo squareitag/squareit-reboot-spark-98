@@ -484,6 +484,35 @@ const ModernHeader = () => {
                         </Link>
                       </DropdownMenuItem>
                       
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/technologies/robopack" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Zap className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Robopack</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Automatisiertes Intune App-Management
+                          </p>
+                        </Link>
+                      </DropdownMenuItem>
+                      
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/technologies/tenant-manager" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Building2 className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Tenant Manager</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Multi-Tenant M365 Management für MSPs
+                          </p>
+                        </Link>
+                      </DropdownMenuItem>
+                      
+                      
                       <div className="mt-4 pt-4 border-t border-border/30">
                         <DropdownMenuItem asChild className="p-0">
                           <Link to="/technologies" className="group w-full cursor-pointer flex items-center justify-center space-x-2 p-3 rounded-lg bg-primary/5 transition-all duration-200 hover:bg-primary/10 hover:shadow-md">
