@@ -45,13 +45,11 @@ async function prerender() {
   
   const page = await browser.newPage();
   
-  // Set authentication for development server
-  const credentials = Buffer.from('dev:squareit2024').toString('base64');
-  await page.setExtraHTTPHeaders({
-    'Authorization': `Basic ${credentials}`
-  });
+  // Set viewport and disable authentication for Lovable
+  await page.setViewport({ width: 1920, height: 1080 });
   
-  const baseURL = 'http://localhost:8080';
+  const baseURL = process.env.VITE_APP_URL || 'https://loving-warmth-production.lovable.app';
+  console.log(`🌐 Using base URL: ${baseURL}`);
   
   for (const route of routes) {
     try {
@@ -86,7 +84,7 @@ async function prerender() {
       const optimizedHtml = html
         .replace(/<script.*?vite.*?<\/script>/gi, '')
         .replace(/<script.*?@vite.*?<\/script>/gi, '')
-        .replace(/http:\/\/localhost:8080/g, '')
+        .replace(/https:\/\/loving-warmth-production\.lovable\.app/g, '')
         .replace(/\s+/g, ' ') // Minify whitespace
         .trim();
       
