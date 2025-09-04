@@ -11,6 +11,7 @@ import HomePage from "./pages/HomePage";
 import AboutPage from "./pages/AboutPage";
 import ServicesPage from "./pages/ServicesPage";
 import ContactPage from "./pages/ContactPage";
+import IndustriesPage from "./pages/IndustriesPage";
 import TechnologiesPage from "./pages/TechnologiesPage";
 import ManagedServicesPage from "./pages/services/ManagedServicesPage";
 import MigrationPage from "./pages/services/MigrationPage";
@@ -114,6 +115,7 @@ const App = () => (
               <Route path="/technologies/printix" element={<PrintixPage />} />
               
               {/* Industry pages */}
+              <Route path="/industries" element={<IndustriesPage />} />
               <Route path="/industries/schools" element={<SchoolsPage />} />
               <Route path="/industries/ngo" element={<NGOPage />} />
               <Route path="/industries/trustees" element={<TrusteesPage />} />
