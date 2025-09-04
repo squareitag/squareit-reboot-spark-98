@@ -11,48 +11,44 @@ export default defineConfig(({ mode }) => ({
     port: 8080,
     middlewareMode: false,
     configureServer(server: any) {
-      if (mode === 'development') {
-        // Serve development robots.txt that blocks all crawlers
-        server.middlewares.use('/robots.txt', (req: any, res: any) => {
-          res.setHeader('Content-Type', 'text/plain');
-          res.end(`User-agent: *
+      // Always enable auth and robots.txt protection for this demo environment
+      
+      // Serve protected robots.txt that blocks all crawlers
+      server.middlewares.use('/robots.txt', (req: any, res: any) => {
+        res.setHeader('Content-Type', 'text/plain');
+        res.end(`User-agent: *
 Disallow: /
 
-# Development environment - no indexing allowed`);
-        });
+# Protected environment - no indexing allowed`);
+      });
 
-        // HTTP Basic Auth for development
-        server.middlewares.use((req: any, res: any, next: any) => {
-          // Skip auth for robots.txt as it's already handled above
-          if (req.url === '/robots.txt') {
-            return;
-          }
+      // HTTP Basic Auth for all requests
+      server.middlewares.use((req: any, res: any, next: any) => {
+        // Skip auth for robots.txt as it's already handled above
+        if (req.url === '/robots.txt') {
+          return;
+        }
 
-          const auth = req.headers.authorization;
-          
-          if (!auth || !auth.startsWith('Basic ')) {
-            res.statusCode = 401;
-            res.setHeader('WWW-Authenticate', 'Basic realm="Development Environment"');
-            res.end('Unauthorized - Development Environment\n\nUsername: dev\nPassword: squareit2024');
-            return;
-          }
-          
-          const credentials = Buffer.from(auth.slice(6), 'base64').toString();
-          const [username, password] = credentials.split(':');
-          
-          if (username === 'dev' && password === 'squareit2024') {
-            next();
-          } else {
-            res.statusCode = 401;
-            res.setHeader('WWW-Authenticate', 'Basic realm="Development Environment"');
-            res.end('Unauthorized');
-          }
-        });
-      }
-      
-      // Note: Staging configuration should be handled on server level
-      // This frontend code runs in browser, not on server
-      // For server-level HTTP Auth and robots.txt, configure your hosting provider
+        const auth = req.headers.authorization;
+        
+        if (!auth || !auth.startsWith('Basic ')) {
+          res.statusCode = 401;
+          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
+          res.end('Unauthorized - Protected Environment\n\nUsername: dev\nPassword: squareit2024');
+          return;
+        }
+        
+        const credentials = Buffer.from(auth.slice(6), 'base64').toString();
+        const [username, password] = credentials.split(':');
+        
+        if (username === 'dev' && password === 'squareit2024') {
+          next();
+        } else {
+          res.statusCode = 401;
+          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
+          res.end('Unauthorized');
+        }
+      });
     }
   },
   plugins: [
