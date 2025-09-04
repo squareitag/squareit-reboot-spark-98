@@ -24,7 +24,13 @@ const Footer = () => {
               Vertrauen Sie auf unsere Expertise.
             </p>
             <div className="flex space-x-4">
-              <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
+              <a 
+                href="https://www.linkedin.com/company/square-it-ag" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-muted-foreground hover:text-primary transition-colors"
+                aria-label="Square IT AG auf LinkedIn"
+              >
                 <Linkedin className="w-5 h-5" />
               </a>
               <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
