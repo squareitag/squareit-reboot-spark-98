@@ -98,7 +98,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Server className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Infrastructure</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Infrastructure</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -109,7 +109,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Laptop className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Workplace</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Workplace</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -120,7 +120,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Database className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Servers</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Servers</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -131,7 +131,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Network className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Network</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Network</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -142,7 +142,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <HardDrive className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Backup</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Backup</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -157,7 +157,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Cloud className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">M365 Migration</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">M365 Migration</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -168,7 +168,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Cloud className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Azure Migration</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Azure Migration</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -179,7 +179,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Users className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">SharePoint/Teams</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">SharePoint/Teams</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -194,7 +194,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Laptop className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Modern Workplace</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Modern Workplace</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -205,7 +205,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Shield className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Cloud Security</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Cloud Security</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -216,7 +216,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Users className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Collaboration</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Collaboration</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -227,7 +227,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Phone className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Teams Telephone</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Teams Telephone</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -238,7 +238,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Target className="w-3 h-3 text-primary" />
                             </div>
-                            <span className="text-xs font-medium text-foreground group-hover:text-primary transition-colors">Workshop</span>
+                            <span className="text-xs font-medium text-foreground group-hover:text-white transition-colors">Workshop</span>
                           </div>
                         </Link>
                       </DropdownMenuItem>
@@ -390,7 +390,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Cloud className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Microsoft 365</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Microsoft 365</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Produktivitäts- und Collaboration-Suite
@@ -404,7 +404,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Cloud className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Microsoft Azure</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Microsoft Azure</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Enterprise Cloud Platform
@@ -418,7 +418,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <HardDrive className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">AvePoint Backup</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">AvePoint Backup</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Microsoft 365 Backup-Lösung
@@ -432,7 +432,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Network className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Cato Networks</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Cato Networks</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Cloud-native Netzwerksicherheit
@@ -448,7 +448,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <FileText className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Printix</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Printix</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Cloud-basiertes Print Management
@@ -462,7 +462,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Phone className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Peoplefone</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Peoplefone</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Cloud-Telefonie und VoIP
@@ -476,7 +476,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Shield className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Keeper</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Keeper</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Enterprise Password Manager
@@ -490,7 +490,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Zap className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Robopack</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Robopack</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Automatisiertes Intune App-Management
@@ -504,7 +504,7 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Building2 className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Tenant Manager</span>
+                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Tenant Manager</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
                             Multi-Tenant M365 Management für IT-Teams
