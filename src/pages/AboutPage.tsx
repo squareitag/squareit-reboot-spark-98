@@ -73,10 +73,10 @@ const AboutPage = () => {
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
-            <div className="text-6xl font-bold text-primary mb-4">80+</div>
+            <div className="text-6xl font-bold text-primary mb-4">30+</div>
             <p className="text-lg text-muted-foreground mb-8">{t('about.years_experience')}</p>
             <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
-              Über Square IT AG - Führender IT-Dienstleister mit 80+ Jahren Erfahrung
+              Über Square IT AG - Führender IT-Dienstleister in der Schweiz
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               Als führender IT-Dienstleister in der Schweiz bieten wir Ihnen umfassende Lösungen für Ihre digitale Transformation. Vertrauen Sie auf unsere Expertise.
@@ -212,10 +212,10 @@ const AboutPage = () => {
               <CardContent className="text-center py-16">
                 <Users className="w-16 h-16 mx-auto mb-6 text-white" />
                 <h3 className="text-3xl font-bold mb-6">
-                  50+ IT-Experten
+                  Erfahrenes IT-Expertenteam
                 </h3>
                 <p className="text-xl mb-8 text-white/90 max-w-2xl mx-auto">
-                  Unser Team besteht aus zertifizierten IT-Spezialisten, Systemadministratoren, 
+                  Unser kompetentes Team besteht aus zertifizierten IT-Spezialisten, Systemadministratoren, 
                   Cloud-Architekten und Sicherheitsexperten, die Ihr Unternehmen optimal unterstützen.
                 </p>
                 <Button size="lg" variant="outline" className="bg-white text-primary hover:bg-white/90" asChild>
