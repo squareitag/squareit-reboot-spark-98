@@ -63,9 +63,9 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Über Square IT - Führender IT-Dienstleister in der Schweiz"
-        description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support. 80+ Jahre Erfahrung in der Schweiz."
-        keywords="Square IT AG, Über uns, IT Dienstleister Schweiz, Managed Services, Cloud Migration, IT Consulting, IT Support Zug"
+        title="Über Square IT AG - Führender IT-Dienstleister mit 80+ Jahren Erfahrung in der Schweiz"
+        description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support. Über 80 Jahre Erfahrung im IT-Bereich."
+        keywords="Square IT AG, Über uns, IT Dienstleister Schweiz, Managed Services, Cloud Migration, IT Consulting, IT Support Zug, 80 Jahre Erfahrung"
       />
       
       <div className="pt-16">
@@ -75,8 +75,8 @@ const AboutPage = () => {
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <div className="text-6xl font-bold text-primary mb-4">80+</div>
             <p className="text-lg text-muted-foreground mb-8">{t('about.years_experience')}</p>
-            <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              {t('about.title')}
+            <h1 className="text-4xl md:text-5xl font-bold mb-6 text-foreground">
+              Über Square IT AG - Führender IT-Dienstleister mit 80+ Jahren Erfahrung
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
               {t('about.subtitle')}
