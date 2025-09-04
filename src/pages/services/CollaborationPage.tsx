@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Users, MessageSquare, Share2, Settings, CheckCircle, ArrowRight, Video, FileText } from "lucide-react";
 import { Link } from "react-router-dom";
 import collaborationHero from "@/assets/collaboration-hero.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const CollaborationPage = () => {
   const services = [
@@ -58,6 +59,12 @@ const CollaborationPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Collaboration-Tools für Teamwork & Produktivität | Square IT"
+        description="Square IT bietet moderne Collaboration-Lösungen für verbesserte Kommunikation, Zusammenarbeit und Produktivität. Nutzen Sie Tools für effizientes Teamwork, Dateiaustausch und digitale Meetings."
+        keywords="Collaboration Tools, Teamwork, Microsoft Teams, SharePoint, Office 365, Zusammenarbeit"
+        canonical="https://www.squareit.ch/collaboration"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

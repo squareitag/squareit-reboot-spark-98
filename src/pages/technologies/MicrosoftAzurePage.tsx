@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cloud, Server, Shield, Database, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const MicrosoftAzurePage = () => {
   const azureServices = [
@@ -52,6 +53,12 @@ const MicrosoftAzurePage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Microsoft Azure Lösungen für Unternehmen | Square IT"
+        description="Nutzen Sie Microsoft Azure mit Square IT für Skalierbarkeit, Flexibilität und Sicherheit. Wir begleiten Ihre digitale Transformation mit Cloud-Architektur, Migration und Managed Services."
+        keywords="Microsoft Azure, Cloud Computing, Azure Migration, Managed Cloud Services, Digitale Transformation"
+        canonical="https://www.squareit.ch/azure"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Network, Globe, Zap, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const CatoNetworksPage = () => {
   const features = [
@@ -52,6 +53,12 @@ const CatoNetworksPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Cato Networks – SASE und SD-WAN Lösungen | Square IT"
+        description="Entdecken Sie Cato Networks: Die cloud-native SASE- und SD-WAN-Lösung für sichere, leistungsstarke Netzwerke. Square IT bietet Beratung, Implementierung und laufenden Support für Ihr Unternehmen."
+        keywords="Cato Networks, SASE, SD-WAN, Cloud-native Netzwerke, Netzwerk Security, WAN Optimierung"
+        canonical="https://www.squareit.ch/cato-networks"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

@@ -1,5 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Shield, Eye, Lock, FileText } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 
 const PrivacyPage = () => {
   const sections = [
@@ -31,6 +32,12 @@ const PrivacyPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Datenschutzerklärung & Sicherheit bei Square IT"
+        description="Erfahren Sie, wie Square IT mit Datenschutz umgeht. Unsere Datenschutzerklärung beschreibt transparente Verfahren, Sicherheit bei Datenverarbeitung und Schutz Ihrer persönlichen Informationen."
+        keywords="Datenschutzerklärung, Datenschutz, DSGVO, Datensicherheit, Privacy Policy"
+        canonical="https://www.squareit.ch/datenschutzerklarung"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

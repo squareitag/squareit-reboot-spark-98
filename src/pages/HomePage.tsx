@@ -154,10 +154,10 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Square IT - Beste Service- und Lösungsangebote | IT Services Schweiz"
-        description="Square IT bietet erstklassige IT-Dienstleistungen und Lösungen in der Schweiz. Managed Services, Cloud Migration, IT Consulting und 24/7 Support für Ihr Unternehmen."
-        keywords="IT Services, Managed Services, Cloud Migration, IT Consulting, Support, Schweiz, Zürich, Square IT AG"
-        canonical="https://squareit.ch"
+        title="Managed IT Services & Support in Zürich und Zug | Square IT"
+        description="Square IT ist Ihr Partner für Managed IT Services, Infrastruktur und Microsoft-Lösungen in Zürich und Zug. Wir bieten zuverlässige Betreuung, Cloud-Lösungen und IT-Sicherheit für Unternehmen."
+        keywords="Managed IT Services, IT Support Zürich, IT Support Zug, Microsoft Lösungen, Cloud Services, IT Sicherheit"
+        canonical="https://www.squareit.ch"
       >
         <meta name="seobility" content="604c9491b7563b121832c63453869d1b" />
       </SEOHead>

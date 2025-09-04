@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Database, RefreshCw, Clock, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const AvePointBackupPage = () => {
   const features = [
@@ -52,6 +53,12 @@ const AvePointBackupPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="AvePoint Backup Lösungen für Microsoft 365 | Square IT"
+        description="Schützen Sie Ihre Geschäftsdaten mit AvePoint Backup für Microsoft 365. Square IT bietet zuverlässige Backup-Strategien, schnelle Wiederherstellung und sicheren Schutz Ihrer Daten in der Cloud."
+        keywords="AvePoint Backup, Microsoft 365 Backup, Cloud Backup, Datenschutz, Datenwiederherstellung"
+        canonical="https://www.squareit.ch/avepoint-backup"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

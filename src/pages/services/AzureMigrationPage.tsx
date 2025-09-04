@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Cloud, Server, Database, Shield, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import azureMigrationImage from "@/assets/azure-migration-hero.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const AzureMigrationPage = () => {
   const services = [
@@ -35,6 +36,12 @@ const AzureMigrationPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Azure-Migration: Nahtlos in die Cloud mit Square IT"
+        description="Square IT unterstützt Sie bei der Migration in die Azure-Cloud. Anwendungen, Datenbanken und Arbeitslasten werden sicher und effizient transferiert. Vertrauen Sie auf unsere Expertise für einen reibungslosen Übergang."
+        keywords="Azure Migration, Cloud Migration, Azure Umzug, Cloud Transformation, Azure Services"
+        canonical="https://www.squareit.ch/azure-migration"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

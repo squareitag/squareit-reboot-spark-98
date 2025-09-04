@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const CloudSecurityPage = () => {
   const services = [
@@ -34,6 +35,12 @@ const CloudSecurityPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Cloud Security Services & Datenschutzlösungen | Square IT"
+        description="Unsere Cloud-Sicherheitslösungen von Square IT schützen Ihre Daten, verbessern Compliance und erhöhen die Effizienz. Setzen Sie auf skalierbare Security-Strategien für maximale Unternehmenssicherheit."
+        keywords="Cloud Security, Datenschutz, IT Sicherheit, Compliance, Cyber Security, Cloud Schutz"
+        canonical="https://www.squareit.ch/cloud-security"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

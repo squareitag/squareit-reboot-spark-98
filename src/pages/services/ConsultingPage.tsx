@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Lightbulb, Target, TrendingUp, Shield, Users, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const ConsultingPage = () => {
   const consultingAreas = [
@@ -44,6 +45,12 @@ const ConsultingPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="IT-Consulting & Strategie-Beratung für Firmen | Square IT"
+        description="Square IT unterstützt Unternehmen mit professionellem IT-Consulting. Von Infrastruktur-Strategien bis hin zu Cloud-Konzepten entwickeln wir maßgeschneiderte Lösungen für nachhaltigen Erfolg."
+        keywords="IT Consulting, IT Beratung, IT Strategie, Infrastruktur Beratung, Cloud Consulting, Digitalisierung"
+        canonical="https://www.squareit.ch/consulting"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
