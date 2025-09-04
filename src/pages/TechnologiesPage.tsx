@@ -48,6 +48,13 @@ const TechnologiesPage = () => {
       icon: <Monitor className="w-8 h-8" />,
       description: "Proaktive Überwachung und Business Intelligence",
       items: ["SCOM", "Nagios", "Zabbix", "Power BI", "Grafana"]
+    },
+    {
+      category: "IT-Automation & Management",
+      id: "automation",
+      icon: <Server className="w-8 h-8" />,
+      description: "Automatisierung und Multi-Tenant Management für MSPs",
+      items: ["Robopack", "Tenant Manager", "Microsoft Intune", "Azure AD", "PowerShell"]
     }
   ];
 
