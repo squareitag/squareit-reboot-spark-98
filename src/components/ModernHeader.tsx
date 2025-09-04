@@ -507,7 +507,7 @@ const ModernHeader = () => {
                             <span className="font-medium text-foreground group-hover:text-primary transition-colors">Tenant Manager</span>
                           </div>
                           <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Multi-Tenant M365 Management für MSPs
+                            Multi-Tenant M365 Management für IT-Teams
                           </p>
                         </Link>
                       </DropdownMenuItem>
