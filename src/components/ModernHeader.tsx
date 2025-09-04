@@ -90,8 +90,8 @@ const ModernHeader = () => {
                   </div>
                   <div className="grid grid-cols-3 gap-4 mb-6">
                     {/* Managed Services Column */}
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2">Managed Services</h4>
+                    <div className="space-y-3 text-left">
+                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2 text-left">Managed Services</h4>
                       <DropdownMenuItem asChild className="p-0">
                         <Link to="/services/managed-infrastructure" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-2">
@@ -149,8 +149,8 @@ const ModernHeader = () => {
                     </div>
                     
                     {/* Migration Column */}
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2">Migration</h4>
+                    <div className="space-y-3 text-left">
+                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2 text-left">Migration</h4>
                       <DropdownMenuItem asChild className="p-0">
                         <Link to="/services/m365-migration" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-2">
@@ -186,8 +186,8 @@ const ModernHeader = () => {
                     </div>
                     
                     {/* Consulting Column */}
-                    <div className="space-y-3">
-                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2">Consulting</h4>
+                    <div className="space-y-3 text-left">
+                      <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2 text-left">Consulting</h4>
                       <DropdownMenuItem asChild className="p-0">
                         <Link to="/services/modern-workplace" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-2">
@@ -383,7 +383,7 @@ const ModernHeader = () => {
                     <p className="text-sm text-muted-foreground">Modernste Technologien für Ihr Unternehmen</p>
                   </div>
                   <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-3">
+                    <div className="space-y-3 text-left">
                       <DropdownMenuItem asChild className="p-0">
                         <Link to="/technologies/microsoft-365" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-3">
@@ -441,7 +441,7 @@ const ModernHeader = () => {
                       </DropdownMenuItem>
                     </div>
                     
-                    <div className="space-y-3">
+                    <div className="space-y-3 text-left">
                       <DropdownMenuItem asChild className="p-0">
                         <Link to="/technologies/printix" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-3">
