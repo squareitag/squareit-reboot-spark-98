@@ -93,7 +93,7 @@ const ModernHeader = () => {
                     <div className="space-y-3 text-left">
                       <h4 className="text-sm font-semibold text-foreground/80 mb-3 px-2 text-left">Managed Services</h4>
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/services/managed-infrastructure" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-secondary-accent hover:bg-secondary-accent hover:shadow-lg">
+                        <Link to="/services/managed-infrastructure" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-2">
                              <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/30 transition-colors">
                                <Server className="w-3 h-3 text-primary group-hover:text-white" />
@@ -104,7 +104,7 @@ const ModernHeader = () => {
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/services/managed-workplace" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-secondary-accent hover:bg-secondary-accent hover:shadow-lg">
+                        <Link to="/services/managed-workplace" className="group w-full cursor-pointer flex flex-col space-y-2 p-3 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
                           <div className="flex items-center space-x-2">
                             <div className="flex items-center justify-center w-6 h-6 rounded-md bg-primary/10 group-hover:bg-primary/30 transition-colors">
                               <Laptop className="w-3 h-3 text-primary group-hover:text-white" />
