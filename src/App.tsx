@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from 'react-helmet-async';
 import { LanguageProvider } from "./contexts/LanguageContext";
+import { AuthGuard } from "./components/AuthGuard";
 import ScrollToTop from "./components/ScrollToTop";
 import ModernHeader from "./components/ModernHeader";
 import Footer from "./components/Footer";
@@ -73,9 +74,10 @@ const App = () => (
     <LanguageProvider>
     <QueryClientProvider client={queryClient}>
       <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+        <AuthGuard>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
           <ScrollToTop />
           <div className="min-h-screen flex flex-col">
             <ModernHeader />
@@ -157,6 +159,7 @@ const App = () => (
           <Footer />
         </div>
       </BrowserRouter>
+        </AuthGuard>
       </TooltipProvider>
     </QueryClientProvider>
   </LanguageProvider>
