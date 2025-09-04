@@ -29,9 +29,9 @@ export const SEOHead = ({
       {/* Language and indexing attributes */}
       <html lang="de" />
       <meta httpEquiv="content-language" content="de" />
-      {/* For staging: block indexing, for production: allow indexing */}
-      <meta name="robots" content={isStaging ? "noindex, nofollow" : "index, follow"} />
-      <meta name="googlebot" content={isStaging ? "noindex, nofollow" : "index, follow"} />
+      {/* Allow indexing after authentication - Seobility can crawl after login */}
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
       <link rel="alternate" hrefLang="de" href={finalCanonical} />
       
       {/* Primary Meta Tags */}

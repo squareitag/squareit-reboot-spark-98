@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /
+Allow: /
 
-# Protected staging environment - no indexing allowed
-# Authentication required for access
+# Protected by HTTP Auth - accessible after authentication
+# SEO tools can crawl after login
