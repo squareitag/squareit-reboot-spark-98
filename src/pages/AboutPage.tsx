@@ -66,7 +66,6 @@ const AboutPage = () => {
         title="Über Square IT - Führender IT-Dienstleister in der Schweiz"
         description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support. 80+ Jahre Erfahrung in der Schweiz."
         keywords="Square IT AG, Über uns, IT Dienstleister Schweiz, Managed Services, Cloud Migration, IT Consulting, IT Support Zug"
-        canonical="https://squareit.ch/about"
       />
       
       <div className="pt-16">
