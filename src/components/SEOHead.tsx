@@ -70,8 +70,8 @@ export const SEOHead = ({
             "@type": "Organization",
             "name": "Square IT AG"
           },
-          "foundingDate": "1944",
-          "numberOfEmployees": "50+",
+          "foundingDate": "1994",
+          "numberOfEmployees": "5",
           "knowsAbout": [
             "Managed Services",
             "Cloud Migration", 
