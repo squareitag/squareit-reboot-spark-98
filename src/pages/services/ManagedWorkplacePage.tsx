@@ -116,8 +116,7 @@ const ManagedWorkplacePage = () => {
               Unsere Managed Workplace-Services sind darauf ausgelegt, Ihnen eine umfassende IT-Lösung zu bieten, 
               die die Produktivität steigert, die Sicherheit verbessert und die betrieblichen Kosten reduziert. 
               Wir kümmern uns um alle Aspekte Ihrer IT-Umgebung, von der Verwaltung von Geräten und Anwendungen 
-              bis hin zur Bereitstellung von 24/7-Support, um sicherzustellen, dass Ihr Unternehmen reibungslos 
-              und effizient funktioniert.
+              bis hin zur Bereitstellung von 24/7-Support. Erfahren Sie mehr über unsere <Link to="/technologies/microsoft-365" className="text-primary hover:underline">Microsoft 365 Expertise</Link> und entdecken Sie unser <Link to="/about" className="text-primary hover:underline">erfahrenes Team</Link>.
             </p>
           </div>
         </div>

@@ -80,7 +80,7 @@ const ManagedServersPage = () => {
               Bei Square IT wissen wir, dass eine effektive Verwaltung und Wartung Ihrer IT-Systeme entscheidend 
               für den reibungslosen Ablauf Ihres Unternehmens ist. Deshalb haben wir unseren Managed Server Service 
               entwickelt, um Ihnen alle Sorgen abzunehmen und Ihnen die Freiheit zu geben, sich auf Ihr Kerngeschäft 
-              zu konzentrieren.
+              zu konzentrieren. Erfahren Sie mehr über unsere <Link to="/technologies/infrastructure" className="text-primary hover:underline">Server-Infrastrukturen</Link> und entdecken Sie weitere <Link to="/services" className="text-primary hover:underline">Managed Services</Link>.
             </p>
           </div>
         </div>

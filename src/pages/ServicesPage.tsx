@@ -96,7 +96,7 @@ const ServicesPage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Professionelle IT-Services für moderne Unternehmen. Von Managed Services 
-              bis hin zu strategischem Consulting - wir haben die Lösung für Ihre Anforderungen.
+              bis hin zu strategischem Consulting - wir haben die Lösung für Ihre Anforderungen. Lernen Sie mehr <Link to="/about" className="text-primary hover:underline">über unser Team</Link> und unsere modernen <Link to="/technologies" className="text-primary hover:underline">Technologien</Link>.
             </p>
           </div>
         </div>

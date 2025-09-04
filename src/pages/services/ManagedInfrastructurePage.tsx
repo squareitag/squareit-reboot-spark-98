@@ -75,7 +75,7 @@ const ManagedInfrastructurePage = () => {
               {t('infrastructure.title')}
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
-              {t('infrastructure.subtitle')}
+              {t('infrastructure.subtitle')} Erfahren Sie mehr über unsere <Link to="/technologies/infrastructure" className="text-primary hover:underline">Infrastruktur-Technologien</Link> und entdecken Sie weitere <Link to="/services" className="text-primary hover:underline">Managed Services</Link>.
             </p>
           </div>
         </div>

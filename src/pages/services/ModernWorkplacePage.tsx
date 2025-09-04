@@ -53,7 +53,7 @@ const ModernWorkplacePage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Strategische Beratung für den modernen Arbeitsplatz. Wir helfen Ihnen dabei, 
-              eine zukunftsfähige und produktive Arbeitsumgebung zu schaffen.
+              eine zukunftsfähige und produktive Arbeitsumgebung zu schaffen. Entdecken Sie unsere <Link to="/services/managed-workplace" className="text-primary hover:underline">Managed Workplace Services</Link> und erfahren Sie mehr über unsere <Link to="/technologies" className="text-primary hover:underline">Technologien</Link>.
             </p>
           </div>
         </div>

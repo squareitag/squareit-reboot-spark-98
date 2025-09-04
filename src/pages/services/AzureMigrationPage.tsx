@@ -54,7 +54,7 @@ const AzureMigrationPage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Professionelle Migration Ihrer Infrastruktur und Anwendungen zu Microsoft Azure. 
-              Sicher, effizient und kostenoptimiert in die Cloud.
+              Sicher, effizient und kostenoptimiert in die Cloud. Erfahren Sie mehr über unsere <Link to="/technologies/microsoft-azure" className="text-primary hover:underline">Azure-Expertise</Link> und entdecken Sie weitere <Link to="/services" className="text-primary hover:underline">Cloud-Services</Link>.
             </p>
           </div>
         </div>

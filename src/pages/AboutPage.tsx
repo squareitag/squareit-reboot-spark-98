@@ -80,7 +80,7 @@ const AboutPage = () => {
               Über Square IT AG - Führender IT-Dienstleister in der Schweiz
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              Als führender IT-Dienstleister in der Schweiz bieten wir Ihnen umfassende Lösungen für Ihre digitale Transformation. Vertrauen Sie auf unsere Expertise.
+              Als führender IT-Dienstleister in der Schweiz bieten wir Ihnen umfassende <Link to="/services" className="text-primary hover:underline">IT-Lösungen</Link> für Ihre digitale Transformation. Vertrauen Sie auf unsere Expertise und entdecken Sie unsere innovativen <Link to="/technologies" className="text-primary hover:underline">Technologien</Link>.
             </p>
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg inline-block text-lg font-semibold">
               IT Lösungen aus einer Hand

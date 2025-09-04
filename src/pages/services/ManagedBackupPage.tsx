@@ -73,7 +73,7 @@ const ManagedBackupPage = () => {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Erfahren Sie, wie unsere erstklassigen Managed Backup Services Ihre wertvollen Daten schützen 
               und Ihr Unternehmen vor Datenverlust bewahren können. Bei Square IT verstehen wir die wesentliche 
-              Rolle zuverlässiger Backups für den Geschäftsbetrieb.
+              Rolle zuverlässiger Backups für den Geschäftsbetrieb. Entdecken Sie unsere <Link to="/technologies/avepoint-backup" className="text-primary hover:underline">AvePoint Backup-Lösungen</Link> und weitere <Link to="/services" className="text-primary hover:underline">Managed Services</Link>.
             </p>
           </div>
         </div>

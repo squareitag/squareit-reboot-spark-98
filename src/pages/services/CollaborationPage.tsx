@@ -78,9 +78,7 @@ const CollaborationPage = () => {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Unsere Zusammenarbeitsdienste sind darauf ausgelegt, Teamwork und Produktivität in Ihrer Organisation zu verbessern. 
               Wir bieten eine Reihe von Tools und Lösungen, die die Kommunikation, den Dateiaustausch und die Projektzusammenarbeit 
-              erleichtern und es Ihren Teams ermöglichen, nahtlos zusammenzuarbeiten, unabhängig von ihrem Standort. Ob Sie virtuelle 
-              Besprechungen durchführen, Dokumente in Echtzeit gemeinsam verfassen oder Projekte effizient verwalten müssen, unsere 
-              Zusammenarbeitsdienste haben Sie abgedeckt.
+              erleichtern und es Ihren Teams ermöglichen, nahtlos zusammenzuarbeiten, unabhängig von ihrem Standort. Entdecken Sie unsere <Link to="/technologies/microsoft-365" className="text-primary hover:underline">Microsoft 365 Lösungen</Link> und erfahren Sie mehr über unser <Link to="/about" className="text-primary hover:underline">erfahrenes Team</Link>.
             </p>
           </div>
         </div>

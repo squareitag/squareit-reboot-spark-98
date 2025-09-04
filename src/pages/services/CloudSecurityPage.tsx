@@ -53,7 +53,7 @@ const CloudSecurityPage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Umfassende Sicherheitsberatung für Ihre Cloud-Umgebung. 
-              Schützen Sie Ihre Daten und Systeme vor modernen Cyber-Bedrohungen.
+              Schützen Sie Ihre Daten und Systeme vor modernen Cyber-Bedrohungen. Entdecken Sie unsere <Link to="/technologies/security" className="text-primary hover:underline">Security-Technologien</Link> und weitere <Link to="/services/consulting" className="text-primary hover:underline">Consulting-Services</Link>.
             </p>
           </div>
         </div>

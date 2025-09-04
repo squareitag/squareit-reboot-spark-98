@@ -78,7 +78,7 @@ const TechnologiesPage = () => {
             <p className="text-xl text-muted-foreground leading-relaxed">
               Wir arbeiten mit den neuesten und bewährtesten Technologien, um Ihnen 
               optimale Lösungen zu bieten. Unser Technologie-Stack ist darauf ausgelegt, 
-              maximale Performance, Sicherheit und Skalierbarkeit zu gewährleisten.
+              maximale Performance, Sicherheit und Skalierbarkeit zu gewährleisten. Entdecken Sie unsere <Link to="/services" className="text-primary hover:underline">Services</Link> und erfahren Sie mehr <Link to="/about" className="text-primary hover:underline">über uns</Link>.
             </p>
           </div>
         </div>

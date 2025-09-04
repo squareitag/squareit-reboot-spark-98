@@ -72,8 +72,8 @@ const ContactPage = () => {
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Vielen Dank für Ihren Besuch auf unserer Website! Wir freuen uns über Ihr Interesse 
-              an unseren IT-Dienstleistungen. Bei Fragen, Informationsbedarf oder individuellen 
-              Angeboten sind wir gerne für Sie da.
+              an unseren <Link to="/services" className="text-primary hover:underline">IT-Dienstleistungen</Link>. Bei Fragen, Informationsbedarf oder individuellen 
+              Angeboten sind wir gerne für Sie da. Erfahren Sie mehr <Link to="/about" className="text-primary hover:underline">über uns</Link>.
             </p>
           </div>
         </div>
