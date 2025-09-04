@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Phone, MessageSquare, Users, Settings, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const TeamstelephonePage = () => {
   const services = [
@@ -34,6 +35,12 @@ const TeamstelephonePage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="Microsoft Teams Einführung & Optimierung | Square IT"
+        description="Nutzen Sie Microsoft Teams mit Square IT für moderne Zusammenarbeit. Wir begleiten Sie bei Einführung, Integration und Schulung, damit Ihr Team produktiver und effizienter kommuniziert."
+        keywords="Microsoft Teams, Teams Telefonie, Teams Phone System, Unified Communications"
+        canonical="https://www.squareit.ch/teams"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { FileText, Users, Share2, MessageSquare, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import sharePointTeamsImage from "@/assets/sharepoint-teams-hero.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const SharePointTeamsMigrationPage = () => {
   const services = [
@@ -35,6 +36,12 @@ const SharePointTeamsMigrationPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="SharePoint Lösungen & Beratung für Unternehmen | Square IT"
+        description="Mit SharePoint von Square IT verbessern Sie Zusammenarbeit, Dokumentenmanagement und Workflows. Wir unterstützen bei Planung, Einführung und Betrieb, damit Ihr Unternehmen produktiver und sicherer arbeitet."
+        keywords="SharePoint, SharePoint Online, Dokumentenmanagement, Teams Migration, Collaboration"
+        canonical="https://www.squareit.ch/sharepoint"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

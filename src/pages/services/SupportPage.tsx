@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Phone, Mail, MessageSquare, Clock, Users, Wrench, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const SupportPage = () => {
   const supportChannels = [
@@ -74,6 +75,12 @@ const SupportPage = () => {
 
   return (
     <div className="min-h-screen pt-16">
+      <SEOHead 
+        title="IT-Support & Helpdesk Services in Zürich | Square IT"
+        description="Square IT bietet schnellen und kompetenten IT-Support. Unser Helpdesk löst Probleme rund um Microsoft 365, Azure und IT-Infrastruktur, damit Ihr Unternehmen ohne Ausfälle effizient arbeiten kann."
+        keywords="IT Support, Helpdesk, Remote Support, 24/7 Support, IT Notfall Service"
+        canonical="https://www.squareit.ch/support"
+      />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
