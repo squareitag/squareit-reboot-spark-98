@@ -82,7 +82,7 @@ const ModernHeader = () => {
                 <span>{t('nav.services')}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[600px] bg-secondary-accent border border-border shadow-xl z-50 p-0">
+              <DropdownMenuContent className="w-[600px] bg-background border border-border shadow-xl z-50 p-0">
                 <div className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-lg font-semibold text-foreground mb-2">Unsere Services</h3>
@@ -273,7 +273,7 @@ const ModernHeader = () => {
                 <span>Branchen</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[520px] bg-secondary-accent border border-border shadow-xl z-50 p-0">
+              <DropdownMenuContent className="w-[520px] bg-background border border-border shadow-xl z-50 p-0">
                 <div className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-lg font-semibold text-foreground mb-2">Branchen & Fachbereiche</h3>
@@ -376,7 +376,7 @@ const ModernHeader = () => {
                 <span>{t('nav.technologies')}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-[520px] bg-secondary-accent border border-border shadow-xl z-50 p-0">
+              <DropdownMenuContent className="w-[520px] bg-background border border-border shadow-xl z-50 p-0">
                 <div className="p-6">
                   <div className="text-center mb-6">
                     <h3 className="text-lg font-semibold text-foreground mb-2">Technologien</h3>
