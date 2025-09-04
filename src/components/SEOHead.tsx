@@ -48,7 +48,7 @@ export const SEOHead = ({
           "@type": "Organization",
           "name": "Square IT AG",
           "url": "https://squareit.ch",
-          "logo": "https://squareit.ch/logo.png",
+          "logo": "https://squareit.ch/squareit-favicon.png",
           "description": description,
           "address": {
             "@type": "PostalAddress",
@@ -65,6 +65,20 @@ export const SEOHead = ({
           },
           "sameAs": [
             "https://www.linkedin.com/company/square-it-ag"
+          ],
+          "founder": {
+            "@type": "Organization",
+            "name": "Square IT AG"
+          },
+          "foundingDate": "1944",
+          "numberOfEmployees": "50+",
+          "knowsAbout": [
+            "Managed Services",
+            "Cloud Migration", 
+            "IT Consulting",
+            "Microsoft 365",
+            "Azure Migration",
+            "IT Support"
           ]
         })}
       </script>
