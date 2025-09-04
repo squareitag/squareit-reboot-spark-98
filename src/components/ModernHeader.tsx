@@ -199,18 +199,18 @@ const ModernHeader = () => {
                 location.pathname.startsWith("/industries") ? "text-primary" : "text-muted-foreground"
               }`}>
                 <Factory className="w-4 h-4" />
-                <span>Industries</span>
+                <span>Branchen</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
               <DropdownMenuContent className="w-80 bg-background border border-border shadow-lg z-50">
                 <div className="grid grid-cols-2 gap-4 p-4">
                   <div>
-                    <h4 className="font-medium mb-3 text-foreground">Education & Non-Profit</h4>
+                    <h4 className="font-medium mb-3 text-foreground">Bildung & Non-Profit</h4>
                     <div className="space-y-2">
                       <DropdownMenuItem asChild>
                         <Link to="/industries/schools" className="w-full cursor-pointer flex items-center space-x-2">
                           <GraduationCap className="w-4 h-4" />
-                          <span>Schools & Education</span>
+                          <span>Schulen & Bildung</span>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
@@ -222,24 +222,24 @@ const ModernHeader = () => {
                     </div>
                   </div>
                   <div>
-                    <h4 className="font-medium mb-3 text-foreground">Financial & Professional</h4>
+                    <h4 className="font-medium mb-3 text-foreground">Finanzen & Fachbereiche</h4>
                     <div className="space-y-2">
                       <DropdownMenuItem asChild>
                         <Link to="/industries/finance" className="w-full cursor-pointer flex items-center space-x-2">
                           <Banknote className="w-4 h-4" />
-                          <span>Financial Services</span>
+                          <span>Finanzdienstleistungen</span>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link to="/industries/trustees" className="w-full cursor-pointer flex items-center space-x-2">
                           <Scale className="w-4 h-4" />
-                          <span>Trustees & Fiduciary</span>
+                          <span>Treuhänder & Fiduziär</span>
                         </Link>
                       </DropdownMenuItem>
                       <DropdownMenuItem asChild>
                         <Link to="/industries/healthcare" className="w-full cursor-pointer flex items-center space-x-2">
                           <Stethoscope className="w-4 h-4" />
-                          <span>Healthcare & Medical</span>
+                          <span>Gesundheitswesen & Medizin</span>
                         </Link>
                       </DropdownMenuItem>
                     </div>
@@ -383,7 +383,7 @@ const ModernHeader = () => {
               <div className="px-3 py-2">
                 <div className="flex items-center space-x-2 text-sm font-medium text-foreground mb-3">
                   <Factory className="w-4 h-4" />
-                  <span>Industries</span>
+                  <span>Branchen</span>
                 </div>
                 <div className="space-y-1">
                   <Link
@@ -392,7 +392,7 @@ const ModernHeader = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <GraduationCap className="w-4 h-4" />
-                    <span>Schools & Education</span>
+                    <span>Schulen & Bildung</span>
                   </Link>
                   <Link
                     to="/industries/ngo"
@@ -408,7 +408,7 @@ const ModernHeader = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Banknote className="w-4 h-4" />
-                    <span>Financial Services</span>
+                    <span>Finanzdienstleistungen</span>
                   </Link>
                   <Link
                     to="/industries/trustees"
@@ -416,7 +416,7 @@ const ModernHeader = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Scale className="w-4 h-4" />
-                    <span>Trustees & Fiduciary</span>
+                    <span>Treuhänder & Fiduziär</span>
                   </Link>
                   <Link
                     to="/industries/healthcare"
@@ -424,7 +424,7 @@ const ModernHeader = () => {
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <Stethoscope className="w-4 h-4" />
-                    <span>Healthcare & Medical</span>
+                    <span>Gesundheitswesen & Medizin</span>
                   </Link>
                 </div>
               </div>

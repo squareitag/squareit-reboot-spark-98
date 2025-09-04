@@ -22,21 +22,21 @@ const SchoolsPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">
               <GraduationCap className="w-4 h-4 mr-2" />
-              Education Solutions
+              Bildungslösungen
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              IT Solutions for Schools & Educational Institutions
+              IT-Lösungen für Schulen & Bildungseinrichtungen
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Empowering education through secure, scalable, and innovative technology solutions. 
-              From digital classrooms to administrative systems, we help schools thrive in the digital age.
+              Bildung durch sichere, skalierbare und innovative Technologielösungen stärken. 
+              Von digitalen Klassenzimmern bis zu Verwaltungssystemen – wir helfen Schulen im digitalen Zeitalter zu gedeihen.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/contact">Get Educational Consultation</Link>
+                <Link to="/contact">Bildungsberatung erhalten</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/kalkulator">Calculate Your IT Costs</Link>
+                <Link to="/kalkulator">IT-Kosten berechnen</Link>
               </Button>
             </div>
           </div>
@@ -47,9 +47,9 @@ const SchoolsPage = () => {
       <section className="py-20 bg-secondary/30">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Comprehensive School IT Solutions</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Umfassende IT-Lösungen für Schulen</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From classroom technology to administrative systems, we provide complete IT infrastructure for modern education.
+              Von Klassenzimmertechnik bis zu Verwaltungssystemen bieten wir komplette IT-Infrastruktur für moderne Bildung.
             </p>
           </div>
           
@@ -57,9 +57,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Monitor className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Digital Classroom Solutions</CardTitle>
+                <CardTitle>Digitale Klassenzimmerlösungen</CardTitle>
                 <CardDescription>
-                  Interactive whiteboards, tablets, and learning management systems for engaging education.
+                  Interaktive Whiteboards, Tablets und Lernmanagementsysteme für ansprechende Bildung.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -67,9 +67,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Shield className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Student Data Protection</CardTitle>
+                <CardTitle>Schülerdatenschutz</CardTitle>
                 <CardDescription>
-                  GDPR-compliant systems to protect sensitive student and staff information with advanced security.
+                  DSGVO-konforme Systeme zum Schutz sensibler Schüler- und Mitarbeiterdaten mit fortschrittlicher Sicherheit.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -77,9 +77,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Wifi className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>School-Wide WiFi Networks</CardTitle>
+                <CardTitle>Schulweite WLAN-Netzwerke</CardTitle>
                 <CardDescription>
-                  Reliable, secure wireless networks designed for high-density educational environments.
+                  Zuverlässige, sichere drahtlose Netzwerke für dichte Bildungsumgebungen konzipiert.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -87,9 +87,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <BookOpen className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Learning Management Systems</CardTitle>
+                <CardTitle>Lernmanagementsysteme</CardTitle>
                 <CardDescription>
-                  Modern LMS platforms for online learning, assignments, and student progress tracking.
+                  Moderne LMS-Plattformen für Online-Lernen, Aufgaben und Verfolgung des Schülerfortschritts.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -97,9 +97,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <Users className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Administrative Systems</CardTitle>
+                <CardTitle>Verwaltungssysteme</CardTitle>
                 <CardDescription>
-                  Student information systems, grade books, and communication platforms for efficient administration.
+                  Schülerinformationssysteme, Notenbücher und Kommunikationsplattformen für effiziente Verwaltung.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -107,9 +107,9 @@ const SchoolsPage = () => {
             <Card className="hover:shadow-lg transition-shadow">
               <CardHeader>
                 <GraduationCap className="w-12 h-12 text-primary mb-4" />
-                <CardTitle>Remote Learning Support</CardTitle>
+                <CardTitle>Fernunterricht-Support</CardTitle>
                 <CardDescription>
-                  Complete infrastructure for hybrid and distance learning with Microsoft Teams for Education.
+                  Komplette Infrastruktur für hybrides und Fernlernen mit Microsoft Teams für Bildungseinrichtungen.
                 </CardDescription>
               </CardHeader>
             </Card>
@@ -121,9 +121,9 @@ const SchoolsPage = () => {
       <section className="py-20">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold mb-4">What Schools Say About Us</h2>
+            <h2 className="text-3xl lg:text-4xl font-bold mb-4">Was Schulen über uns sagen</h2>
             <p className="text-xl text-muted-foreground">
-              Trusted by educational institutions across Switzerland
+              Vertraut von Bildungseinrichtungen in der ganzen Schweiz
             </p>
           </div>
           
@@ -139,11 +139,11 @@ const SchoolsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4 italic">
-                  "SquareIT transformed our school's technology infrastructure. Our teachers now have reliable tools, 
-                  and our students are more engaged with learning. The support team is exceptional."
+                  "SquareIT hat die Technologie-Infrastruktur unserer Schule transformiert. Unsere Lehrer haben jetzt zuverlässige Tools, 
+                  und unsere Schüler sind mehr mit dem Lernen beschäftigt. Das Support-Team ist außergewöhnlich."
                 </p>
                 <div className="font-semibold">Sarah Weber</div>
-                <div className="text-sm text-muted-foreground">IT Director, Gymnasium Zürich Nord</div>
+                <div className="text-sm text-muted-foreground">IT-Direktorin, Gymnasium Zürich Nord</div>
               </CardContent>
             </Card>
 
@@ -158,11 +158,11 @@ const SchoolsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4 italic">
-                  "The migration to Microsoft 365 for Education was seamless. Students and teachers can now 
-                  collaborate effectively from anywhere. Best investment we've made in years."
+                  "Die Migration zu Microsoft 365 für Bildungseinrichtungen war nahtlos. Schüler und Lehrer können jetzt 
+                  effektiv von überall aus zusammenarbeiten. Die beste Investition, die wir seit Jahren gemacht haben."
                 </p>
                 <div className="font-semibold">Dr. Andreas Müller</div>
-                <div className="text-sm text-muted-foreground">Principal, Kantonsschule Basel</div>
+                <div className="text-sm text-muted-foreground">Schulleiter, Kantonsschule Basel</div>
               </CardContent>
             </Card>
 
@@ -177,11 +177,11 @@ const SchoolsPage = () => {
               </CardHeader>
               <CardContent>
                 <p className="mb-4 italic">
-                  "Their cybersecurity solutions gave us peace of mind. With sensitive student data, 
-                  we needed experts who understand educational compliance requirements."
+                  "Ihre Cybersicherheitslösungen gaben uns Seelenfrieden. Mit sensiblen Schülerdaten 
+                  brauchten wir Experten, die die Compliance-Anforderungen im Bildungswesen verstehen."
                 </p>
                 <div className="font-semibold">Maria Rossi</div>
-                <div className="text-sm text-muted-foreground">ICT Manager, International School Geneva</div>
+                <div className="text-sm text-muted-foreground">ICT-Managerin, International School Geneva</div>
               </CardContent>
             </Card>
           </div>
@@ -192,17 +192,17 @@ const SchoolsPage = () => {
       <section className="py-20 bg-primary text-primary-foreground">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl lg:text-4xl font-bold mb-6">
-            Ready to Transform Your School's Technology?
+            Bereit, die Technologie Ihrer Schule zu transformieren?
           </h2>
           <p className="text-xl mb-8 max-w-2xl mx-auto opacity-90">
-            Let's discuss how we can enhance your educational environment with modern, secure IT solutions.
+            Lassen Sie uns besprechen, wie wir Ihre Bildungsumgebung mit modernen, sicheren IT-Lösungen verbessern können.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="secondary" size="lg" asChild>
-              <Link to="/contact">Schedule Consultation</Link>
+              <Link to="/contact">Beratung vereinbaren</Link>
             </Button>
             <Button variant="outline" size="lg" className="border-primary-foreground text-primary-foreground hover:bg-primary-foreground hover:text-primary" asChild>
-              <Link to="/services">View Our Services</Link>
+              <Link to="/services">Unsere Services ansehen</Link>
             </Button>
           </div>
         </div>

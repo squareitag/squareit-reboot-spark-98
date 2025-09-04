@@ -22,21 +22,21 @@ const TrusteesPage = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-4">
               <Scale className="w-4 h-4 mr-2" />
-              Fiduciary Services
+              Treuhand-Services
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              IT Solutions for Trustees & Fiduciary Services
+              IT-Lösungen für Treuhänder & Treuhand-Services
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Secure, compliant, and efficient technology solutions for trustees, fiduciary service providers, 
-              and wealth management professionals. Protect sensitive financial data with enterprise-grade security.
+              Sichere, konforme und effiziente Technologielösungen für Treuhänder, Treuhand-Dienstleister 
+              und Vermögensverwaltungsfachleute. Schützen Sie sensible Finanzdaten mit Sicherheit auf Unternehmensniveau.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/contact">Get Fiduciary IT Consultation</Link>
+                <Link to="/contact">Treuhand-IT-Beratung erhalten</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/kalkulator">Calculate Your IT Costs</Link>
+                <Link to="/kalkulator">IT-Kosten berechnen</Link>
               </Button>
             </div>
           </div>
