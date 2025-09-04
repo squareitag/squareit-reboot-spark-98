@@ -455,6 +455,20 @@ const Header = () => {
                   >
                     Keeper
                   </Link>
+                  <Link
+                    to="/technologies/robopack"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Robopack
+                  </Link>
+                  <Link
+                    to="/technologies/tenant-manager"
+                    className="block py-1 text-sm text-muted-foreground hover:text-primary"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    Tenant Manager
+                  </Link>
                 </div>
               </div>
               
