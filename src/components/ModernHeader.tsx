@@ -301,11 +301,11 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Heart className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">NGOs & Non-Profits</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Kosteneffiziente Lösungen für gemeinnützige Organisationen
-                          </p>
+                           <span className="font-medium text-foreground group-hover:text-white transition-colors">NGOs & Non-Profits</span>
+                         </div>
+                         <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                           Kosteneffiziente Lösungen für gemeinnützige Organisationen
+                         </p>
                         </Link>
                       </DropdownMenuItem>
                       
@@ -315,11 +315,11 @@ const ModernHeader = () => {
                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
                               <Banknote className="w-4 h-4 text-primary" />
                             </div>
-                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Finanzdienstleistungen</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Hochsichere IT-Infrastrukturen für Finanzunternehmen
-                          </p>
+                           <span className="font-medium text-foreground group-hover:text-white transition-colors">Finanzdienstleistungen</span>
+                         </div>
+                         <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                           Hochsichere IT-Infrastrukturen für Finanzunternehmen
+                         </p>
                         </Link>
                       </DropdownMenuItem>
                     </div>
@@ -485,16 +485,16 @@ const ModernHeader = () => {
                       </DropdownMenuItem>
                       
                       <DropdownMenuItem asChild className="p-0">
-                        <Link to="/technologies/robopack" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
-                          <div className="flex items-center space-x-3">
-                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
-                              <Zap className="w-4 h-4 text-primary" />
-                            </div>
-                            <span className="font-medium text-foreground group-hover:text-white transition-colors">Robopack</span>
-                          </div>
-                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
-                            Automatisiertes Intune App-Management
-                          </p>
+                         <Link to="/technologies/robopack" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                           <div className="flex items-center space-x-3">
+                             <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                               <Zap className="w-4 h-4 text-primary" />
+                             </div>
+                             <span className="font-medium text-foreground group-hover:text-white transition-colors">Robopack</span>
+                           </div>
+                           <p className="text-xs text-muted-foreground group-hover:text-white/80 transition-colors leading-relaxed">
+                             Automatisiertes Intune App-Management
+                           </p>
                         </Link>
                       </DropdownMenuItem>
                       

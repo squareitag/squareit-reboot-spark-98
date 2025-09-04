@@ -23,10 +23,15 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-dark: 217 91% 45%;
     
-    /* Professional Dark Blue Accent */
-    --accent: 221 39% 11%;
+    /* Orange Accent for Content */
+    --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 221 39% 15%;
+    --accent-light: 24 95% 60%;
+    
+    /* Professional Dark Blue */
+    --secondary-accent: 221 39% 11%;
+    --secondary-accent-foreground: 0 0% 100%;
+    --secondary-accent-light: 221 39% 15%;
 
     --secondary: 220 14% 96%;
     --secondary-foreground: 220 25% 15%;
@@ -83,9 +88,13 @@ All colors MUST be HSL.
     --primary-foreground: 0 0% 100%;
     --primary-dark: 217 91% 45%;
 
-    --accent: 221 39% 15%;
+    --accent: 24 95% 53%;
     --accent-foreground: 0 0% 100%;
-    --accent-light: 221 39% 20%;
+    --accent-light: 24 95% 60%;
+    
+    --secondary-accent: 221 39% 15%;
+    --secondary-accent-foreground: 0 0% 100%;
+    --secondary-accent-light: 221 39% 20%;
 
     --secondary: 220 25% 15%;
     --secondary-foreground: 220 14% 96%;
