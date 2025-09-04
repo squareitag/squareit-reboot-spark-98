@@ -21,6 +21,13 @@ export const SEOHead = ({
   
   return (
     <Helmet>
+      {/* Language and indexing attributes */}
+      <html lang="de" />
+      <meta httpEquiv="content-language" content="de" />
+      <meta name="robots" content="index, follow" />
+      <meta name="googlebot" content="index, follow" />
+      <link rel="alternate" hrefLang="de" href={canonical || "https://www.squareit.ch"} />
+      
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
       <meta name="title" content={fullTitle} />
