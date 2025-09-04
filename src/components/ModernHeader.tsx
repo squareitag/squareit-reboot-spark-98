@@ -202,46 +202,94 @@ const ModernHeader = () => {
                 <span>Branchen</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-80 bg-background border border-border shadow-lg z-50">
-                <div className="grid grid-cols-2 gap-4 p-4">
-                  <div>
-                    <h4 className="font-medium mb-3 text-foreground">Bildung & Non-Profit</h4>
-                    <div className="space-y-2">
-                      <DropdownMenuItem asChild>
-                        <Link to="/industries/schools" className="w-full cursor-pointer flex items-center space-x-2">
-                          <GraduationCap className="w-4 h-4" />
-                          <span>Schulen & Bildung</span>
+              <DropdownMenuContent className="w-[520px] bg-background border border-border shadow-xl z-50 p-0">
+                <div className="p-6">
+                  <div className="text-center mb-6">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">Branchen & Fachbereiche</h3>
+                    <p className="text-sm text-muted-foreground">Spezialisierte IT-Lösungen für Ihre Branche</p>
+                  </div>
+                  <div className="grid grid-cols-2 gap-4">
+                    <div className="space-y-3">
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/industries/schools" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <GraduationCap className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Schulen & Bildung</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Moderne IT-Infrastrukturen für Bildungseinrichtungen
+                          </p>
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/industries/ngo" className="w-full cursor-pointer flex items-center space-x-2">
-                          <Heart className="w-4 h-4" />
-                          <span>NGOs & Non-Profits</span>
+                      
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/industries/ngo" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Heart className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">NGOs & Non-Profits</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Kosteneffiziente Lösungen für gemeinnützige Organisationen
+                          </p>
+                        </Link>
+                      </DropdownMenuItem>
+                      
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/industries/finance" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Banknote className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Finanzdienstleistungen</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Hochsichere IT-Infrastrukturen für Finanzunternehmen
+                          </p>
                         </Link>
                       </DropdownMenuItem>
                     </div>
-                  </div>
-                  <div>
-                    <h4 className="font-medium mb-3 text-foreground">Finanzen & Fachbereiche</h4>
-                    <div className="space-y-2">
-                      <DropdownMenuItem asChild>
-                        <Link to="/industries/finance" className="w-full cursor-pointer flex items-center space-x-2">
-                          <Banknote className="w-4 h-4" />
-                          <span>Finanzdienstleistungen</span>
+                    
+                    <div className="space-y-3">
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/industries/trustees" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Scale className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Treuhänder & Fiduziär</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            Vertrauensvolle IT-Partner für Treuhandgesellschaften
+                          </p>
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/industries/trustees" className="w-full cursor-pointer flex items-center space-x-2">
-                          <Scale className="w-4 h-4" />
-                          <span>Treuhänder & Fiduziär</span>
+                      
+                      <DropdownMenuItem asChild className="p-0">
+                        <Link to="/industries/healthcare" className="group w-full cursor-pointer flex flex-col space-y-2 p-4 rounded-lg border border-border/50 transition-all duration-200 hover:border-primary/30 hover:bg-gradient-to-br hover:from-primary/5 hover:to-primary/10 hover:shadow-lg">
+                          <div className="flex items-center space-x-3">
+                            <div className="flex items-center justify-center w-8 h-8 rounded-md bg-primary/10 group-hover:bg-primary/20 transition-colors">
+                              <Stethoscope className="w-4 h-4 text-primary" />
+                            </div>
+                            <span className="font-medium text-foreground group-hover:text-primary transition-colors">Gesundheitswesen</span>
+                          </div>
+                          <p className="text-xs text-muted-foreground group-hover:text-foreground/80 transition-colors leading-relaxed">
+                            HIPAA-konforme IT-Lösungen für medizinische Einrichtungen
+                          </p>
                         </Link>
                       </DropdownMenuItem>
-                      <DropdownMenuItem asChild>
-                        <Link to="/industries/healthcare" className="w-full cursor-pointer flex items-center space-x-2">
-                          <Stethoscope className="w-4 h-4" />
-                          <span>Gesundheitswesen & Medizin</span>
-                        </Link>
-                      </DropdownMenuItem>
+                      
+                      <div className="mt-4 pt-4 border-t border-border/30">
+                        <DropdownMenuItem asChild className="p-0">
+                          <Link to="/industries" className="group w-full cursor-pointer flex items-center justify-center space-x-2 p-3 rounded-lg bg-primary/5 transition-all duration-200 hover:bg-primary/10 hover:shadow-md">
+                            <span className="text-sm font-medium text-primary">Alle Branchen ansehen</span>
+                            <ChevronDown className="w-4 h-4 text-primary rotate-[-90deg] transition-transform group-hover:translate-x-1" />
+                          </Link>
+                        </DropdownMenuItem>
+                      </div>
                     </div>
                   </div>
                 </div>
