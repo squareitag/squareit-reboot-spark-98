@@ -52,10 +52,17 @@ const WorkshopPage = () => {
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
               Workshop Services
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
+            <p className="text-xl text-muted-foreground leading-relaxed mb-6">
               Interaktive Workshops und Trainings für digitale Transformation und 
               moderne Arbeitsweisen. Lernen Sie von unseren Experten.
             </p>
+            <div className="flex items-center justify-center gap-2 text-sm text-muted-foreground">
+              <Link to="/" className="hover:text-primary transition-colors">Startseite</Link>
+              <span>→</span>
+              <Link to="/services" className="hover:text-primary transition-colors">Services</Link>
+              <span>→</span>
+              <span>Workshop Services</span>
+            </div>
           </div>
         </div>
       </section>
