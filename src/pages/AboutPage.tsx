@@ -64,7 +64,7 @@ const AboutPage = () => {
     <div className="min-h-screen">
       <SEOHead 
         title="Über Square IT - Führender IT-Dienstleister in der Schweiz"
-        description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support. Über 80 Jahre Erfahrung im IT-Bereich."
+        description="Erfahren Sie mehr über Square IT AG - Ihr zuverlässiger Partner für Managed Services, Cloud Migration, IT Consulting und 24/7 Support für Unternehmen in der Schweiz."
         keywords="Square IT AG, Über uns, IT Dienstleister Schweiz, Managed Services, Cloud Migration, IT Consulting, IT Support Zug"
       />
       
@@ -79,7 +79,7 @@ const AboutPage = () => {
               Über Square IT AG - Führender IT-Dienstleister mit 80+ Jahren Erfahrung
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8">
-              {t('about.subtitle')}
+              Als führender IT-Dienstleister in der Schweiz bieten wir Ihnen umfassende Lösungen für Ihre digitale Transformation. Vertrauen Sie auf unsere Expertise.
             </p>
             <div className="bg-gradient-to-r from-orange-500 to-orange-600 text-white px-6 py-3 rounded-lg inline-block text-lg font-semibold">
               IT Lösungen aus einer Hand
