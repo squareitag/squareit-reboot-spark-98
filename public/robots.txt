@@ -1,5 +1,7 @@
 User-agent: *
 Allow: /
 
+Sitemap: https://sqsolutions.ch/sitemap.xml
+
 # Protected by HTTP Auth - accessible after authentication
 # SEO tools can crawl after login

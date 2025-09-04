@@ -98,6 +98,9 @@ export const SEOHead = ({
         })}
       </script>
       
+      {/* Sitemap reference for crawlers */}
+      <link rel="sitemap" type="application/xml" href="/sitemap.xml" />
+      
       {/* Additional custom meta tags */}
       {children}
     </Helmet>
