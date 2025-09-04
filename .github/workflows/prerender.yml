@@ -1,0 +1,68 @@
+name: Pre-render Pages for SEO
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  prerender:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: |
+        npm ci
+        npm install puppeteer
+        
+    - name: Build application
+      run: npm run build
+      
+    - name: Start preview server and run pre-rendering
+      run: |
+        # Start the preview server in background
+        npm run preview &
+        
+        # Wait for server to be ready
+        sleep 10
+        
+        # Run the pre-rendering script
+        node scripts/production-prerender.js
+        
+        # Stop the preview server
+        pkill -f "vite preview" || true
+        
+    - name: Commit pre-rendered files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        
+        # Add the prerendered files
+        git add prerendered/ || true
+        
+        # Check if there are changes to commit
+        if git diff --staged --quiet; then
+          echo "No changes to commit"
+        else
+          git commit -m "Auto-update pre-rendered pages [skip ci]"
+          git push
+        fi
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        
+    - name: Upload pre-rendered artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        name: prerendered-pages
+        path: prerendered/
+        retention-days: 30
