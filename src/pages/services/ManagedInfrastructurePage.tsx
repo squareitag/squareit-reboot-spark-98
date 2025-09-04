@@ -5,6 +5,7 @@ import { Server, Cloud, Shield, Monitor, CheckCircle, ArrowRight } from "lucide-
 import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import managedInfrastructureImage from "@/assets/managed-infrastructure-hero.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedInfrastructurePage = () => {
   const { t } = useLanguage();
@@ -55,7 +56,14 @@ const ManagedInfrastructurePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Managed Infrastructure Services - Erhöhte Zuverlässigkeit und Sicherheit"
+        description="Unsere Managed Infrastructure-Services bieten Ihnen zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit."
+        keywords="Managed Infrastructure, Server Management, Cloud Infrastructure, Network Infrastructure, IT Infrastructure, Kosteneinsparungen"
+        canonical="https://sqsolutions.ch/managed-infrastructure"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -277,6 +285,7 @@ const ManagedInfrastructurePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

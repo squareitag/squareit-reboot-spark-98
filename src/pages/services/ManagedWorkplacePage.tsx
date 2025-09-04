@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Laptop, Shield, Users, Settings, CheckCircle, ArrowRight, Monitor, Smartphone, Cloud } from "lucide-react";
 import { Link } from "react-router-dom";
 import managedWorkplaceHero from "@/assets/managed-workplace.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedWorkplacePage = () => {
   const services = [
@@ -93,7 +94,14 @@ const ManagedWorkplacePage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Managed Workplace Services - Umfassende IT-Lösung für Produktivität"
+        description="Unsere Managed Workplace-Services sind darauf ausgelegt, Ihnen eine umfassende IT-Lösung zu bieten, die die Produktivität steigert, die Sicherheit verbessert und die betrieblichen Kosten reduziert."
+        keywords="Managed Workplace, Device Management, User Provisioning, Security Management, Collaboration Tools, Microsoft Teams, Mobile Device Management"
+        canonical="https://sqsolutions.ch/managed-workplace"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -275,6 +283,7 @@ const ManagedWorkplacePage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

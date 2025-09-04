@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Users, BookOpen, Target, Lightbulb, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const WorkshopPage = () => {
   const services = [
@@ -33,7 +34,14 @@ const WorkshopPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Workshop Services - Interaktive IT-Schulungen und Trainings"
+        description="Workshops sind eine effektive Möglichkeit, Teams zu stärken, Wissen zu erweitern und Fähigkeiten zu verbessern. Wir bieten Microsoft Teams, SharePoint, Endpoint Manager und verschiedene Microsoft-Tools Workshops."
+        keywords="Workshop, IT Training, Microsoft Teams Workshop, SharePoint Workshop, Endpoint Manager, IT Schulungen, Digital Transformation"
+        canonical="https://sqsolutions.ch/workshop"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -108,6 +116,7 @@ const WorkshopPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 

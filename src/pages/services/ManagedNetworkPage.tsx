@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Network, Wifi, Shield, Settings, CheckCircle, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import managedNetworkImage from "@/assets/managed-network-hero.jpg";
+import { SEOHead } from "@/components/SEOHead";
 
 const ManagedNetworkPage = () => {
   const services = [
@@ -52,7 +53,14 @@ const ManagedNetworkPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Managed Network Services - Optimale Netzwerk-Performance und Sicherheit"
+        description="Erfahren Sie, wie unsere führenden Managed Network Services Ihre Unternehmenskommunikation optimieren, die Netzwerksicherheit erhöhen und eine reibungslose digitale Infrastruktur gewährleisten."
+        keywords="Managed Network, Network Infrastructure, Wireless Network Management, Network Security, Network Monitoring, Firewall Management"
+        canonical="https://sqsolutions.ch/managed-network"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -155,6 +163,7 @@ const ManagedNetworkPage = () => {
         </div>
       </section>
     </div>
+    </>
   );
 };
 
