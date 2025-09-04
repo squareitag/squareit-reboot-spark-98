@@ -6,6 +6,7 @@ interface SEOHeadProps {
   keywords?: string;
   canonical?: string;
   ogImage?: string;
+  children?: React.ReactNode;
 }
 
 export const SEOHead = ({ 
@@ -13,7 +14,8 @@ export const SEOHead = ({
   description, 
   keywords = "IT Services, Managed Services, Cloud Migration, IT Consulting, Support, Schweiz, Zürich",
   canonical,
-  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png"
+  ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
+  children
 }: SEOHeadProps) => {
   const fullTitle = title.includes('Square IT') ? title : `${title} | Square IT AG`;
   
@@ -82,6 +84,9 @@ export const SEOHead = ({
           ]
         })}
       </script>
+      
+      {/* Additional custom meta tags */}
+      {children}
     </Helmet>
   );
 };
