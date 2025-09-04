@@ -6,6 +6,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { useToast } from "@/hooks/use-toast";
 import { Calculator, ChevronLeft, ChevronRight, Users, Building, Shield, Cloud, Server, Monitor, Database, Wifi } from "lucide-react";
+import { SEOHead } from "@/components/SEOHead";
 
 interface CalculatorData {
   employees: string;
@@ -383,7 +384,14 @@ const ITCalculatorPage = () => {
   };
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="IT-Kostenrechner für Unternehmen | Square IT"
+        description="Berechnen Sie Ihre IT-Kosten mit unserem kostenlosen IT-Rechner. Erhalten Sie eine individuelle Kostenschätzung für Managed Services, Cloud-Lösungen und IT-Infrastruktur."
+        keywords="IT Kostenrechner, IT Kosten berechnen, Managed Services Preise, IT Budget, Square IT"
+        canonical="https://www.squareit.ch/calculator"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -525,7 +533,8 @@ const ITCalculatorPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

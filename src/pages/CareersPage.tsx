@@ -3,6 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import { Users, Heart, TrendingUp, Coffee, MapPin, ArrowRight, CheckCircle } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const CareersPage = () => {
   const benefits = [
@@ -68,7 +69,14 @@ const CareersPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="Karriere bei Square IT - Jobs im IT-Bereich Zürich"
+        description="Starten Sie Ihre IT-Karriere bei Square IT! Wir bieten spannende Jobs in einem dynamischen Team mit flexiblen Arbeitszeiten, Weiterbildungsmöglichkeiten und attraktiven Benefits in Zürich und Zug."
+        keywords="IT Jobs, Karriere, Stellenangebote, IT-Techniker, System Administrator, Zürich, Zug, Square IT"
+        canonical="https://www.squareit.ch/careers"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -250,7 +258,8 @@ const CareersPage = () => {
           </Card>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

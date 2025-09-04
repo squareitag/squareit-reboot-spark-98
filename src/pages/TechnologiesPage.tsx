@@ -3,6 +3,7 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Cloud, Shield, Server, Database, Network, Monitor } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const TechnologiesPage = () => {
   const technologies = [
@@ -59,7 +60,14 @@ const TechnologiesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen pt-16">
+    <>
+      <SEOHead 
+        title="IT-Technologien & Plattformen | Square IT"
+        description="Moderne IT-Technologien von Square IT: Microsoft Azure, AWS, Security-Lösungen, Server-Infrastrukturen und Netzwerk-Technologien für optimale Performance und Sicherheit."
+        keywords="IT Technologien, Microsoft Azure, AWS, Security, Server, Netzwerk, Cloud Platforms, Square IT"
+        canonical="https://www.squareit.ch/technologies"
+      />
+      <div className="min-h-screen pt-16">
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -229,7 +237,8 @@ const TechnologiesPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 

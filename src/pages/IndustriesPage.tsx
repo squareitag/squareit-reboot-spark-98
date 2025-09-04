@@ -10,6 +10,7 @@ import {
   CheckCircle
 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { SEOHead } from "@/components/SEOHead";
 
 const IndustriesPage = () => {
   const industries = [
@@ -91,7 +92,14 @@ const IndustriesPage = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
+    <>
+      <SEOHead 
+        title="Branchenlösungen - IT für verschiedene Industrien | Square IT"
+        description="Spezialisierte IT-Lösungen für Schulen, NGOs, Trustees, Gesundheitswesen und Finanzsektor. Square IT bietet branchenspezifische Services und Compliance-konforme Systeme."
+        keywords="Branchenlösungen, IT Bildung, Healthcare IT, Finance IT, NGO IT, Compliance, Square IT"
+        canonical="https://www.squareit.ch/industries"
+      />
+      <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
       <section className="relative py-20 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-primary/10 to-transparent" />
@@ -202,7 +210,8 @@ const IndustriesPage = () => {
           </div>
         </div>
       </section>
-    </div>
+      </div>
+    </>
   );
 };
 
