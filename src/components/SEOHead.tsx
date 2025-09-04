@@ -19,14 +19,20 @@ export const SEOHead = ({
 }: SEOHeadProps) => {
   const fullTitle = title.includes('Square IT') ? title : `${title} | Square IT AG`;
   
+  // Determine if we're on staging and adjust canonical URLs accordingly
+  const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('sqsolutions.ch');
+  const baseUrl = isStaging ? 'https://sqsolutions.ch' : 'https://www.squareit.ch';
+  const finalCanonical = canonical || baseUrl;
+  
   return (
     <Helmet>
       {/* Language and indexing attributes */}
       <html lang="de" />
       <meta httpEquiv="content-language" content="de" />
-      <meta name="robots" content="index, follow" />
-      <meta name="googlebot" content="index, follow" />
-      <link rel="alternate" hrefLang="de" href={canonical || "https://www.squareit.ch"} />
+      {/* For staging: block indexing, for production: allow indexing */}
+      <meta name="robots" content={isStaging ? "noindex, nofollow" : "index, follow"} />
+      <meta name="googlebot" content={isStaging ? "noindex, nofollow" : "index, follow"} />
+      <link rel="alternate" hrefLang="de" href={finalCanonical} />
       
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
@@ -34,15 +40,15 @@ export const SEOHead = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       
-      {/* Canonical URL */}
-      {canonical && <link rel="canonical" href={canonical} />}
+      {/* Canonical URL - only add if not staging (alternative: remove completely for staging) */}
+      {!isStaging && finalCanonical && <link rel="canonical" href={finalCanonical} />}
       
       {/* Open Graph / Facebook */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
-      {canonical && <meta property="og:url" content={canonical} />}
+      {finalCanonical && <meta property="og:url" content={finalCanonical} />}
       
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />

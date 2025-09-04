@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /
+
+# Staging environment - no indexing allowed
+# Seobility can still crawl after HTTP Basic Auth login

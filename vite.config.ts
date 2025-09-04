@@ -49,6 +49,10 @@ Disallow: /
           }
         });
       }
+      
+      // Note: Staging configuration should be handled on server level
+      // This frontend code runs in browser, not on server
+      // For server-level HTTP Auth and robots.txt, configure your hosting provider
     }
   },
   plugins: [
