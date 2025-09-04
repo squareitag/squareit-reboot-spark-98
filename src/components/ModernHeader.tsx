@@ -22,7 +22,13 @@ import {
   Target,
   Headphones,
   FileText,
-  Calculator
+  Calculator,
+  GraduationCap,
+  Heart,
+  Scale,
+  Banknote,
+  Stethoscope,
+  Factory
 } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
@@ -187,6 +193,61 @@ const ModernHeader = () => {
               </DropdownMenuContent>
             </DropdownMenu>
 
+            {/* Industries Dropdown */}
+            <DropdownMenu>
+              <DropdownMenuTrigger className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary ${
+                location.pathname.startsWith("/industries") ? "text-primary" : "text-muted-foreground"
+              }`}>
+                <Factory className="w-4 h-4" />
+                <span>Industries</span>
+                <ChevronDown className="w-4 h-4" />
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="w-80 bg-background border border-border shadow-lg z-50">
+                <div className="grid grid-cols-2 gap-4 p-4">
+                  <div>
+                    <h4 className="font-medium mb-3 text-foreground">Education & Non-Profit</h4>
+                    <div className="space-y-2">
+                      <DropdownMenuItem asChild>
+                        <Link to="/industries/schools" className="w-full cursor-pointer flex items-center space-x-2">
+                          <GraduationCap className="w-4 h-4" />
+                          <span>Schools & Education</span>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/industries/ngo" className="w-full cursor-pointer flex items-center space-x-2">
+                          <Heart className="w-4 h-4" />
+                          <span>NGOs & Non-Profits</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    </div>
+                  </div>
+                  <div>
+                    <h4 className="font-medium mb-3 text-foreground">Financial & Professional</h4>
+                    <div className="space-y-2">
+                      <DropdownMenuItem asChild>
+                        <Link to="/industries/finance" className="w-full cursor-pointer flex items-center space-x-2">
+                          <Banknote className="w-4 h-4" />
+                          <span>Financial Services</span>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/industries/trustees" className="w-full cursor-pointer flex items-center space-x-2">
+                          <Scale className="w-4 h-4" />
+                          <span>Trustees & Fiduciary</span>
+                        </Link>
+                      </DropdownMenuItem>
+                      <DropdownMenuItem asChild>
+                        <Link to="/industries/healthcare" className="w-full cursor-pointer flex items-center space-x-2">
+                          <Stethoscope className="w-4 h-4" />
+                          <span>Healthcare & Medical</span>
+                        </Link>
+                      </DropdownMenuItem>
+                    </div>
+                  </div>
+                </div>
+              </DropdownMenuContent>
+            </DropdownMenu>
+
             {/* Technologies Dropdown */}
             <DropdownMenu>
               <DropdownMenuTrigger className={`flex items-center space-x-2 text-sm font-medium transition-colors hover:text-primary ${
@@ -318,6 +379,56 @@ const ModernHeader = () => {
                 <span>{t('nav.about')}</span>
               </Link>
               
+              {/* Mobile Industries */}
+              <div className="px-3 py-2">
+                <div className="flex items-center space-x-2 text-sm font-medium text-foreground mb-3">
+                  <Factory className="w-4 h-4" />
+                  <span>Industries</span>
+                </div>
+                <div className="space-y-1">
+                  <Link
+                    to="/industries/schools"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <GraduationCap className="w-4 h-4" />
+                    <span>Schools & Education</span>
+                  </Link>
+                  <Link
+                    to="/industries/ngo"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Heart className="w-4 h-4" />
+                    <span>NGOs & Non-Profits</span>
+                  </Link>
+                  <Link
+                    to="/industries/finance"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Banknote className="w-4 h-4" />
+                    <span>Financial Services</span>
+                  </Link>
+                  <Link
+                    to="/industries/trustees"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Scale className="w-4 h-4" />
+                    <span>Trustees & Fiduciary</span>
+                  </Link>
+                  <Link
+                    to="/industries/healthcare"
+                    className="flex items-center space-x-2 py-2 px-4 text-sm text-muted-foreground hover:text-primary hover:bg-secondary rounded-md transition-colors"
+                    onClick={() => setIsMenuOpen(false)}
+                  >
+                    <Stethoscope className="w-4 h-4" />
+                    <span>Healthcare & Medical</span>
+                  </Link>
+                </div>
+              </div>
+
               {/* Mobile Services */}
               <div className="px-3 py-2">
                 <div className="flex items-center space-x-2 text-sm font-medium text-foreground mb-3">

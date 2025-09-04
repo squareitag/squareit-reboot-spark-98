@@ -51,6 +51,15 @@ import KeeperPage from "./pages/technologies/KeeperPage";
 import PeoplefonePage from "./pages/technologies/PeoplefonePage";
 import PrintixPage from "./pages/technologies/PrintixPage";
 
+// Industry pages
+import { 
+  SchoolsPage, 
+  NGOPage, 
+  TrusteesPage, 
+  FinancePage, 
+  HealthcarePage 
+} from "./pages/industries";
+
 const queryClient = new QueryClient();
 
 const App = () => (
@@ -103,6 +112,14 @@ const App = () => (
               <Route path="/technologies/keeper" element={<KeeperPage />} />
               <Route path="/technologies/peoplefone" element={<PeoplefonePage />} />
               <Route path="/technologies/printix" element={<PrintixPage />} />
+              
+              {/* Industry pages */}
+              <Route path="/industries/schools" element={<SchoolsPage />} />
+              <Route path="/industries/ngo" element={<NGOPage />} />
+              <Route path="/industries/trustees" element={<TrusteesPage />} />
+              <Route path="/industries/finance" element={<FinancePage />} />
+              <Route path="/industries/healthcare" element={<HealthcarePage />} />
+              
               <Route path="/contact" element={<ContactPage />} />
               <Route path="/careers" element={<CareersPage />} />
               <Route path="/privacy" element={<PrivacyPage />} />
