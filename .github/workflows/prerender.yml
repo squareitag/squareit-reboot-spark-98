@@ -1,4 +1,4 @@
-name: Pre-render Pages for SEO
+name: Pre-render and Deploy Pages
 
 on:
   push:
@@ -7,7 +7,7 @@ on:
     branches: [ main, master ]
 
 jobs:
-  prerender:
+  prerender-and-deploy:
     runs-on: ubuntu-latest
     
     steps:
@@ -42,6 +42,12 @@ jobs:
         # Stop the preview server
         pkill -f "vite preview" || true
         
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./prerendered
+      
     - name: Commit pre-rendered files
       run: |
         git config --local user.email "action@github.com"
@@ -59,10 +65,3 @@ jobs:
         fi
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Upload pre-rendered artifacts
-      uses: actions/upload-artifact@v4
-      with:
-        name: prerendered-pages
-        path: prerendered/
-        retention-days: 30
