@@ -146,7 +146,7 @@ const Header = () => {
                 <span>{t('nav.technologies')}</span>
                 <ChevronDown className="w-4 h-4" />
               </DropdownMenuTrigger>
-              <DropdownMenuContent className="w-56 bg-background border border-border shadow-lg z-50">
+              <DropdownMenuContent className="w-56 bg-background/95 backdrop-blur-sm border border-border shadow-lg z-50">
                 <DropdownMenuItem asChild>
                   <Link to="/technologies" className="w-full cursor-pointer">
                     Alle Technologien
@@ -197,7 +197,6 @@ const Header = () => {
                     Tenant Manager
                   </Link>
                 </DropdownMenuItem>
-                {/* Force refresh */}
               </DropdownMenuContent>
             </DropdownMenu>
             
