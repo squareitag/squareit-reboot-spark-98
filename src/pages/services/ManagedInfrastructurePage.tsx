@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import managedInfrastructureImage from "@/assets/managed-infrastructure-hero.jpg";
 import { SEOHead } from "@/components/SEOHead";
-import { Breadcrumb } from "@/components/Breadcrumb";
 
 const ManagedInfrastructurePage = () => {
   const { t } = useLanguage();
@@ -65,10 +64,6 @@ const ManagedInfrastructurePage = () => {
         canonical="https://sqsolutions.ch/managed-infrastructure"
       />
       <div className="min-h-screen pt-16">
-      <Breadcrumb items={[
-        { label: "Services", href: "/services" },
-        { label: "Managed Infrastructure" }
-      ]} />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">

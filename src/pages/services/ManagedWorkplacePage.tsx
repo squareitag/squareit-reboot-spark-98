@@ -5,7 +5,6 @@ import { Laptop, Shield, Users, Settings, CheckCircle, ArrowRight, Monitor, Smar
 import { Link } from "react-router-dom";
 import managedWorkplaceHero from "@/assets/managed-workplace.jpg";
 import { SEOHead } from "@/components/SEOHead";
-import { Breadcrumb } from "@/components/Breadcrumb";
 
 const ManagedWorkplacePage = () => {
   const services = [
@@ -103,10 +102,6 @@ const ManagedWorkplacePage = () => {
         canonical="https://sqsolutions.ch/managed-workplace"
       />
       <div className="min-h-screen pt-16">
-      <Breadcrumb items={[
-        { label: "Services", href: "/services" },
-        { label: "Managed Workplace" }
-      ]} />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
