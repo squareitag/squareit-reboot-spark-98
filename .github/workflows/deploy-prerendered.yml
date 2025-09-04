@@ -24,12 +24,11 @@ jobs:
         github-token: ${{ secrets.GITHUB_TOKEN }}
         run-id: ${{ github.event.workflow_run.id }}
         
-    - name: Deploy to GitHub Pages (Optional)
-      # Uncomment and configure if you want to deploy to GitHub Pages
-      # uses: peaceiris/actions-gh-pages@v3
-      # with:
-      #   github_token: ${{ secrets.GITHUB_TOKEN }}
-      #   publish_dir: ./prerendered
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./prerendered
       
     - name: Notify deployment success
       run: |
