@@ -106,11 +106,35 @@ const TechnologiesPage = () => {
                 </CardHeader>
                 <CardContent>
                   <div className="flex flex-wrap gap-2">
-                    {tech.items.map((item, itemIndex) => (
-                      <Badge key={itemIndex} variant="secondary" className="text-xs">
-                        {item}
-                      </Badge>
-                    ))}
+                    {tech.items.map((item, itemIndex) => {
+                      const getItemLink = (item: string, category: string) => {
+                        const itemKey = item.toLowerCase().replace(/\s+/g, '-');
+                        if (item === "Robopack") return "/technologies/robopack";
+                        if (item === "Tenant Manager") return "/technologies/tenant-manager";
+                        if (item === "Microsoft Azure") return "/technologies/microsoft-azure";
+                        if (item === "Microsoft 365") return "/technologies/microsoft-365";
+                        if (item === "AvePoint Backup") return "/technologies/avepoint-backup";
+                        if (item === "Cato Networks") return "/technologies/cato-networks";
+                        if (item === "Keeper") return "/technologies/keeper";
+                        if (item === "Peoplefone") return "/technologies/peoplefone";
+                        if (item === "Printix") return "/technologies/printix";
+                        return null;
+                      };
+                      
+                      const itemLink = getItemLink(item, tech.category);
+                      
+                      return itemLink ? (
+                        <Link key={itemIndex} to={itemLink}>
+                          <Badge variant="secondary" className="text-xs hover:bg-primary hover:text-primary-foreground transition-colors cursor-pointer">
+                            {item}
+                          </Badge>
+                        </Link>
+                      ) : (
+                        <Badge key={itemIndex} variant="secondary" className="text-xs">
+                          {item}
+                        </Badge>
+                      );
+                    })}
                   </div>
                 </CardContent>
               </Card>
