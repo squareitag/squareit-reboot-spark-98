@@ -77,6 +77,25 @@ async function prerenderProduction() {
   console.log(`🌐 Base URL: ${baseURL}`);
   console.log(`📁 Output directory: ${outputDir}`);
   
+  // **AUTHENTICATE FIRST** - Login to bypass AuthGuard
+  console.log('🔐 Authenticating with dev credentials...');
+  await page.goto(`${baseURL}/`, { waitUntil: 'networkidle0', timeout: 30000 });
+  
+  // Check if we need to login (look for login form)
+  const needsLogin = await page.$('#username');
+  if (needsLogin) {
+    await page.type('#username', 'dev');
+    await page.type('#password', 'squareit2024');
+    await page.click('button[type="submit"]');
+    
+    // Wait for authentication to complete
+    await page.waitForFunction(() => {
+      return !document.querySelector('#username'); // Login form disappears
+    }, { timeout: 10000 });
+    
+    console.log('✅ Authentication successful');
+  }
+  
   let successCount = 0;
   let errorCount = 0;
   
