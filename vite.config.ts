@@ -34,25 +34,10 @@ Allow: /
 # This is dev-seo.sqsolutions.ch for SEO testing`);
       });
 
-      // HTTP Basic Auth for all requests with SEO bot bypass
+      // HTTP Basic Auth for all requests
       server.middlewares.use((req: any, res: any, next: any) => {
         // Skip auth for robots.txt as it's already handled above
         if (req.url === '/robots.txt') {
-          return;
-        }
-
-        // Allow SEO tools and crawlers to bypass auth
-        const userAgent = (req.headers['user-agent'] || '').toLowerCase();
-        const isBot = userAgent.includes('seobility') || 
-                      userAgent.includes('googlebot') || 
-                      userAgent.includes('bingbot') || 
-                      userAgent.includes('crawler') || 
-                      userAgent.includes('spider') ||
-                      userAgent.includes('bot');
-        
-        if (isBot) {
-          console.log(`🤖 SEO Bot detected and allowed: ${userAgent}`);
-          next();
           return;
         }
 
