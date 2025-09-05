@@ -21,7 +21,7 @@ export const SEOHead = ({
   
   // Determine if we're on staging and adjust canonical URLs accordingly
   const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('sqsolutions.ch');
-  const baseUrl = isStaging ? 'https://sqsolutions.ch' : 'https://www.squareit.ch';
+  const baseUrl = isStaging ? `https://${window.location.hostname}` : 'https://www.squareit.ch';
   const finalCanonical = canonical || baseUrl;
   
   return (
