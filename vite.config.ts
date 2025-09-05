@@ -45,7 +45,7 @@ Disallow: /
         if (!auth || !auth.startsWith('Basic ')) {
           res.statusCode = 401;
           res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
-          res.end('Unauthorized - Protected Environment\n\nUsername: dev\nPassword: squareit2024');
+          res.end('Unauthorized - Protected DEV Environment\n\nUsername: dev\nPassword: squareit2024');
           return;
         }
         
