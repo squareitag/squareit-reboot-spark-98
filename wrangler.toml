@@ -1,10 +1,6 @@
 name = "squareit-website"
 compatibility_date = "2024-09-05"
-pages_build_output_dir = "dist"
 
 [build]
 command = "bun install && bun add puppeteer && bun run build && node scripts/production-prerender.js"
-cwd = "."
-
-[[pages]]
-project_name = "squareit-website"
+publish = "dist"
