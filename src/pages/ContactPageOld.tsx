@@ -61,7 +61,7 @@ const ContactPage = () => {
         title="Kontakt - Square IT AG"
         description="Haben Sie Fragen oder benötigen Sie Unterstützung? Unser Expertenteam steht Ihnen gerne zur Verfügung. Kontaktieren Sie uns noch heute!"
         keywords="Kontakt, Square IT Support, IT Beratung, Hilfe, Kundenservice"
-        canonical="https://sqsolutions.ch/contact"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

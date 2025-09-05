@@ -21,7 +21,7 @@ const NGOPage = () => {
         title="IT Solutions for NGOs & Non-Profit Organizations - Cost-Effective Technology"
         description="Maximize your impact with cost-effective, secure IT solutions designed specifically for non-profit organizations. Focus on your mission while we handle your technology needs."
         keywords="NGO IT Services, Non-Profit Technology, Charity IT Solutions, Microsoft 365 Non-Profit, Volunteer Management, Donor Management"
-        canonical="https://sqsolutions.ch/industries/ngo"
+        
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

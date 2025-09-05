@@ -57,7 +57,7 @@ const CloudPage = () => {
         title="Cloud Plattformen - Microsoft Azure, AWS, Google Cloud & VMware"
         description="Moderne Cloud-Infrastrukturen für maximale Skalierbarkeit, Sicherheit und Performance. Wir helfen Ihnen dabei, die optimale Cloud-Strategie für Ihr Unternehmen zu entwickeln."
         keywords="Cloud Plattformen, Microsoft Azure, Amazon AWS, Google Cloud, VMware vSphere, Cloud Migration, Cloud Computing"
-        canonical="https://sqsolutions.ch/technologies/cloud"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

@@ -79,7 +79,7 @@ const DatabasePage = () => {
         title="Database Systems - SQL Server, MySQL, PostgreSQL & MongoDB"
         description="Leistungsstarke Datenbanklösungen für Ihr Business. Von relationalen Datenbanken bis hin zu NoSQL-Systemen - wir implementieren die optimale Lösung für Ihre Daten."
         keywords="Database Systems, Microsoft SQL Server, MySQL, PostgreSQL, MongoDB, Database Design, Database Migration"
-        canonical="https://sqsolutions.ch/technologies/database"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

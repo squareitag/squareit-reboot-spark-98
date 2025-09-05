@@ -61,7 +61,7 @@ const ManagedInfrastructurePage = () => {
         title="Managed Infrastructure Services - Erhöhte Zuverlässigkeit und Sicherheit"
         description="Unsere Managed Infrastructure-Services bieten Ihnen zahlreiche Vorteile, darunter erhöhte Zuverlässigkeit, verbesserte Sicherheit, Kosteneinsparungen und Skalierbarkeit."
         keywords="Managed Infrastructure, Server Management, Cloud Infrastructure, Network Infrastructure, IT Infrastructure, Kosteneinsparungen"
-        canonical="https://sqsolutions.ch/managed-infrastructure"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

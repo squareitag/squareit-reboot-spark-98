@@ -58,7 +58,7 @@ const ManagedNetworkPage = () => {
         title="Managed Network Services - Optimale Netzwerk-Performance und Sicherheit"
         description="Erfahren Sie, wie unsere führenden Managed Network Services Ihre Unternehmenskommunikation optimieren, die Netzwerksicherheit erhöhen und eine reibungslose digitale Infrastruktur gewährleisten."
         keywords="Managed Network, Network Infrastructure, Wireless Network Management, Network Security, Network Monitoring, Firewall Management"
-        canonical="https://sqsolutions.ch/managed-network"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

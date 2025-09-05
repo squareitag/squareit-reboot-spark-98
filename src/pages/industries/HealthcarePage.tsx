@@ -21,7 +21,7 @@ const HealthcarePage = () => {
         title="IT Solutions for Healthcare & Medical Practices - HIPAA Compliant Technology"
         description="Secure, HIPAA-compliant technology solutions for hospitals, clinics, and medical practices. Improve patient care while maintaining the highest data security standards."
         keywords="Healthcare IT, Medical Practice IT, HIPAA Compliance, Electronic Health Records, EHR Systems, Medical Technology"
-        canonical="https://sqsolutions.ch/industries/healthcare"
+        
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

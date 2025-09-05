@@ -21,7 +21,7 @@ const FinancePage = () => {
         title="IT Solutions for Financial Services - Enterprise Technology for Banks"
         description="Enterprise-grade technology solutions for banks, investment firms, insurance companies, and financial advisors. Secure, compliant, and scalable systems that drive financial innovation."
         keywords="Financial IT Services, Banking Technology, Investment Firm IT, Insurance IT Solutions, Financial Compliance, FINMA Compliance"
-        canonical="https://sqsolutions.ch/industries/finance"
+        
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

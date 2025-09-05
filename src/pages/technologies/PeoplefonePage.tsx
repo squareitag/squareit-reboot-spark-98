@@ -57,7 +57,7 @@ const PeoplefonePage = () => {
         title="Peoplefone - Business Voice Lösung & Microsoft Teams Integration"
         description="Die führende Business Voice Lösung aus der Schweiz. Cloud-Telefonie, Unified Communications und Contact Center in einer integrierten Plattform."
         keywords="Peoplefone, Business Voice, Cloud Telefonie, Microsoft Teams Telefonie, VoIP Schweiz, Unified Communications"
-        canonical="https://sqsolutions.ch/technologies/peoplefone"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

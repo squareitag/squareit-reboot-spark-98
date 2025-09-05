@@ -79,7 +79,7 @@ const InfrastructurePage = () => {
         title="Server & Infrastructure - Windows Server, Linux, VMware & Kubernetes"
         description="Moderne Server-Infrastrukturen für optimale Performance, Skalierbarkeit und Zuverlässigkeit. Von physischen Servern bis hin zu Container-Orchestration."
         keywords="Server Infrastructure, Windows Server, Linux Server, VMware vSphere, Docker, Kubernetes, Virtualization"
-        canonical="https://sqsolutions.ch/technologies/infrastructure"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

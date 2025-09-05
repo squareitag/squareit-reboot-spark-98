@@ -21,7 +21,7 @@ const SchoolsPage = () => {
         title="IT-Lösungen für Schulen & Bildungseinrichtungen - Digitale Klassenzimmer"
         description="Bildung durch sichere, skalierbare und innovative Technologielösungen stärken. Von digitalen Klassenzimmern bis zu Verwaltungssystemen – wir helfen Schulen im digitalen Zeitalter zu gedeihen."
         keywords="Schul-IT, Bildungstechnologie, Digitale Klassenzimmer, WLAN Schulen, Schülerdatenschutz, LMS Lernmanagementsystem"
-        canonical="https://sqsolutions.ch/industries/schools"
+        
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

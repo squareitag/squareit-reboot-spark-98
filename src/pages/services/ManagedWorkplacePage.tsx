@@ -99,7 +99,7 @@ const ManagedWorkplacePage = () => {
         title="Managed Workplace Services - Umfassende IT-Lösung für Produktivität"
         description="Unsere Managed Workplace-Services sind darauf ausgelegt, Ihnen eine umfassende IT-Lösung zu bieten, die die Produktivität steigert, die Sicherheit verbessert und die betrieblichen Kosten reduziert."
         keywords="Managed Workplace, Device Management, User Provisioning, Security Management, Collaboration Tools, Microsoft Teams, Mobile Device Management"
-        canonical="https://sqsolutions.ch/managed-workplace"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

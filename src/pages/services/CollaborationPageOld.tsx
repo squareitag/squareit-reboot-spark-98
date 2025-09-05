@@ -39,7 +39,7 @@ const CollaborationPage = () => {
         title="Collaboration Consulting - Optimierte Zusammenarbeit mit modernen Tools"
         description="Optimieren Sie die Zusammenarbeit in Ihrem Unternehmen mit modernen Collaboration-Tools und -Strategien für maximale Produktivität."
         keywords="Collaboration Consulting, Microsoft Teams Beratung, SharePoint Zusammenarbeit, Hybrid Meetings, Collaboration Training"
-        canonical="https://sqsolutions.ch/collaboration-old"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

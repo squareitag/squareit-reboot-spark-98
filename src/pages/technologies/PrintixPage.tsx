@@ -57,7 +57,7 @@ const PrintixPage = () => {
         title="Printix - Cloud Print Management & Mobile Printing Solutions"
         description="Die moderne Cloud-Print-Management-Lösung für Unternehmen. Vereinfachen Sie Ihre Druckinfrastruktur und drucken Sie von überall."
         keywords="Printix, Cloud Print Management, Mobile Printing, Print Analytics, Print Security, Cloud Printing"
-        canonical="https://sqsolutions.ch/technologies/printix"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

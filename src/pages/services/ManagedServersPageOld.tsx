@@ -58,7 +58,7 @@ const ManagedServersPage = () => {
         title="Managed Servers - Professional Server Management & Monitoring"
         description="Bei Square IT wissen wir, dass eine effektive Verwaltung und Wartung Ihrer IT-Systeme entscheidend für den reibungslosen Ablauf Ihres Unternehmens ist."
         keywords="Managed Servers, Server Management, Server Monitoring, IT Infrastructure Management, 24/7 Support"
-        canonical="https://sqsolutions.ch/managed-servers-old"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

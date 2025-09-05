@@ -39,7 +39,7 @@ const WorkshopPage = () => {
         title="Workshop Services - Interaktive IT-Schulungen und Trainings"
         description="Workshops sind eine effektive Möglichkeit, Teams zu stärken, Wissen zu erweitern und Fähigkeiten zu verbessern. Wir bieten Microsoft Teams, SharePoint, Endpoint Manager und verschiedene Microsoft-Tools Workshops."
         keywords="Workshop, IT Training, Microsoft Teams Workshop, SharePoint Workshop, Endpoint Manager, IT Schulungen, Digital Transformation"
-        canonical="https://sqsolutions.ch/workshop"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}

@@ -58,7 +58,7 @@ const ManagedWorkplacePage = () => {
         title="Managed Workplace - Modern Workplace Solutions & Device Management"
         description="Der moderne Arbeitsplatz erfordert flexible, sichere und produktive Lösungen. Wir verwalten Ihre komplette Workplace-Umgebung für optimale User Experience."
         keywords="Managed Workplace, Modern Workplace, Device Management, Microsoft Intune, Azure AD, Mobile Device Management"
-        canonical="https://sqsolutions.ch/managed-workplace-old"
+        
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}
