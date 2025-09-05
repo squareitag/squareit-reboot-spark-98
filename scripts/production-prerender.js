@@ -66,7 +66,7 @@ async function prerenderProduction() {
   // Set user agent to mimic a real browser
   await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
   
-  const baseURL = 'https://loving-warmth-production.lovable.app';
+  const baseURL = 'https://dev-seo.sqsolutions.ch';
   const outputDir = path.join(process.cwd(), 'prerendered');
   
   // Create output directory

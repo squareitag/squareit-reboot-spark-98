@@ -52,7 +52,7 @@ async function prerender() {
   // Set viewport and disable authentication for Lovable
   await page.setViewport({ width: 1920, height: 1080 });
   
-  const baseURL = process.env.VITE_APP_URL || 'https://loving-warmth-production.lovable.app';
+  const baseURL = process.env.VITE_APP_URL || 'https://dev-seo.sqsolutions.ch';
   console.log(`🌐 Using base URL: ${baseURL}`);
   
   for (const route of routes) {
