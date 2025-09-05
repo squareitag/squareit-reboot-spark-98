@@ -98,11 +98,13 @@ async function prerenderProduction() {
         const title = document.querySelector('title');
         const description = document.querySelector('meta[name="description"]');
         return title && title.textContent && 
-               description && description.getAttribute('content');
-      }, { timeout: 10000 });
+               description && description.getAttribute('content') &&
+               !title.textContent.includes('Vite') &&
+               title.textContent.length > 10; // Ensure it's not just default title
+      }, { timeout: 20000 });
       
-      // Additional wait for dynamic content
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // Additional wait for React Helmet to fully update
+      await new Promise(resolve => setTimeout(resolve, 5000));
       
       const html = await page.content();
       
