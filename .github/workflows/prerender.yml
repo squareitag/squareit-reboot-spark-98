@@ -18,24 +18,23 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v4
       
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v1
       with:
-        node-version: '18'
-        cache: 'npm'
+        bun-version: latest
         
     - name: Install dependencies
       run: |
-        npm ci
-        npm install puppeteer
+        bun install
+        bun add puppeteer
         
     - name: Build application
-      run: npm run build
+      run: bun run build
       
     - name: Start preview server and run pre-rendering
       run: |
         # Start the preview server in background
-        npm run preview &
+        bun run preview &
         
         # Wait for server to be ready
         sleep 10
