@@ -24,19 +24,35 @@ export default defineConfig(({ mode }) => ({
     configureServer(server: any) {
       // Always enable auth and robots.txt protection for this demo environment
       
-      // Serve protected robots.txt that blocks all crawlers
+      // Serve robots.txt that allows SEO tools but indicates dev environment
       server.middlewares.use('/robots.txt', (req: any, res: any) => {
         res.setHeader('Content-Type', 'text/plain');
         res.end(`User-agent: *
-Disallow: /
+Allow: /
 
-# Protected environment - no indexing allowed`);
+# Development environment - SEO testing allowed
+# This is dev-seo.sqsolutions.ch for SEO testing`);
       });
 
-      // HTTP Basic Auth for all requests
+      // HTTP Basic Auth for all requests with SEO bot bypass
       server.middlewares.use((req: any, res: any, next: any) => {
         // Skip auth for robots.txt as it's already handled above
         if (req.url === '/robots.txt') {
+          return;
+        }
+
+        // Allow SEO tools and crawlers to bypass auth
+        const userAgent = (req.headers['user-agent'] || '').toLowerCase();
+        const isBot = userAgent.includes('seobility') || 
+                      userAgent.includes('googlebot') || 
+                      userAgent.includes('bingbot') || 
+                      userAgent.includes('crawler') || 
+                      userAgent.includes('spider') ||
+                      userAgent.includes('bot');
+        
+        if (isBot) {
+          console.log(`🤖 SEO Bot detected and allowed: ${userAgent}`);
+          next();
           return;
         }
 
@@ -44,8 +60,8 @@ Disallow: /
         
         if (!auth || !auth.startsWith('Basic ')) {
           res.statusCode = 401;
-          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
-          res.end('Unauthorized - Protected Environment\n\nUsername: dev\nPassword: squareit2024');
+          res.setHeader('WWW-Authenticate', 'Basic realm="Geschützter Bereich (DEV)"');
+          res.end('Unauthorized - Geschützter Bereich (DEV)\n\nUsername: dev\nPassword: squareit2024');
           return;
         }
         
@@ -56,7 +72,7 @@ Disallow: /
           next();
         } else {
           res.statusCode = 401;
-          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
+          res.setHeader('WWW-Authenticate', 'Basic realm="Geschützter Bereich (DEV)"');
           res.end('Unauthorized');
         }
       });
