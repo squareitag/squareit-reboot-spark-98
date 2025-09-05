@@ -28,6 +28,12 @@ jobs:
         bun install
         bun add puppeteer
         
+    - name: Update lockfile for Cloudflare
+      run: |
+        # Regenerate lockfile to ensure it's up to date
+        rm -f bun.lockb
+        bun install
+        
     - name: Build application
       run: bun run build
       
