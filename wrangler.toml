@@ -1,0 +1,10 @@
+name = "squareit-website"
+compatibility_date = "2024-09-05"
+
+[build]
+command = "bun install && bun run build && node scripts/production-prerender.js"
+cwd = "."
+watch_dir = "src"
+
+[[pages]]
+project_name = "squareit-website"

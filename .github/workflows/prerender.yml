@@ -23,61 +23,12 @@ jobs:
       with:
         bun-version: latest
         
-    - name: Install dependencies
-      run: |
-        bun install
-        bun add puppeteer
-        
     - name: Update lockfile for Cloudflare
       run: |
-        # Regenerate lockfile to ensure it's up to date
-        rm -f bun.lockb
-        bun install
+        # Ensure puppeteer is in dependencies and lockfile is fresh
+        bun add puppeteer
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
         git add bun.lockb
-        git commit -m "Update bun lockfile" || echo "No lockfile changes"
+        git commit -m "Update bun lockfile for Cloudflare compatibility" || echo "No lockfile changes"
         git push || echo "No changes to push"
-        
-    - name: Build application
-      run: bun run build
-      
-    - name: Start preview server and run pre-rendering
-      run: |
-        # Start the preview server in background
-        bun run preview &
-        
-        # Wait for server to be ready
-        sleep 10
-        
-        # Run the pre-rendering script
-        node scripts/production-prerender.js
-        
-        # Stop the preview server
-        pkill -f "vite preview" || true
-        
-    - name: Deploy to Cloudflare Pages
-      run: |
-        # Deploy pre-rendered files directly
-        npx wrangler pages deploy ./prerendered --project-name=squareit-website
-      env:
-        CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      
-    - name: Commit pre-rendered files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        
-        # Add the prerendered files
-        git add prerendered/ || true
-        
-        # Check if there are changes to commit
-        if git diff --staged --quiet; then
-          echo "No changes to commit"
-        else
-          git commit -m "Auto-update pre-rendered pages [skip ci]"
-          git push
-        fi
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
