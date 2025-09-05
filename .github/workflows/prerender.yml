@@ -46,11 +46,13 @@ jobs:
         # Stop the preview server
         pkill -f "vite preview" || true
         
-    - name: Deploy to GitHub Pages
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Deploy to Cloudflare Pages
+      uses: cloudflare/pages-action@v1
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./prerendered
+        apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+        accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+        projectName: squareit-website
+        directory: ./prerendered
       
     - name: Commit pre-rendered files
       run: |
