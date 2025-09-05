@@ -34,7 +34,7 @@ jobs:
     - name: Update dependencies
       run: |
         bun add puppeteer
-        git add bun.lockb
+        git add bun.lock
         git commit -m "Update dependencies for deployment" || echo "No lockfile changes"
         git push || echo "No changes to push"
         
