@@ -23,12 +23,12 @@ jobs:
       with:
         bun-version: latest
         
-    - name: Update lockfile for Cloudflare
+    - name: Update dependencies and config for Cloudflare
       run: |
-        # Ensure puppeteer is in dependencies and lockfile is fresh
+        # Ensure all files are committed including wrangler.toml
         bun add puppeteer
         git config --local user.email "action@github.com"
         git config --local user.name "GitHub Action"
-        git add bun.lockb
-        git commit -m "Update bun lockfile for Cloudflare compatibility" || echo "No lockfile changes"
+        git add -A
+        git commit -m "Update dependencies and Cloudflare config" || echo "No changes"
         git push || echo "No changes to push"
