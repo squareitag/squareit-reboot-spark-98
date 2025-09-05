@@ -1,1 +1,1 @@
-Trigger GitHub Action deployment with Cloudflare secrets - $(date)
+Trigger GitHub Action deployment with improved pre-rendering - $(date)
