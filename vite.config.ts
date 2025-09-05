@@ -30,7 +30,7 @@ export default defineConfig(({ mode }) => ({
         res.end(`User-agent: *
 Disallow: /
 
-# Protected DEV environment - no indexing allowed`);
+# Protected environment - no indexing allowed`);
       });
 
       // HTTP Basic Auth for all requests
@@ -44,8 +44,8 @@ Disallow: /
         
         if (!auth || !auth.startsWith('Basic ')) {
           res.statusCode = 401;
-          res.setHeader('WWW-Authenticate', 'Basic realm="Protected DEV Environment"');
-          res.end('Unauthorized - Protected DEV Environment\n\nUsername: dev\nPassword: squareit2024');
+          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
+          res.end('Unauthorized - Protected Environment\n\nUsername: dev\nPassword: squareit2024');
           return;
         }
         
@@ -56,7 +56,7 @@ Disallow: /
           next();
         } else {
           res.statusCode = 401;
-          res.setHeader('WWW-Authenticate', 'Basic realm="Protected DEV Environment"');
+          res.setHeader('WWW-Authenticate', 'Basic realm="Protected Environment"');
           res.end('Unauthorized');
         }
       });

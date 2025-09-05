@@ -54,7 +54,7 @@ export const AuthGuard: React.FC<AuthGuardProps> = ({ children }) => {
             <div className="mx-auto w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center">
               <Lock className="w-6 h-6 text-primary" />
             </div>
-            <h1 className="text-2xl font-bold">Geschützter Bereich</h1>
+            <h1 className="text-2xl font-bold">Geschützter Bereich (DEV)</h1>
             <p className="text-muted-foreground">
               Bitte melden Sie sich an, um fortzufahren
             </p>
