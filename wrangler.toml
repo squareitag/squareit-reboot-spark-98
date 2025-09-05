@@ -2,7 +2,7 @@ name = "squareit-website"
 compatibility_date = "2024-09-05"
 
 [build]
-command = "bun install && bun run build && node scripts/production-prerender.js"
+command = "bun install --no-frozen-lockfile && bun add puppeteer && bun run build && node scripts/production-prerender.js"
 cwd = "."
 watch_dir = "src"
 
