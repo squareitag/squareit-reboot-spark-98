@@ -90,6 +90,22 @@ async function prerenderProduction() {
         timeout: 45000 
       });
       
+      // Debug: Check what URL was actually loaded
+      const currentUrl = await page.url();
+      console.log(`   🌐 Actual URL: ${currentUrl}`);
+      
+      // Debug: Check if the right component loaded
+      const pageContent = await page.evaluate(() => {
+        return {
+          h1Text: document.querySelector('h1')?.textContent?.substring(0, 50),
+          titleTag: document.querySelector('title')?.textContent,
+          descMeta: document.querySelector('meta[name="description"]')?.getAttribute('content')?.substring(0, 50)
+        };
+      });
+      console.log(`   🔍 H1: ${pageContent.h1Text}`);
+      console.log(`   📝 Current Title: ${pageContent.titleTag}`);
+      console.log(`   📄 Current Desc: ${pageContent.descMeta}`);
+      
       // Wait for React to fully render
       await page.waitForSelector('#root > *', { timeout: 15000 });
       
