@@ -33,6 +33,11 @@ jobs:
         # Regenerate lockfile to ensure it's up to date
         rm -f bun.lockb
         bun install
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add bun.lockb
+        git commit -m "Update bun lockfile" || echo "No lockfile changes"
+        git push || echo "No changes to push"
         
     - name: Build application
       run: bun run build
