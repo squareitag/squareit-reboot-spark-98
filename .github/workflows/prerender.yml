@@ -52,6 +52,6 @@ jobs:
       with:
         apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
         accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-        projectName: dev-seo-sqsolutions
+        projectName: squareit-reboot-spark-98
         directory: prerendered
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
