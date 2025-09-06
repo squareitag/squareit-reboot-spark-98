@@ -210,27 +210,6 @@ async function prerenderProduction() {
   console.log(`📊 Results: ${successCount} successful, ${errorCount} errors`);
   console.log(`📁 Files saved to: ${outputDir}`);
   
-  // Create index file listing all routes
-  const indexContent = `
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Pre-rendered Pages - Square IT AG</title>
-  <meta charset="utf-8">
-</head>
-<body>
-  <h1>Pre-rendered Pages</h1>
-  <p>Generated: ${new Date().toISOString()}</p>
-  <p>Success: ${successCount} | Errors: ${errorCount}</p>
-  <ul>
-    ${routes.map(route => `<li><a href=".${route === '/' ? '/index.html' : route + '/index.html'}">${route}</a></li>`).join('\n    ')}
-  </ul>
-</body>
-</html>
-  `.trim();
-  
-  fs.writeFileSync(path.join(outputDir, 'index.html'), indexContent);
-  
   if (successCount > 0) {
     console.log(`\n📋 Instructions for deployment:`);
     console.log(`1. Copy files from ${outputDir} to your web server`);
