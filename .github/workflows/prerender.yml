@@ -45,6 +45,11 @@ jobs:
     - name: Build application
       run: bun run build
       
+    - name: Clean previous prerendered files
+      run: |
+        rm -rf prerendered
+        mkdir -p prerendered
+        
     - name: Run pre-rendering
       run: node scripts/production-prerender.js
       
@@ -56,3 +61,4 @@ jobs:
         projectName: squareit-reboot-spark-98
         directory: prerendered
         gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        wranglerVersion: '3'

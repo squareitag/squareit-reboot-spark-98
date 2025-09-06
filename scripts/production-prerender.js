@@ -165,12 +165,21 @@ async function prerenderProduction() {
       
       const html = await page.content();
       
-      // Verify content quality
+      // Verify content quality before saving
       const title = await page.$eval('title', el => el.textContent);
       const description = await page.$eval('meta[name="description"]', el => el.getAttribute('content'));
       
-      if (!title || title.includes('Vite') || !description) {
-        throw new Error(`Invalid SEO content - Title: "${title}", Description: "${description}"`);
+      console.log(`   📝 Final Title: ${title}`);
+      console.log(`   📄 Final Description: ${description?.substring(0, 80)}...`);
+      
+      // Strict validation - reject invalid content
+      if (!title || 
+          title.includes('Vite') || 
+          title.includes('Pre-rendered Pages') ||
+          title.length < 10 ||
+          !description || 
+          description.length < 20) {
+        throw new Error(`❌ Invalid SEO content - Title: "${title}", Description: "${description}"`);
       }
       
       // Create directory structure
