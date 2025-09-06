@@ -39,6 +39,9 @@ export const SEOHead = ({
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
       
+      {/* Self-referencing alternate link for current page */}
+      <link rel="alternate" href={currentUrl} />
+      
       {/* Hreflang Links - Same URL serves multiple languages via context */}
       <link rel="alternate" hrefLang="de" href={currentUrl} />
       <link rel="alternate" hrefLang="en" href={currentUrl} />
