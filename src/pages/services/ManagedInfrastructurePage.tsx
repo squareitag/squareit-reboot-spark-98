@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import { useLanguage } from "@/contexts/LanguageContext";
 import managedInfrastructureImage from "@/assets/managed-infrastructure-hero.jpg";
 import { SEOHead } from "@/components/SEOHead";
+import Breadcrumbs from "@/components/Breadcrumbs";
+import InternalNavigation from "@/components/InternalNavigation";
 
 const ManagedInfrastructurePage = () => {
   const { t } = useLanguage();
@@ -64,6 +66,9 @@ const ManagedInfrastructurePage = () => {
         
       />
       <div className="min-h-screen pt-16">
+        <div className="container mx-auto px-4 py-8">
+          <Breadcrumbs />
+        </div>
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
         <div className="container mx-auto px-4">
@@ -284,6 +289,36 @@ const ManagedInfrastructurePage = () => {
           </div>
         </div>
       </section>
+
+      <div className="container mx-auto px-4">
+        <InternalNavigation 
+          previousPage={{
+            url: "/services/managed-services",
+            title: "Managed Services"
+          }}
+          nextPage={{
+            url: "/services/managed-workplace", 
+            title: "Managed Workplace"
+          }}
+          relatedPages={[
+            {
+              url: "/services/managed-servers",
+              title: "Managed Servers",
+              description: "Professionelle Server-Verwaltung und Monitoring"
+            },
+            {
+              url: "/services/managed-backup",
+              title: "Managed Backup", 
+              description: "Zuverlässige Datensicherung und Recovery-Lösungen"
+            },
+            {
+              url: "/technologies/microsoft-azure",
+              title: "Microsoft Azure",
+              description: "Cloud-Infrastrukturen mit Azure"
+            }
+          ]}
+        />
+      </div>
     </div>
     </>
   );
