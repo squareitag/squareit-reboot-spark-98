@@ -99,7 +99,7 @@ async function prerenderProduction() {
     console.log('✅ Authentication successful');
     
     // Additional wait to ensure session is established
-    await page.waitForTimeout(2000);
+    await new Promise(resolve => setTimeout(resolve, 2000));
   }
   
   // Set authentication cookie/session for all future requests
