@@ -82,19 +82,30 @@ async function prerenderProduction() {
   await page.goto(`${baseURL}/`, { waitUntil: 'networkidle0', timeout: 30000 });
   
   // Check if we need to login (look for login form)
-  const needsLogin = await page.$('#username');
+  let needsLogin = await page.$('#username');
   if (needsLogin) {
+    console.log('📝 Filling login form...');
     await page.type('#username', 'dev');
     await page.type('#password', 'squareit2024');
     await page.click('button[type="submit"]');
     
-    // Wait for authentication to complete
+    // Wait for authentication to complete and page to load
     await page.waitForFunction(() => {
       return !document.querySelector('#username'); // Login form disappears
-    }, { timeout: 10000 });
+    }, { timeout: 15000 });
     
+    // Wait for main content to load
+    await page.waitForSelector('main', { timeout: 10000 });
     console.log('✅ Authentication successful');
+    
+    // Additional wait to ensure session is established
+    await page.waitForTimeout(2000);
   }
+  
+  // Set authentication cookie/session for all future requests
+  await page.evaluate(() => {
+    sessionStorage.setItem('staging_auth', 'authenticated');
+  });
   
   let successCount = 0;
   let errorCount = 0;
@@ -103,10 +114,18 @@ async function prerenderProduction() {
     try {
       const url = `${baseURL}${route}`;
       console.log(`📄 Pre-rendering: ${route}`);
+      console.log(`   🌐 Actual URL: ${url}`);
+      
+      // Ensure authentication is still valid before each route
+      await page.evaluate(() => {
+        if (!sessionStorage.getItem('staging_auth')) {
+          sessionStorage.setItem('staging_auth', 'authenticated');
+        }
+      });
       
       await page.goto(url, { 
         waitUntil: 'networkidle0',
-        timeout: 45000 
+        timeout: 45000
       });
       
       // Debug: Check what URL was actually loaded

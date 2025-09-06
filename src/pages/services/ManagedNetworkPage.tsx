@@ -55,10 +55,10 @@ const ManagedNetworkPage = () => {
   return (
     <>
       <SEOHead 
-        title="Managed Network Services - Optimale Netzwerk-Performance und Sicherheit"
-        description="Erfahren Sie, wie unsere führenden Managed Network Services Ihre Unternehmenskommunikation optimieren, die Netzwerksicherheit erhöhen und eine reibungslose digitale Infrastruktur gewährleisten."
-        keywords="Managed Network, Network Infrastructure, Wireless Network Management, Network Security, Network Monitoring, Firewall Management"
-        
+        title="Managed Network Services Zürich | Square IT"
+        description="Managed Network Services von Square IT: WLAN-Management, Netzwerksicherheit und Performance-Optimierung für Ihr Unternehmen. Professionelle Netzwerk-Infrastruktur."
+        keywords="Managed Network, Netzwerk-Management, WLAN-Management, Netzwerksicherheit, Network Infrastructure"
+        canonical="https://www.squareit.ch/services/managed-network"
       />
       <div className="min-h-screen pt-16">
       {/* Hero Section */}
