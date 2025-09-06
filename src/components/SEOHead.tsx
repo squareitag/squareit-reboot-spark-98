@@ -1,4 +1,5 @@
 import { Helmet } from 'react-helmet-async';
+import { useLanguage } from '@/contexts/LanguageContext';
 
 interface SEOHeadProps {
   title: string;
@@ -17,23 +18,32 @@ export const SEOHead = ({
   ogImage = "https://lovable.dev/opengraph-image-p98pqg.png",
   children
 }: SEOHeadProps) => {
+  const { language } = useLanguage();
   const fullTitle = title.includes('Square IT') ? title : `${title} | Square IT AG`;
   
   // Determine if we're on staging and adjust canonical URLs accordingly
   const isStaging = typeof window !== 'undefined' && window.location.hostname.includes('sqsolutions.ch');
   const baseUrl = isStaging ? `https://${window.location.hostname}` : 'https://www.squareit.ch';
-  const finalCanonical = canonical || baseUrl;
+  
+  // Get current path for hreflang
+  const currentPath = typeof window !== 'undefined' ? window.location.pathname : '/';
+  const currentUrl = `${baseUrl}${currentPath}`;
+  const finalCanonical = canonical || currentUrl;
   
   return (
     <Helmet>
       {/* Language and indexing attributes */}
-      <html lang="de" />
-      <meta httpEquiv="content-language" content="de" />
+      <html lang={language} />
+      <meta httpEquiv="content-language" content={language} />
       {/* Allow indexing after authentication - Seobility can crawl after login */}
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
-      <link rel="alternate" hrefLang="de" href={finalCanonical} />
-      <link rel="alternate" hrefLang="x-default" href={finalCanonical} />
+      
+      {/* Hreflang Links - Same URL serves multiple languages via context */}
+      <link rel="alternate" hrefLang="de" href={currentUrl} />
+      <link rel="alternate" hrefLang="en" href={currentUrl} />
+      <link rel="alternate" hrefLang="de-CH" href={currentUrl} />
+      <link rel="alternate" hrefLang="x-default" href={currentUrl} />
       
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>
@@ -41,7 +51,7 @@ export const SEOHead = ({
       <meta name="description" content={description} />
       <meta name="keywords" content={keywords} />
       
-      {/* Canonical URL - only add if not staging (alternative: remove completely for staging) */}
+      {/* Canonical URL - only add if not staging */}
       {!isStaging && finalCanonical && <link rel="canonical" href={finalCanonical} />}
       
       {/* Open Graph / Facebook */}
@@ -49,6 +59,7 @@ export const SEOHead = ({
       <meta property="og:title" content={fullTitle} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={ogImage} />
+      <meta property="og:locale" content={language === 'de' ? 'de_CH' : 'en_US'} />
       {finalCanonical && <meta property="og:url" content={finalCanonical} />}
       
       {/* Twitter */}
@@ -66,6 +77,7 @@ export const SEOHead = ({
           "url": "https://squareit.ch",
           "logo": "https://squareit.ch/squareit-favicon.png",
           "description": description,
+          "inLanguage": language,
           "address": {
             "@type": "PostalAddress",
             "streetAddress": "Alpenstrasse 12",
