@@ -67,10 +67,10 @@ const SecurityPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Security & Datenschutzlösungen für Firmen | Square IT"
-        description="Mit Square IT schützen Sie Ihre IT-Infrastruktur vor Cyberangriffen. Unsere IT-Security-Lösungen umfassen Firewalls, Cloud-Security und Awareness-Trainings für maximale Unternehmenssicherheit."
+        title="IT-Security Lösungen Zürich | Square IT"
+        description="IT-Security von Square IT: Schutz vor Cyberangriffen mit Firewalls, Cloud-Security und Awareness-Trainings. Maximale Sicherheit für Ihre IT-Infrastruktur."
         keywords="IT Security, Cybersecurity, Firewall, Endpoint Protection, Security Monitoring, SIEM"
-        canonical="https://www.squareit.ch/security"
+        canonical="https://www.squareit.ch/technologies/security"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

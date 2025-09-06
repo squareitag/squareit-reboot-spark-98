@@ -71,8 +71,8 @@ const CareersPage = () => {
   return (
     <>
       <SEOHead 
-        title="Karriere bei Square IT - Jobs im IT-Bereich Zürich"
-        description="Starten Sie Ihre IT-Karriere bei Square IT! Wir bieten spannende Jobs in einem dynamischen Team mit flexiblen Arbeitszeiten, Weiterbildungsmöglichkeiten und attraktiven Benefits in Zürich und Zug."
+        title="Karriere IT-Jobs Zürich & Zug | Square IT"
+        description="IT-Karriere bei Square IT: Spannende Jobs, flexibles Arbeiten und Weiterbildung in Zürich & Zug. Werden Sie Teil unseres dynamischen IT-Teams!"
         keywords="IT Jobs, Karriere, Stellenangebote, IT-Techniker, System Administrator, Zürich, Zug, Square IT"
         canonical="https://www.squareit.ch/careers"
       />

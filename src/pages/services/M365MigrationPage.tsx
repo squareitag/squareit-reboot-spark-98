@@ -68,10 +68,10 @@ const M365MigrationPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Microsoft 365 Migration einfach & sicher | Square IT"
-        description="Square IT übernimmt Ihre M365-Migration – von E-Mails bis Kalender. Wir sorgen für einen sicheren, reibungslosen Übergang und begleiten Ihr Unternehmen bei der erfolgreichen Einführung von Microsoft 365."
+        title="Microsoft 365 Migration Zürich | Square IT"
+        description="M365-Migration von Square IT: E-Mails, Kalender und Daten sicher migriert. Professionelle Begleitung bei der Einführung von Microsoft 365 für KMU."
         keywords="Microsoft 365 Migration, M365 Migration, Email Migration, SharePoint Migration, Teams Migration"
-        canonical="https://www.squareit.ch/m365-migration"
+        canonical="https://www.squareit.ch/services/m365-migration"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

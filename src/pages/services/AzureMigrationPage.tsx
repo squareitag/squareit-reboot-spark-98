@@ -37,10 +37,10 @@ const AzureMigrationPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Azure-Migration: Nahtlos in die Cloud mit Square IT"
-        description="Square IT unterstützt Sie bei der Migration in die Azure-Cloud. Anwendungen, Datenbanken und Arbeitslasten werden sicher und effizient transferiert. Vertrauen Sie auf unsere Expertise für einen reibungslosen Übergang."
+        title="Azure Migration Zürich | Square IT"
+        description="Azure-Migration von Square IT: Sicherer Umzug in die Cloud mit minimaler Ausfallzeit. Infrastruktur, Anwendungen und Daten professionell migriert."
         keywords="Azure Migration, Cloud Migration, Azure Umzug, Cloud Transformation, Azure Services"
-        canonical="https://www.squareit.ch/azure-migration"
+        canonical="https://www.squareit.ch/services/azure-migration"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

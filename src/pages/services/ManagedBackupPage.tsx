@@ -55,10 +55,10 @@ const ManagedBackupPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Backup Strategien & Datensicherung | Square IT"
-        description="Mit Square IT sichern Sie Ihre Unternehmensdaten zuverlässig. Wir entwickeln Backup-Strategien für Microsoft 365, Server und Cloud-Lösungen, damit Ihre Daten jederzeit geschützt und wiederherstellbar sind."
+        title="Managed Backup Services Zürich | Square IT"
+        description="Managed Backup von Square IT: Zuverlässige Datensicherung für Microsoft 365, Server und Cloud. Schutz vor Datenverlust mit professionellen Backup-Strategien."
         keywords="IT Backup, Datensicherung, Managed Backup, Backup Strategien, Data Recovery"
-        canonical="https://www.squareit.ch/backup"
+        canonical="https://www.squareit.ch/services/managed-backup"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

@@ -46,10 +46,10 @@ const ConsultingPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Consulting & Strategie-Beratung für Firmen | Square IT"
-        description="Square IT unterstützt Unternehmen mit professionellem IT-Consulting. Von Infrastruktur-Strategien bis hin zu Cloud-Konzepten entwickeln wir maßgeschneiderte Lösungen für nachhaltigen Erfolg."
+        title="IT-Consulting Zürich & Zug | Square IT"
+        description="Strategische IT-Beratung von Square IT: Infrastruktur-Strategien, Cloud-Konzepte und maßgeschneiderte Digitalisierungslösungen für nachhaltigen Unternehmenserfolg."
         keywords="IT Consulting, IT Beratung, IT Strategie, Infrastruktur Beratung, Cloud Consulting, Digitalisierung"
-        canonical="https://www.squareit.ch/consulting"
+        canonical="https://www.squareit.ch/services/consulting"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

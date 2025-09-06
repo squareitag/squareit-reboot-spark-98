@@ -18,10 +18,10 @@ const FinancePage = () => {
   return (
     <>
       <SEOHead 
-        title="IT Solutions for Financial Services - Enterprise Technology for Banks"
-        description="Enterprise-grade technology solutions for banks, investment firms, insurance companies, and financial advisors. Secure, compliant, and scalable systems that drive financial innovation."
-        keywords="Financial IT Services, Banking Technology, Investment Firm IT, Insurance IT Solutions, Financial Compliance, FINMA Compliance"
-        
+        title="IT-Lösungen Finanzwesen Zürich | Square IT"
+        description="Sichere IT-Lösungen für Banken, Treuhand und Finanzdienstleister. FINMA-konforme Systeme, Datenschutz und Compliance. Jetzt beraten lassen!"
+        keywords="IT Finanzwesen, Banking IT, Treuhand IT, FINMA Compliance, Finanzsoftware"
+        canonical="https://www.squareit.ch/industries/finance"
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}
@@ -33,18 +33,18 @@ const FinancePage = () => {
               Financial Services
             </Badge>
             <h1 className="text-4xl lg:text-6xl font-bold mb-6 bg-gradient-to-r from-primary to-primary/60 bg-clip-text text-transparent">
-              IT Solutions for Financial Services
+              IT-Lösungen Finanzwesen
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Enterprise-grade technology solutions for banks, investment firms, insurance companies, and financial advisors. 
-              Secure, compliant, and scalable systems that drive financial innovation.
+              Professionelle IT-Lösungen für Banken, Treuhandbüros, Versicherungen und Finanzberater. 
+              Sichere, FINMA-konforme und skalierbare Systeme für den Finanzsektor.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <Link to="/contact">Get Financial IT Consultation</Link>
+                <Link to="/contact">IT-Beratung Finanzwesen</Link>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <Link to="/kalkulator">Calculate Your IT Investment</Link>
+                <Link to="/kalkulator">IT-Kosten berechnen</Link>
               </Button>
             </div>
           </div>

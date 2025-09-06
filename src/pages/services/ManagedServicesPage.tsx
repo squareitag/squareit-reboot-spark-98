@@ -41,10 +41,10 @@ const ManagedServicesPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Managed IT Services für Unternehmen in Zürich | Square IT"
-        description="Vertrauen Sie auf Square IT für Managed Services. Wir übernehmen IT-Betrieb, Support und Monitoring, damit Sie sich auf Ihr Business konzentrieren. Effiziente, sichere und skalierbare IT-Lösungen für KMU."
-        keywords="Managed IT Services, IT Outsourcing, Server Management, 24/7 Support, IT Monitoring"
-        canonical="https://www.squareit.ch/managed-services"
+        title="Managed Services Zürich & Zug | Square IT"
+        description="Managed IT Services von Square IT: 24/7 Monitoring, Server-Management und IT-Support für KMU. Mehr Sicherheit, weniger Kosten. Jetzt beraten lassen!"
+        keywords="Managed Services, IT Outsourcing, Server Management, 24/7 Support, IT Monitoring"
+        canonical="https://www.squareit.ch/services/managed-services"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

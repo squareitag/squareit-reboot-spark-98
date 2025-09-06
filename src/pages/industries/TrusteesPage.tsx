@@ -18,10 +18,10 @@ const TrusteesPage = () => {
   return (
     <>
       <SEOHead 
-        title="IT-Lösungen für Treuhänder & Treuhand-Services - FINMA Compliant"
-        description="Sichere, konforme und effiziente Technologielösungen für Treuhänder, Treuhand-Dienstleister und Vermögensverwaltungsfachleute. Schützen Sie sensible Finanzdaten mit Sicherheit auf Unternehmensniveau."
-        keywords="Treuhand IT, Fiduciary IT Services, FINMA Compliance, Trust Management Systems, Financial Data Security, Trustee Technology"
-        
+        title="IT-Lösungen Treuhand Zürich | Square IT"
+        description="FINMA-konforme IT-Lösungen für Treuhänder und Treuhandgesellschaften. Sichere Finanzdaten-Verwaltung und konforme Technologie für Vermögensverwalter."
+        keywords="Treuhand IT, Fiduciary IT, FINMA Compliance, Treuhänder IT, Finanzdaten Sicherheit"
+        canonical="https://www.squareit.ch/industries/trustees"
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

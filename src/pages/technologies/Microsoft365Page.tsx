@@ -54,10 +54,10 @@ const Microsoft365Page = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Microsoft 365 Lösungen & Beratung für Firmen | Square IT"
-        description="Nutzen Sie Microsoft 365 mit Square IT für moderne Zusammenarbeit, Produktivität und Sicherheit. Wir begleiten Unternehmen bei Einführung, Migration und Optimierung von M365 für den Geschäftserfolg."
+        title="Microsoft 365 Services Zürich | Square IT"
+        description="Microsoft 365 von Square IT: Teams, Exchange, SharePoint & OneDrive für moderne Zusammenarbeit. Migration, Setup und Support für KMU. Jetzt informieren!"
         keywords="Microsoft 365, Office 365, Teams, SharePoint, Exchange Online, Modern Workplace"
-        canonical="https://www.squareit.ch/m365"
+        canonical="https://www.squareit.ch/technologies/microsoft-365"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">
@@ -67,7 +67,7 @@ const Microsoft365Page = () => {
               <FileText className="w-10 h-10" />
             </div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Microsoft 365
+              Microsoft 365 Services
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Die komplette Produktivitätssuite für moderne Unternehmen. Office-Anwendungen, 

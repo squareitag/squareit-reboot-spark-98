@@ -33,10 +33,10 @@ const PrivacyPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Datenschutzerklärung & Sicherheit bei Square IT"
-        description="Erfahren Sie, wie Square IT mit Datenschutz umgeht. Unsere Datenschutzerklärung beschreibt transparente Verfahren, Sicherheit bei Datenverarbeitung und Schutz Ihrer persönlichen Informationen."
+        title="Datenschutz & Sicherheit | Square IT"
+        description="Datenschutzerklärung von Square IT: Transparente Verfahren, DSGVO-konforme Datenverarbeitung und Schutz Ihrer persönlichen Informationen."
         keywords="Datenschutzerklärung, Datenschutz, DSGVO, Datensicherheit, Privacy Policy"
-        canonical="https://www.squareit.ch/datenschutzerklarung"
+        canonical="https://www.squareit.ch/privacy"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

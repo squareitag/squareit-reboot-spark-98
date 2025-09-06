@@ -54,10 +54,10 @@ const AvePointBackupPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="AvePoint Backup Lösungen für Microsoft 365 | Square IT"
-        description="Schützen Sie Ihre Geschäftsdaten mit AvePoint Backup für Microsoft 365. Square IT bietet zuverlässige Backup-Strategien, schnelle Wiederherstellung und sicheren Schutz Ihrer Daten in der Cloud."
+        title="AvePoint Backup Microsoft 365 | Square IT"
+        description="AvePoint Backup für Microsoft 365: Zuverlässige Datensicherung, schnelle Wiederherstellung und sicherer Schutz Ihrer Cloud-Daten mit Square IT."
         keywords="AvePoint Backup, Microsoft 365 Backup, Cloud Backup, Datenschutz, Datenwiederherstellung"
-        canonical="https://www.squareit.ch/avepoint-backup"
+        canonical="https://www.squareit.ch/technologies/avepoint-backup"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

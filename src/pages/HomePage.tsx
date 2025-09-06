@@ -154,9 +154,9 @@ const HomePage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Managed IT Services & Support in Zürich und Zug | Square IT"
-        description="Square IT ist Ihr Partner für Managed IT Services, Infrastruktur und Microsoft-Lösungen in Zürich und Zug. Wir bieten zuverlässige Betreuung, Cloud-Lösungen und IT-Sicherheit für Unternehmen."
-        keywords="Managed IT Services, IT Support Zürich, IT Support Zug, Microsoft Lösungen, Cloud Services, IT Sicherheit"
+        title="IT-Services Zürich & Zug | Square IT AG"
+        description="Square IT bietet Managed Services, Cloud-Migration und IT-Support in Zürich & Zug. Professionelle IT-Lösungen für KMU. Jetzt kostenlose Beratung anfragen!"
+        keywords="IT Services Zürich, IT Services Zug, Managed Services, Cloud Migration, IT Support, Microsoft 365"
         canonical="https://www.squareit.ch"
       >
         <meta name="seobility" content="604c9491b7563b121832c63453869d1b" />
@@ -172,7 +172,7 @@ const HomePage = () => {
         
         <div className="relative z-10 container mx-auto px-4 text-center animate-fade-in">
           <h1 className="text-5xl md:text-7xl font-bold mb-6 gradient-hero bg-clip-text text-transparent">
-            Beste Service- und Lösungsangebote
+            IT-Services für Ihr Unternehmen
           </h1>
           <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto mb-8 leading-relaxed">
             Wir bieten erstklassige Dienstleistungen und Lösungen, die auf Ihre Bedürfnisse zugeschnitten sind. 

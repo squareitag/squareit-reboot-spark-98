@@ -69,8 +69,8 @@ const TechnologiesPage = () => {
   return (
     <>
       <SEOHead 
-        title="IT-Technologien & Plattformen | Square IT"
-        description="Moderne IT-Technologien von Square IT: Microsoft Azure, AWS, Security-Lösungen, Server-Infrastrukturen und Netzwerk-Technologien für optimale Performance und Sicherheit."
+        title="IT-Technologien Zürich | Square IT"
+        description="Moderne IT-Technologien von Square IT: Microsoft 365, Azure, Sicherheitslösungen und Cloud-Plattformen für KMU. Innovative Technik für Ihren Geschäftserfolg."
         keywords="IT Technologien, Microsoft Azure, AWS, Security, Server, Netzwerk, Cloud Platforms, Square IT"
         canonical="https://www.squareit.ch/technologies"
       />
@@ -80,7 +80,7 @@ const TechnologiesPage = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center animate-fade-in">
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              Technologien
+              IT-Technologien & Plattformen
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed">
               Wir arbeiten mit den neuesten und bewährtesten Technologien, um Ihnen 

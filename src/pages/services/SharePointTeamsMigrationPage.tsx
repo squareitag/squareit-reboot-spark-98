@@ -37,10 +37,10 @@ const SharePointTeamsMigrationPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="SharePoint Lösungen & Beratung für Unternehmen | Square IT"
-        description="Mit SharePoint von Square IT verbessern Sie Zusammenarbeit, Dokumentenmanagement und Workflows. Wir unterstützen bei Planung, Einführung und Betrieb, damit Ihr Unternehmen produktiver und sicherer arbeitet."
+        title="SharePoint & Teams Migration Zürich | Square IT"
+        description="SharePoint und Teams Migration von Square IT: Moderne Collaboration und Dokumentenmanagement für Ihr Unternehmen. Professionelle Einführung und Betreuung."
         keywords="SharePoint, SharePoint Online, Dokumentenmanagement, Teams Migration, Collaboration"
-        canonical="https://www.squareit.ch/sharepoint"
+        canonical="https://www.squareit.ch/services/sharepoint-teams-migration"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

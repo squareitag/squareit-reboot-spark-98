@@ -18,10 +18,10 @@ const NGOPage = () => {
   return (
     <>
       <SEOHead 
-        title="IT Solutions for NGOs & Non-Profit Organizations - Cost-Effective Technology"
-        description="Maximize your impact with cost-effective, secure IT solutions designed specifically for non-profit organizations. Focus on your mission while we handle your technology needs."
-        keywords="NGO IT Services, Non-Profit Technology, Charity IT Solutions, Microsoft 365 Non-Profit, Volunteer Management, Donor Management"
-        
+        title="IT-Lösungen NGOs & Vereine Zürich | Square IT"
+        description="Kosteneffektive IT-Lösungen für NGOs und Non-Profit-Organisationen. Maximieren Sie Ihren Impact mit sicherer, skalierbarer Technologie für den guten Zweck."
+        keywords="NGO IT Services, Non-Profit Technologie, Verein IT, Microsoft 365 Non-Profit, Spendenverwaltung"
+        canonical="https://www.squareit.ch/industries/ngo"
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

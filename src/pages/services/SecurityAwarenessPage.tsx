@@ -61,10 +61,10 @@ const SecurityAwarenessPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Security Awareness Trainings für Firmen | Square IT"
-        description="Erhöhen Sie die IT-Sicherheit mit Security Awareness Trainings von Square IT. Wir schulen Mitarbeiter im Umgang mit Cybergefahren und stärken die Sicherheitskultur in Ihrem Unternehmen."
+        title="Security Awareness Training Zürich | Square IT"
+        description="Security Awareness Trainings von Square IT: Mitarbeiterschulungen gegen Cybergefahren, Phishing-Training und Stärkung der IT-Sicherheitskultur im Unternehmen."
         keywords="Security Awareness, Cyber Security Training, Phishing Training, Mitarbeiterschulung, IT Security"
-        canonical="https://www.squareit.ch/security-awareness"
+        canonical="https://www.squareit.ch/services/security-awareness"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

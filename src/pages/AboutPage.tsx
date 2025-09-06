@@ -63,10 +63,10 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       <SEOHead 
-        title="Square IT – Ihr IT-Dienstleister in Zürich & Zug"
-        description="Square IT ist ein innovatives IT-Unternehmen in Zürich und Zug. Wir bieten Managed Services, Cloud-Lösungen, Microsoft 365 und individuelle Beratung für Unternehmen jeder Größe."
+        title="Über Square IT Zürich & Zug | IT-Dienstleister"
+        description="Square IT: 30 Jahre IT-Erfahrung in Zürich & Zug. Ihr Partner für Managed Services, Cloud-Lösungen und Microsoft 365. Lernen Sie unser erfahrenes Team kennen!"
         keywords="Square IT, IT Unternehmen Zürich, IT Dienstleister Zug, Managed Services, Cloud Solutions"
-        canonical="https://www.squareit.ch/unternehmen"
+        canonical="https://www.squareit.ch/about"
       />
       
       <div className="pt-16">

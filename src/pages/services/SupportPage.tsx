@@ -76,10 +76,10 @@ const SupportPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Support & Helpdesk Services in Zürich | Square IT"
-        description="Square IT bietet schnellen und kompetenten IT-Support. Unser Helpdesk löst Probleme rund um Microsoft 365, Azure und IT-Infrastruktur, damit Ihr Unternehmen ohne Ausfälle effizient arbeiten kann."
+        title="IT-Support & Helpdesk Zürich | Square IT"
+        description="IT-Support von Square IT: Schnelle Problemlösung für Microsoft 365, Azure und IT-Infrastruktur. Professioneller Helpdesk für unterbrechungsfreies Arbeiten."
         keywords="IT Support, Helpdesk, Remote Support, 24/7 Support, IT Notfall Service"
-        canonical="https://www.squareit.ch/support"
+        canonical="https://www.squareit.ch/services/support"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

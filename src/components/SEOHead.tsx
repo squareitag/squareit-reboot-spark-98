@@ -33,6 +33,7 @@ export const SEOHead = ({
       <meta name="robots" content="index, follow" />
       <meta name="googlebot" content="index, follow" />
       <link rel="alternate" hrefLang="de" href={finalCanonical} />
+      <link rel="alternate" hrefLang="x-default" href={finalCanonical} />
       
       {/* Primary Meta Tags */}
       <title>{fullTitle}</title>

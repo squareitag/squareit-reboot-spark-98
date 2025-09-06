@@ -54,10 +54,10 @@ const MicrosoftAzurePage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="Microsoft Azure Lösungen für Unternehmen | Square IT"
-        description="Nutzen Sie Microsoft Azure mit Square IT für Skalierbarkeit, Flexibilität und Sicherheit. Wir begleiten Ihre digitale Transformation mit Cloud-Architektur, Migration und Managed Services."
+        title="Microsoft Azure Services Zürich | Square IT"
+        description="Microsoft Azure von Square IT: Skalierbare Cloud-Architektur, Migration und Managed Services für digitale Transformation. Flexibel, sicher und kosteneffizient."
         keywords="Microsoft Azure, Cloud Computing, Azure Migration, Managed Cloud Services, Digitale Transformation"
-        canonical="https://www.squareit.ch/azure"
+        canonical="https://www.squareit.ch/technologies/microsoft-azure"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

@@ -82,10 +82,10 @@ const ServicesPage = () => {
   return (
     <div className="min-h-screen pt-16">
       <SEOHead 
-        title="IT-Services & Beratung für Unternehmen in Zürich | Square IT"
-        description="Square IT bietet umfassende IT-Services – von Beratung über Cloud-Lösungen bis hin zu Managed Services. Wir entwickeln maßgeschneiderte IT-Konzepte für Sicherheit, Effizienz und Wachstum."
+        title="IT-Services Zürich & Zug | Square IT"
+        description="Professionelle IT-Services von Square IT: Managed Services, Cloud-Migration, Consulting und Support für KMU. Maßgeschneiderte IT-Lösungen für Ihren Erfolg."
         keywords="IT Services, IT Dienstleistungen, Managed Services, Cloud Services, IT Beratung"
-        canonical="https://www.squareit.ch/it-services"
+        canonical="https://www.squareit.ch/services"
       />
       {/* Hero Section */}
       <section className="py-20 gradient-subtle">

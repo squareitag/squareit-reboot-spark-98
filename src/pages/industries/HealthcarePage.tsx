@@ -18,10 +18,10 @@ const HealthcarePage = () => {
   return (
     <>
       <SEOHead 
-        title="IT Solutions for Healthcare & Medical Practices - HIPAA Compliant Technology"
-        description="Secure, HIPAA-compliant technology solutions for hospitals, clinics, and medical practices. Improve patient care while maintaining the highest data security standards."
-        keywords="Healthcare IT, Medical Practice IT, HIPAA Compliance, Electronic Health Records, EHR Systems, Medical Technology"
-        
+        title="IT-Lösungen Gesundheitswesen Zürich | Square IT"
+        description="HIPAA-konforme IT-Lösungen für Krankenhäuser, Praxen und medizinische Einrichtungen. Sichere Technologie für bessere Patientenversorgung und Datenschutz."
+        keywords="Healthcare IT, Medizin IT, HIPAA Compliance, Gesundheitswesen IT, Praxis IT, Krankenhaus IT"
+        canonical="https://www.squareit.ch/industries/healthcare"
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

@@ -18,10 +18,10 @@ const SchoolsPage = () => {
   return (
     <>
       <SEOHead 
-        title="IT-Lösungen für Schulen & Bildungseinrichtungen - Digitale Klassenzimmer"
-        description="Bildung durch sichere, skalierbare und innovative Technologielösungen stärken. Von digitalen Klassenzimmern bis zu Verwaltungssystemen – wir helfen Schulen im digitalen Zeitalter zu gedeihen."
-        keywords="Schul-IT, Bildungstechnologie, Digitale Klassenzimmer, WLAN Schulen, Schülerdatenschutz, LMS Lernmanagementsystem"
-        
+        title="IT-Lösungen Schulen Zürich | Square IT"
+        description="Digitale Bildung mit sicheren IT-Lösungen für Schulen. Digitale Klassenzimmer, WLAN-Infrastruktur und Lernmanagement für moderne Bildungseinrichtungen."
+        keywords="Schul-IT, Bildungstechnologie, Digitale Klassenzimmer, WLAN Schulen, Schülerdatenschutz, LMS"
+        canonical="https://www.squareit.ch/industries/schools"
       />
       <div className="min-h-screen bg-gradient-to-br from-background to-secondary/20">
       {/* Hero Section */}

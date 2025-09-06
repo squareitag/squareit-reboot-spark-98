@@ -94,8 +94,8 @@ const IndustriesPage = () => {
   return (
     <>
       <SEOHead 
-        title="Branchenlösungen - IT für verschiedene Industrien | Square IT"
-        description="Spezialisierte IT-Lösungen für Schulen, NGOs, Trustees, Gesundheitswesen und Finanzsektor. Square IT bietet branchenspezifische Services und Compliance-konforme Systeme."
+        title="Branchenlösungen IT Zürich | Square IT"
+        description="IT-Lösungen für Schulen, NGOs, Treuhand, Gesundheitswesen & Finanzsektor. Spezialisierte Services und Compliance-konforme Systeme von Square IT."
         keywords="Branchenlösungen, IT Bildung, Healthcare IT, Finance IT, NGO IT, Compliance, Square IT"
         canonical="https://www.squareit.ch/industries"
       />
